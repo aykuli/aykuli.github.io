@@ -71,7 +71,7 @@ a {
 #welcome-section {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(-45deg, var(--deep-blue, #111), var(--links, #222), var(--moody-sky, #333), var(--sky, #444), var(--gray-blue, #555));
+  background: linear-gradient(-45deg, var(--deep-blue, #111), var(--blue, #222), var(--links, #333), var(--sky, #444), var(--gray-blue, #555));
 	background-size: 500% 500%;
 	-webkit-animation: Gradient 30s ease infinite;
 	-moz-animation: Gradient 30s ease infinite;
