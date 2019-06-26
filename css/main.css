@@ -1,0 +1,170 @@
+body {
+	background: linear-gradient(0deg, #CFF, #FCC) no-repeat center center / contain;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+  height: 100vh;
+}
+
+h1,h1,h3,h4,h5,p,h6 {
+	margin: 0;
+	padding: 0;
+}
+a, a:hover, a:active {
+
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	
+}
+
+.container {
+	margin: 0 auto;
+	
+}
+.content {
+	height: 80vh;
+	width: 80vh;
+	margin: 50px auto;
+}
+.d-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.offer {
+	background: #1c1c1c;
+}
+
+.btn {
+	background: #e930a1;
+	color: #fff;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 12px;
+	width: 185px;
+	padding: 22px 0;
+	border-radius: 100px;
+	display: block;
+}
+.btn:hover {
+	background: #ff009c;
+	box-shadow: 0 10px 30px rgba(233,48,161,0.4);
+}
+.btn-round {
+	font-size: 9px;
+	border: 1px solid #30e9a1;
+	padding: 5px 16px;
+	text-transform: uppercase;
+	border-radius: 100px;
+	color: #30e9a1;
+}
+
+.btn-round:hover {
+	background: #30e9a1;
+	color: #fff;
+	border: 1px solid #30e9a1;
+	
+}
+
+.logo {
+
+}
+
+.menu {
+	margin-left: 235px;
+}
+
+.menu__item {
+	margin-right: 48px;
+}
+
+.menu__item a {
+	font-weight: 300;
+	font-size: 13px;
+	color: #fff;
+}
+
+
+
+.menu__item a:hover {
+	color: #23c8d2;
+}
+
+.slider {
+	background: rgba(0,0,0,0.07);
+	position: relative;
+}
+
+
+.none-decoration {
+	text-transform: none;
+	font-size: 10px;
+	color: #fff;
+}
+
+.footer {
+	
+}
+
+.ball { 
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: fixed;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    border-radius: 50%;
+  }
+#ball1 {
+    left: 20%;
+  }
+#ball2 {
+    left: 65%;
+    top: 45%;
+    transform:scale(1.5);
+  }
+#ball3 {
+    left: 35%;
+    top: 75%;
+    transform:scale(2);
+}
+#ball1:hover {
+	
+	transform: skewX(45deg);
+}
+#ball2:hover {
+	transform:scale(1.6);
+}
+#ball3:hover {
+	transform:scale(2.1);
+}
+.moon
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50vh;
+  width: 100px;
+  height: 100px;
+  
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0 0 #CFF;
+}
+
