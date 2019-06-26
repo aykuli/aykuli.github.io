@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Aynur Shauerman portfolio on GitHub</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link 
+    href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap&subset=cyrillic"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/main.css">
+  <title>Aynur Shauerman Portfolio</title>
 </head>
 <body>
-	<section class="first">
-		<header id="first" class="first">
+  
+<!-- HEADER -->  
+  <header>
+    <div class="logo">
+      
+    </div>
+    <nav id="navbar" class="nav">
+      <ul class="nav-list">
+        <li><a href="#welcome-section">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contacts">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- END OF HEADER -->    
+  
+<!-- WELCOME SECTION -->  
+  <section id="welcome-section">
+    <p>Front-End Developer</p>
+    <h1>Aynur Shauerman</h1>
+    <p>portfolio</p>
+  </section>
+<!-- END OF WELCOME SECTION -->   
 
-		</header>
-		<div class="content">
-			<div class="links">
-			<a href="../RagAndBoneMan/index.html">RagAndBoneMan</a>
-			<br>
-			<a href="../Technical_ Documentation_Page/index.html">JS Documentation</a>
-			<br>
-			<a href="../Survey_Form/index.html">Survey Form</a>
-			<br>
-			<a href="../Product Landing Page/index.html">Product Landing Page</a>
-			</div>
-			<div class="slider">
-				<div class="ball" id= "ball1"></div>
-				<div class="ball" id= "ball2"></div>
-				<div class="ball" id= "ball3"></div>
-				<div class="moon"></div>
-				
-			</div>
-		</div>
-	</section>
-
-	<footer>
-		<div class="footer">
-			
-		</div>
-	</footer>
-
-	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/main.js"></script>
+<!-- PORTFOLIO PROJECTS -->
+  <section id="projects">
+    <h2 class="projects-section-header">These are some of my projects</h2>
+    <div class="project-grid">
+            <!-- HALBSTADT.INFO -->
+      <a href="http://halbstadt.info" class="project-tile" target="_blank">
+        <img src="https://aykuli.github.io/img/halbstadt.info.png" alt="halbstadt.info" class="img-project">
+        <p class="project-title">
+          <code>&lt;</code> Halbstadt administration <code>&#8260;&gt;</code>
+        </p>
+      </a>
+      <!-- END OF HALBSTADT.INFO -->
+      
+      <!-- TRIBUTE PAGE-->
+      <a href="https://codepen.io/aykuli/full/PrNxKV" class="project-tile" target="_blank">
+        <img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg" alt="tribute page" class="img-project">
+        <p class="project-title">
+          <code>&lt;</code> Tribute Page <code>&#8260;&gt;</code>
+        </p>
+      </a>
+      <!-- END OF TRIBUTE PAGE-->
+      
+      <!-- TECHNICAL DOCUMENTATION FOR JS-->
+     <a href="https://aykuli.github.io/Technical_Documentation_Page/index.html" class="project-tile" target="_blank">
+        <img src="https://aykuli.github.io/Technical_Documentation_Page/img/Technical_Documentation_Page.png" alt="JS Documentation" class="img-project">
+        <p class="project-title">
+          <code>&lt;</code> JS Documentation <code>&#8260;&gt;</code>
+        </p>
+      </a>
+      <!-- END OF TECHNICAL DOCUMENTATION FOR JS-->
+      
+      <!-- SURVEY FORM -->
+      <a href="https://codepen.io/aykuli/full/NZrNqw" class="project-tile" target="_blank">
+        <img src="https://aykuli.github.io/Survey_Form/img/Survey_Form.png" alt="Survey Form" class="img-project">
+        <p class="project-title">
+          <code>&lt;</code> Survey Form <code>&#8260;&gt;</code>
+        </p>
+      </a>
+      <!-- END OF SURVEY FORM -->
+      
+      <!-- PRODUCT LANDING PAGE -->
+      <a href="https://codepen.io/aykuli/full/NZbKLw" class="project-tile" target="_blank">
+        <img src="https://aykuli.github.io/Product%20Landing%20Page/img/Product_Landing_Page.png" alt="Product Landing Page" class="img-project">
+        <p class="project-title">
+          <code>&lt;</code> Product Landing Page <code>&#8260;&gt;</code>
+        </p>
+      </a>
+      <!-- END OF PRODUCT LANDING PAGE -->
+    </div>
+    <a href="https://aykuli.github.io" class="project-button" target="_blank"><p>Show all <i class="fas fa-chevron-right"></i></p></a>
+    
+  </section>
+<!-- END OF PORTFOLIO PROJECTS -->
+  
+<!-- CONTACTS -->
+  <section id="contacts">
+    <div class="contacts-title">
+      <h2>Let's work together.</h2>
+    </div>
+    <div class="contact-links">
+      <a href="https://github.com/aykuli" id="profile-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://github.com/aykuli" id="profile-link" class="btn">
+        <i class="fab fa-codepen"></i> CodePen
+      </a>
+      <a href="mailto:aykuli@ya.ru"><i class="fas fa-at"></i> Send a mail</a>
+    </div>
+  </section>
+<!-- END OF CONTACTS -->
 </body>
 </html>

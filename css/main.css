@@ -1,170 +1,279 @@
+/* Custom properties/variables  */
+:root {
+  --deep-blue: #005585;
+  --moody-sky: #4DBEFF;
+  --sky: #00A2FF;
+  --blue: #0081CC;  
+  --gray-blue: #265F80;
+  --links: #FF4D61;
+}
+
 body {
-	background: linear-gradient(0deg, #CFF, #FCC) no-repeat center center / contain;
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  background: var(--gray-blue, #555);
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease-out;
 }
 
-h1,h1,h3,h4,h5,p,h6 {
-	margin: 0;
-	padding: 0;
-}
-a, a:hover, a:active {
-
+h1, h2, p {
+  margin: 0;
+  padding: 0;
 }
 
-ul, li {
-	display: block;
-	padding: 0;
-	margin: 0;
-}
-
-.header {
-	
-}
-
-.container {
-	margin: 0 auto;
-	
-}
-.content {
-	height: 80vh;
-	width: 80vh;
-	margin: 50px auto;
-}
-.d-flex {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-}
-
-.offer {
-	background: #1c1c1c;
-}
-
-.btn {
-	background: #e930a1;
-	color: #fff;
-	font-weight: 900;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 12px;
-	width: 185px;
-	padding: 22px 0;
-	border-radius: 100px;
-	display: block;
-}
-.btn:hover {
-	background: #ff009c;
-	box-shadow: 0 10px 30px rgba(233,48,161,0.4);
-}
-.btn-round {
-	font-size: 9px;
-	border: 1px solid #30e9a1;
-	padding: 5px 16px;
-	text-transform: uppercase;
-	border-radius: 100px;
-	color: #30e9a1;
-}
-
-.btn-round:hover {
-	background: #30e9a1;
-	color: #fff;
-	border: 1px solid #30e9a1;
-	
-}
-
-.logo {
-
-}
-
-.menu {
-	margin-left: 235px;
-}
-
-.menu__item {
-	margin-right: 48px;
-}
-
-.menu__item a {
-	font-weight: 300;
-	font-size: 13px;
-	color: #fff;
-}
-
-
-
-.menu__item a:hover {
-	color: #23c8d2;
-}
-
-.slider {
-	background: rgba(0,0,0,0.07);
-	position: relative;
-}
-
-
-.none-decoration {
-	text-transform: none;
-	font-size: 10px;
-	color: #fff;
-}
-
-.footer {
-	
-}
-
-.ball { 
-    width: 40px;
-    height: 40px;
-    margin: 50 auto;
-    position: fixed;
-    background: linear-gradient(
-      35deg,
-      #ccffff,
-      #ffcccc
-    );
-    border-radius: 50%;
-  }
-#ball1 {
-    left: 20%;
-  }
-#ball2 {
-    left: 65%;
-    top: 45%;
-    transform:scale(1.5);
-  }
-#ball3 {
-    left: 35%;
-    top: 75%;
-    transform:scale(2);
-}
-#ball1:hover {
-	
-	transform: skewX(45deg);
-}
-#ball2:hover {
-	transform:scale(1.6);
-}
-#ball3:hover {
-	transform:scale(2.1);
-}
-.moon
-{
-  position: absolute;
-  margin: auto;
+header {
+  width: 96%;
+  position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 50vh;
-  width: 100px;
-  height: 100px;
-  
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow: 25px 10px 0 0 #CFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  background: var(--sky, #333);
+  box-shadow: 0px 0.2rem 0.2rem var(--gray-blue, #555);
 }
 
+.logo img {
+}
+
+#navbar {
+  width: 90%;
+  font-size: 1.5em;
+}
+
+.nav-list {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul.nav-list > li {
+  padding: 0 4rem;
+  list-style: none;
+}
+
+ul.nav-list a:hover {
+  color: var(--links, red);
+  transition: 0.5s;
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+  /*Background from https://freefrontend.com/css-animated-backgrounds/*/
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, var(--deep-blue, #111), var(--blue, #222), var(--moody-sky, #333), var(--sky, #444), var(--gray-blue, #555));
+	background-size: 500% 500%;
+	-webkit-animation: Gradient 30s ease infinite;
+	-moz-animation: Gradient 30s ease infinite;
+	animation: Gradient 30s ease infinite;  
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+#welcome-section h1 {
+  font-size: 5rem;
+}
+
+#welcome-section p {
+  font-size: 3rem;
+  padding: 1rem 0 3rem;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+#projects {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.projects-section-header {
+  max-width: 90vw;
+  font-size: 3rem;
+  margin: 6rem auto;
+  border-bottom: 0.2rem solid #fff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-gap: 3rem;
+  padding: 1rem;
+}
+
+.project-tile {
+  background: var(--blue, #555); 
+  box-shadow: 0 0.2rem 0.2rem rgb(0,0,0,0.4); 
+}
+
+.img-project {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.project-title {
+  width: 100%;
+  line-height: 3rem;
+}
+
+code {
+  color: var(--blue, #333);
+  margin: auto;
+}
+
+.project-tile:hover code {
+  transition: 0.5s;
+  color: var(--links, blue);
+}
+
+.project-button {
+  background: var(--blue, #333);
+  margin: 3rem auto;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.project-button:hover {
+  background: var(--links, red);
+  margin: 3rem auto;
+  padding: 0.8rem;
+  transition: background 0.3s ease-out;
+}
+
+.pointer {
+  font-size: 2rem;
+  margin: auto;
+  background: #000;
+}
+
+.project-button:hover .fas {
+  transform: translateX(2px);
+  transition: transform 0.3s ease-out;
+}
+
+#contacts {
+  background: var(--deep-blue, #111);
+  color: #fff;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.contacts-title {
+  font-size: 2rem;
+  padding: 3rem;
+}
+
+.contact-links a {
+  font-size: 1.5rem;
+  padding: 3rem 2rem;
+  display: inline-block;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-links a:hover {
+  transform: translateY(4px);
+}
+
+@media (max-width: 700px) {
+  .img-project {
+    height: 25vh;
+  }
+}
+
+@media (max-width: 560px) {
+    ul.nav-list > li {
+    padding: 0 1rem;
+    list-style: none;
+  }
+}
+
+@media (max-width: 420px) {
+  #welcome-section h1 {
+    font-size: 3.5rem;
+  }
+
+  #welcome-section p {
+    font-size: 2.5rem;
+    padding: 1rem 0 3rem;
+  }
+
+  .projects-section-header {
+    margin: 3rem auto;
+  }
+
+  .projects-section-header {
+    font-size: 2rem;
+    border-bottom: 1px solid #fff;
+   }
+  
+  #projects {
+    font-size: 1.2rem;
+  }
+
+  .contacts-title {
+    font-size: 1.8rem;
+    padding: 2rem;
+  }
+  
+  .contact-links a {
+    padding: 1rem;
+  }
+
+}
