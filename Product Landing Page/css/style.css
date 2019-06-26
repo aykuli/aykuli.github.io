@@ -1,0 +1,302 @@
+/** global element styling **/
+
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  /*Background from https://freefrontend.com/css-animated-backgrounds/*/
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+/**HEADER**/
+#header {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 0;
+  position: sticky;
+  top: 0;
+  background: #eee;
+  
+}
+.logo {
+  width: 60vw;
+}
+
+#header-img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+}
+
+#nav-bar,.footer-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+#nav-bar {
+  width: 35vw;
+}
+
+.footer-nav {
+  width: 12vw;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+/*end header*/
+.title {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.title-h2 {
+  width: 100%;
+}
+
+#email {
+  width: 80%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  max-width: 275px;
+  height: 2rem;
+  margin: 1rem 0 0;
+}
+
+#submit {
+  text-transform: uppercase;
+  background-color: #F1C40F;
+  border: none;
+  font-size: 1.2em;
+  padding: 0.2em 0.8em;
+}
+
+.submit900 {
+  font-weight: 900;
+}
+
+.card-btn {
+  font-weight: 400;
+  margin: 2rem auto 1rem;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  align-items: flex-end;
+}
+
+.icon {
+  width: 10%;
+  padding: 2rem;
+  color: darkorange;
+}
+
+.description {
+  width: 85%;
+  padding: 2rem;
+}
+
+#how-it-works {
+  display: flex;
+  justify-content: center;
+  margin: 3.2rem auto;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 2rem;
+}
+.card {
+  width: calc(100%/3.1);
+  border: 1px solid #000;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  background: #ddd;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+ol {
+  list-style: none;
+}
+
+footer {
+  background: #ddd;
+  display:flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 1rem;
+}
+.footer {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0.5em;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+@media (max-width: 800px) {
+#pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 2rem;
+  }
+  .card {
+    margin: 0.3rem auto;
+  }
+}
+
+@media (max-width: 650px) {
+  #nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon {
+    width: 15%;
+    padding: 2rem;
+    color: darkorange;
+  }
+
+  .description {
+    width: 85%;
+    padding: 2rem;
+  }
+  
+    .card {
+    width: calc(100%/2);
+    }
+  
+    footer {
+      padding: 1rem;
+    }
+    .footer {
+      color: #666;
+      font-size: 0.9rem;
+      padding: 0.2em;
+    }
+    .footer-nav {
+      width: 35vw;
+      display: flex;
+      justify-content: space-around;
+  }
+}
+
+@media (max-width: 360px) {
+  #header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+  }
+  #header {
+    padding: 0.5rem 0;
+  }
+  .logo {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .title {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .icon {
+    display: none;
+  }
+  
+  .description {
+    text-align: center;
+    width: 100%;
+    padding: 2rem 0.2rem;
+  }
+  
+  #video {
+    max-width: 100%;
+  }
+  
+  .card {
+    width: 90%;
+   }
+  
+  .footer-nav {
+     width: 60vw;
+}
