@@ -13,6 +13,7 @@ body {
   min-width: 320px;
   padding: 0;
   margin: 0;
+  background: #265F80;
   background: var(--gray-blue, #555);
   text-align: center;
   color: #fff;
@@ -147,8 +148,10 @@ a {
 }
 
 .project-grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: repeat(minmax(300px, 1fr)); 
   grid-gap: 3rem;
   padding: 1rem;
 }
