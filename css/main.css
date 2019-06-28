@@ -15,7 +15,7 @@ body {
   margin: 0;
   background: var(--gray-blue, #555);
   text-align: center;
-  color: #fff;
+  color: #fff, #000;
   transition: all 0.3s ease-out;
 }
 
