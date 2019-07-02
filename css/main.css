@@ -13,7 +13,6 @@ body {
   min-width: 320px;
   padding: 0;
   margin: 0;
-  background: #265F80;
   background: var(--gray-blue, #555);
   text-align: center;
   color: #fff;
@@ -62,6 +61,10 @@ ul.nav-list a:hover {
   transition: 0.5s;
 }
 
+ul.nav-list a:focus {
+  color: var(--links, red);
+}
+
 
 a {
   text-decoration: none;
@@ -72,47 +75,47 @@ a {
 #welcome-section {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(-45deg, var(--deep-blue, #111), var(--blue, #222), var(--links, #333), var(--sky, #444), var(--gray-blue, #555));
-	background-size: 500% 500%;
-	-webkit-animation: Gradient 30s ease infinite;
-	-moz-animation: Gradient 30s ease infinite;
-	animation: Gradient 30s ease infinite;  
+  background: linear-gradient(-45deg, var(--deep-blue, #111), var(--links, #222), var(--moody-sky, #333), var(--sky, #444), var(--gray-blue, #555));
+  background-size: 500% 500%;
+  -webkit-animation: Gradient 30s ease infinite;
+  -moz-animation: Gradient 30s ease infinite;
+  animation: Gradient 30s ease infinite;  
 }
 
 @-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 @-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 @keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 #welcome-section h1 {
@@ -144,16 +147,25 @@ a {
   max-width: 90vw;
   font-size: 3rem;
   margin: 6rem auto;
+  padding-bottom: 0.5rem;
   border-bottom: 0.2rem solid #fff;
 }
 
 .project-grid {
-  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  -ms-grid-columns: repeat(minmax(300px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   grid-gap: 3rem;
   padding: 1rem;
+}
+
+.project-tile {
+  background: var(--blue, #555); 
+  box-shadow: 0 0.2rem 0.2rem rgb(0,0,0,0.4); 
+}
+
+.project-tile:focus {
+  border: 1px solid red;
+  color: var(--links, blue);
 }
 
 .img-project {
@@ -172,14 +184,12 @@ code {
   margin: auto;
 }
 
-.project-tile {
-  background: var(--blue, #555); 
-  box-shadow: 0 0.2rem 0.2rem rgb(0,0,0,0.4); 
-}
-
-
 .project-tile:hover code {
   transition: 0.5s;
+  color: var(--links, blue);
+}
+
+.project-tile:focus code {
   color: var(--links, blue);
 }
 
@@ -196,6 +206,10 @@ code {
   margin: 3rem auto;
   padding: 0.8rem;
   transition: background 0.3s ease-out;
+}
+
+.project-button:focus {
+  background: var(--links, red);
 }
 
 .pointer {
@@ -233,6 +247,10 @@ code {
 
 .contact-links a:hover {
   transform: translateY(4px);
+}
+
+.contact-links a:focus {
+  color: var(--links);
 }
 
 @media (max-width: 700px) {
