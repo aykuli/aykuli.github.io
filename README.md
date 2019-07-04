@@ -2,4 +2,5 @@
 Portfolio site of FrontEnd-Developer Aynur Shauerman, created on course «Responsive Web Design Certification» from https://learn.freecodecamp.org.
 
 <a href="http://aykuli.github.io/">
-  <img src="">
+  <img src="img/aykuli.github.io_scrrenshot.jpg">
+</a>
