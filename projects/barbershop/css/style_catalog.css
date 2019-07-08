@@ -1,0 +1,35 @@
+label.filter-radio {
+	display: inline-block;
+	margin-top: -8px;
+}
+
+.filter-input-radio + label {
+  position: relative;
+  padding: 0 0 0 43px;
+  cursor: pointer;
+}
+.filter-input-radio + label.filter-radio:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: transparent;
+}
+.filter-input-radio + label.filter-radio:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0;
+}
+.filter-input-radio:checked + label:after {
+  opacity: 1;
+}
