@@ -24,7 +24,7 @@
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 					<ul class="user-navigation">
-						<li><a href="login.html" class="login-link">Вход</a></li>
+						<li><a href="#" class="login-link">Вход</a></li>
 					</ul>
 				</div>
 			</div>
@@ -201,5 +201,13 @@
 <!--Блокировщик всего контента на сайте
 <div class="modal-overlay"></div>
 -->
+
+	<script>
+		var link = document.querySelector(".login-link");
+
+		link.addEventListener("click", function () {
+			console.log("Нажатие по ВХОД");
+		});
+	</script>
 </body>
 </html>
