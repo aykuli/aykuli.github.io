@@ -565,6 +565,14 @@ input[type="radio"].visually-hidden {
 	z-index: 2;
 }
 
+.modal-show {
+	display: block;
+}
+
+.modal-overlay-none {
+	z-index: -1;
+}
+
 .modal-overlay {
 	position: fixed;
 	top: 0;

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Барбершоп "Бородинский"</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet"> 
 </head>
 <body>
@@ -24,7 +24,7 @@
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 					<ul class="user-navigation">
-						<li><a href="#" class="login-link">Вход</a></li>
+						<li><a href="login.html" class="login-link">Вход</a></li>
 					</ul>
 				</div>
 			</div>
@@ -185,7 +185,7 @@
 				</label>
 				<a href="#" class="restore">Я забыл пароль</a>
 			</p>
-			<button class="button" type="submit">Войти</button>
+			<button class="button" type="submit" action="echo.htmlacademy.ru">Войти</button>
 		</form>
 		<button class="modal-close" type="button">Закрыть</button>
 	</section>
@@ -198,16 +198,9 @@
 		<button class="modal-close" type="button">Закрыть</button>
 	</section> 
 <!--КОНЕЦ POP-UP ОКНА-->
-<!--Блокировщик всего контента на сайте
-<div class="modal-overlay"></div>
--->
+<!--Блокировщик всего контента на сайте-->
+<div class="modal-overlay-none"></div>
 
-	<script>
-		var link = document.querySelector(".login-link");
-
-		link.addEventListener("click", function () {
-			console.log("Нажатие по ВХОД");
-		});
-	</script>
+<script src="js/script.js"></script>
 </body>
 </html>
