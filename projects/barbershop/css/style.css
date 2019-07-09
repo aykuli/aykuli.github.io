@@ -565,8 +565,28 @@ input[type="radio"].visually-hidden {
 	z-index: 2;
 }
 
+@keyframes bounce {
+	  0% {transform: translateY(-2000px);}
+	  70% {transform: translateY(-30px);}
+	  90% {transform: translateY(-10px);}
+	  100% {transform: translateY(0);}
+}
+
+@keyframes shake {
+	  0%, 100% {transform: translateX(0);}
+	  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
 .modal-show {
 	display: block;
+	animation-name: bounce;
+	animation-duration: .6s;
+}
+
+.modal-error {
+	animation-name: shake;
+	animation-duration: .6s;
 }
 
 .modal-overlay-none {
@@ -626,6 +646,41 @@ input[type="radio"].visually-hidden {
 .modal-close::after {
 	transform: rotate(-45deg);	
 }
+/*close button for map*/
+.modal-close-map {
+	position: absolute;
+	top: 0;
+	right: -34px;
+
+	width: 22px;
+	height: 22px;
+	font-size: 0;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+.modal-close-map::before,
+.modal-close-map::after {
+	content: "";
+
+	position: absolute;
+	top: 10px;
+	left: 5px;
+
+	width: 19px;
+	height: 3px;
+	background-color: #d0d0d0;
+}
+
+.modal-close-map::before {
+	transform: rotate(45deg);	
+}
+
+.modal-close-map::after {
+	transform: rotate(-45deg);	
+}
+/*END OF close button for map*/
 
 .modal-login h2 {
 	margin: 0;
@@ -754,15 +809,20 @@ input[type="radio"].visually-hidden {
 /*MAP POP-UP*/
 .modal-map {
 		top: 50%;	
-		left: 50%;
-		width: 776px;	
-		height: 576px;	
+		left: 50%; 
+		width: 780px;	
+		height: 560px;	
 		margin-top: -295px;
 		margin-left: -395px;
-
-		border: 7px solid white;
 		-webkit-box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.7);
 		box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.map-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 /*END OF MAP POP-UP*/
 
