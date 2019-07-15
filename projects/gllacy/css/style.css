@@ -241,17 +241,6 @@ ul {
 	border-radius: 0;
 }
 
-/*.fall-menu li:last-child > a:hover,
-.fall-menu li:last-child > a:focus {
-	
-	border-radius: 0 0 10px 10px;
-}
-
-.fall-menu li:first-child > a:hover,
-.fall-menu li:first-child > a:focus {
-	border-radius: 10px 10px 0 0 ;
-}
-*/
 .new-ice-creams a {
 	font-weight: 700;
 }
@@ -269,7 +258,7 @@ ul {
 	margin-top: 11px;
 }
 
-.user-navigation li {
+/*.user-navigation li {
 	background-color: rgba(255, 255, 255, .2);
 	margin: 0;
 	padding: 0;
@@ -280,6 +269,26 @@ ul {
 	font-size: 14px;
 	line-height: 32px;
 	position: relative;
+}*/
+
+.user-navigation>li a {
+	background-color: rgba(255, 255, 255, .2);
+	margin: 0;
+	padding: 0;
+	margin-left: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-radius: 16px;
+
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 32px;
+	position: relative;
+}
+
+.user-navigation>li:hover a {
+	background-color: #f8f7f4;
+	color:323232;
 }
 
 .user-navigation>li:hover path,
@@ -293,10 +302,38 @@ ul {
 	color: #000;
 }
 
+.user-navigation>li button {
+	background-color: rgba(255, 255, 255, .2);
+	margin: 0;
+	padding: 0;
+	margin-left: 10px;
+	/*padding-bottom: 10px;
+	padding-top: 10px;*/
+	border-radius: 16px;
+
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 32px;
+	position: relative;
+}
 .btn-search {
 	background: none;
 	border: none;
 	vertical-align: middle;
+}
+
+.search {
+	position: relative;
+}
+
+.modal-search {
+	position: absolute;
+	top: 37px;
+	right: 0;
+	padding: 20px 15px;
+
+	background-color: #f8f7f4;
+	border-radius: 5px;
 }
 
 .login-link {

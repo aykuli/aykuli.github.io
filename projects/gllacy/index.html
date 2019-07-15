@@ -37,18 +37,23 @@
 			<div class="nav-left">
 				<ul class="user-navigation">
 					<li class="search">
-						<button class="btn-search" type="button">
+						<button class="btn-search btn-search-invers " type="button">
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
 								<path fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
 									S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
 									S11,4.019,11,6.5S8.981,11,6.5,11z"/>
 							</svg>
-						<form action="#" class="appointment-form" method="post">
-							<label for="search-input" class="visually-hidden">Поле для поиска</label>
-							<input id="search-input" type="text" name="date" value="" placeholder="Что ищем?">
-					
-				</form>
 						</button>
+							<!-- поиск -->
+						<div class="modal-search">
+							<h2 class="visually-hidden">Форма поиска</h2>
+							<form action="#" class="search-form" method="post">
+								<label for="site-search" class="visually-hidden">Поиск по сайту</label>
+								<input type="search" id="site-search" name="site-search" aria-label="Поиск по сайту" placeholder='Что ищем?'>
+							</form>
+						</div>
+						<!-- END OF поиск -->
+						
 					</li>
 					<li>
 						<a href="login.html" class="login-link">
@@ -372,15 +377,7 @@
 	</section>
 	<!-- END OF вход -->
 
-	<!-- поиск -->
-	<section class="modal modal-search">
-		<h2 class="visually-hidden">Форма поиска</h2>
-		<form action="#" class="search-form" method="post">
-			<label for="site-search" class="visually-hidden">Поиск по сайту</label>
-			<input type="search" id="site-search" name="site-search"      aria-label="Поиск по сайту" placeholder='Что ищем?'>
-		</form>
-	</section>
-	<!-- END OF поиск -->
+
 
 	<!-- callback -->
 	<section class="modal modal-callback">
