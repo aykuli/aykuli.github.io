@@ -35,7 +35,7 @@ body {
 	font-weight: 700;
 	color: #fff;
 	
-	background-color: #bbf;
+	background-color: #849d8f;
 	z-index: -4;
 }
 
@@ -49,7 +49,7 @@ a {
 }
 
 /* BACKGORUNDS CHANCHING BY ITEM */
-.bg-image {
+/*.bg-image {
 	width: 100%;
 	height: 100%;
 	
@@ -58,7 +58,7 @@ a {
 	background-position: top center;
 
 	z-index: -2;
-}
+}*/
 
 .bgs {
 	position: relative;
@@ -207,6 +207,13 @@ ul {
 	margin-left: 0;
 	padding-bottom: 10px;
 	border: 1px solid #000;
+}
+
+.site-navigation>li:hover a.catalog-menu-in,
+.site-navigation>li:focus a.catalog-menu-in {
+	color: #333;
+	background-color: #f7f6f3;	
+	border-radius: 16px;
 }
 
 .new-ice-creams div {
@@ -674,6 +681,7 @@ label.choose-both  {
 
 .item-round:hover {
 	cursor: pointer;
+	background-color: rgba(255, 255, 255, .4);
 }
 
 .item2-round {
@@ -759,11 +767,9 @@ label.choose-both  {
 	height: 100%;
 
 	padding-top: 8px;
-	padding-bottom: 75px;
+	padding-bottom: 35px;
 	padding-left: 15px;
 	padding-right: 10px;
-
-	border: 1px solid #000;
 }
 
 .hit>svg {

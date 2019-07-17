@@ -23,9 +23,14 @@ var password = modalLogin.querySelector("[name=password]");
 let modalBasket = document.querySelector(".modal-basket");
 let basketNoEmpty = document.querySelector(".basket-no-empty");
 
-let hitSectionLi = document.querySelector(".hit-section-li");
+let hitSectionLi1 = document.querySelector(".hit-section-li1");
 let hitSectionLi2 = document.querySelector(".hit-section-li2");
-let fast = document.querySelector(".fast");
+let hitSectionLi3 = document.querySelector(".hit-section-li3");
+let hitSectionLi4 = document.querySelector(".hit-section-li4");
+let fast1 = document.querySelector(".fast1");
+let fast2 = document.querySelector(".fast2");
+let fast3 = document.querySelector(".fast3");
+let fast4 = document.querySelector(".fast4");
 
 
 //спрашиваем у браузера, есть ли у него в локальных записях логин пользователя
@@ -91,24 +96,40 @@ basketNoEmpty.addEventListener("mouseleave", function (evt) {
 		modalBasket.classList.add("display-none");
 });
 
-hitSectionLi.addEventListener("mouseenter", function (evt) {
+
+hitSectionLi1.addEventListener("mouseover", function (evt) {
 		console.log("Подсветка фона хита при наведении");
-		fast.classList.remove("display-none");
+		fast1.classList.remove("display-none");
 });
-hitSectionLi.addEventListener("mouseleave", function (evt) {
+hitSectionLi1.addEventListener("mouseleave", function (evt) {
 		console.log("Убрать подсветку фона хита при наведении");
-		fast.classList.add("display-none");
+		fast1.classList.add("display-none");
 });
 
-hitSectionLi2.addEventListener("mouseenter", function (evt) {
+hitSectionLi2.addEventListener("mouseover", function (evt) {
 		console.log("Подсветка фона хита при наведении");
-		fast.classList.remove("display-none");
+		fast2.classList.remove("display-none");
 });
 hitSectionLi2.addEventListener("mouseleave", function (evt) {
 		console.log("Убрать подсветку фона хита при наведении");
-		fast.classList.add("display-none");
+		fast2.classList.add("display-none");
 });
-
+hitSectionLi3.addEventListener("mouseover", function (evt) {
+		console.log("Подсветка фона хита при наведении");
+		fast3.classList.remove("display-none");
+});
+hitSectionLi3.addEventListener("mouseleave", function (evt) {
+		console.log("Убрать подсветку фона хита при наведении");
+		fast3.classList.add("display-none");
+});
+hitSectionLi4.addEventListener("mouseover", function (evt) {
+		console.log("Подсветка фона хита при наведении");
+		fast4.classList.remove("display-none");
+});
+hitSectionLi4.addEventListener("mouseleave", function (evt) {
+		console.log("Убрать подсветку фона хита при наведении");
+		fast4.classList.add("display-none");
+});
  /*Убрать окошко по ESC*/
 window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
