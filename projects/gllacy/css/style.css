@@ -80,10 +80,12 @@ a {
 
 .bg2 {
 	background-color: var(--gray, #8996a6);
+		z-index: -2;
 }
 
 .bg3 {
 	background-color: var(--beige, #9d8b84);
+		z-index: -2;
 }
 
 .bg-light {
@@ -101,15 +103,15 @@ a {
 
 .bg1-light {	
 	background-image: url(../img/light-green.png);
-	
+		z-index: -2;
 }
 
 .bg2-light {
-	background-image: url(../img/light-gray.png);
+	background-image: url(../img/light-gray.png);	z-index: -2;
 }
 
 .bg3-light {
-	background-image: url(../img/light-beige.png);
+	background-image: url(../img/light-beige.png);	z-index: -2;
 }
 /* END OF BACKGORUNDS CHANCHING BY ITEM */
 
@@ -202,11 +204,18 @@ ul {
 	box-shadow: 1px -1px 2px #696969, -1px -1px 2px #696969;
 }
 
-.catalog-menu {
+.catalog-menu  {
 	margin: 0;
 	margin-left: 0;
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 	border: 1px solid #000;
+}
+
+.site-navigation>li:hover a,
+.site-navigation>li:focus a {
+	color: #333;
+	background-color: #f7f6f3;	
+	border-radius: 16px;
 }
 
 .new-ice-creams div {
@@ -232,7 +241,6 @@ ul {
 	border-radius: 10px;
 	background-color: #f8f7f4;
 	box-shadow: 5px 10px 20px rgba(50, 50, 50, 0.4), -5px 10px 20px rgba(50, 50, 50, 0.4);
-	z-index: 1;
 }
 
 .fall-menu li {
@@ -674,6 +682,7 @@ label.choose-both  {
 
 .item-round:hover {
 	cursor: pointer;
+	background-color: rgba(255, 255, 255, .4);
 }
 
 .item2-round {
@@ -762,8 +771,6 @@ label.choose-both  {
 	padding-bottom: 75px;
 	padding-left: 15px;
 	padding-right: 10px;
-
-	border: 1px solid #000;
 }
 
 .hit>svg {
@@ -816,8 +823,7 @@ a.hit {
 	padding: 10px;
 	width: 190px;
 }
-
-.fast {
+.fast-bg {
 	position: absolute;	
 	top: 0;	
 	left: 0;	
@@ -953,7 +959,7 @@ padding-right: 20px;
 	color: #5a5a5a;
 	
 	background-color: #fff;
-	  background: repeating-linear-gradient(-45deg, #92cdff, #92cdff 10px, white 10px, white 20px, #fe9e90 20px, #fe9e90 30px, #fff 30px, #fff 40px);
+	background: repeating-linear-gradient(-45deg, #92cdff, #92cdff 10px, white 10px, white 20px, #fe9e90 20px, #fe9e90 30px, #fff 30px, #fff 40px);
 
 	border-radius: 15px;
 }
@@ -986,7 +992,7 @@ padding-right: 20px;
 }
 
 .subscribe-form input[type="email"] {
-	width: 350px;
+	width: 320px;
 
 	padding-left: 15px;
 	
