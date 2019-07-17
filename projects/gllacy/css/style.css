@@ -764,9 +764,10 @@ label.choose-both  {
 	height: 100%;
 
 	padding-top: 8px;
-	padding-bottom: 35px;
+	padding-bottom: 85px;
 	padding-left: 15px;
 	padding-right: 10px;
+
 }
 
 .hit>svg {
@@ -838,7 +839,7 @@ a.hit {
 .features {
 	margin: 0;
 	padding: 0;
-	margin-top: 80px;
+	margin-top: 10px;
 	padding-top: 25px;
 	padding-left: 20px;
 
@@ -923,10 +924,9 @@ padding-right: 20px;
 
 	background-image: url(../img/bg-strawberry.jpg);
 	background-repeat: no-repeat;
-	object-fit: cover;
+	object-fit: fill;
 
 	border-radius: 15px;
-	border: 1px solid #000;
 }
 
 .blog h2 {
@@ -960,12 +960,12 @@ padding-right: 20px;
 	margin: 0;
 	padding: 0;
 
-	max-width: 560px;
+	max-width: 580px;
 
 	color: #5a5a5a;
 	
 	background-color: #fff;
-	  background: repeating-linear-gradient(-45deg, #92cdff, #92cdff 10px, white 10px, white 20px, #fe9e90 20px, #fe9e90 30px, #fff 30px, #fff 40px);
+	background: repeating-linear-gradient(-45deg, #92cdff, #92cdff 10px, white 10px, white 20px, #fe9e90 20px, #fe9e90 30px, #fff 30px, #fff 40px);
 
 	border-radius: 15px;
 }
@@ -986,7 +986,7 @@ padding-right: 20px;
 	padding: 0;
 	margin: 5px;
 	padding-top: 30px;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 
 	font-size: 16px;
 	line-height: 22px;
