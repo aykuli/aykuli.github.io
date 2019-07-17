@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet"> 
 </head>
-<body>
+<body class="bg-image ">
 	<div class="bg bg1"></div>
 <!-- ШАПКА-->
 	<header class="main-header">
@@ -37,7 +37,7 @@
 			<div class="nav-left">
 				<ul class="user-navigation">
 					<li class="search">
-						<button class="btn-search btn-search-invers " type="button">
+						<button class="btn-search" type="button">
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
 								<path fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
 									S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
@@ -45,9 +45,9 @@
 							</svg>
 						</button>
 							<!-- поиск -->
-						<div class="modal-search">
+						<div class="modal modal-search display-none">
 							<h2 class="visually-hidden">Форма поиска</h2>
-							<form action="#" class="search-form" method="post">
+							<form action="#" method="post">
 								<label for="site-search" class="visually-hidden">Поиск по сайту</label>
 								<input type="search" id="site-search" name="site-search" aria-label="Поиск по сайту" placeholder='Что ищем?'>
 							</form>
@@ -55,29 +55,90 @@
 						<!-- END OF поиск -->
 						
 					</li>
-					<li>
-						<a href="login.html" class="login-link">
+					<li class="login-link">
+						<a href="login.html">
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
 								<polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
 								<path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/>
 							</svg>
-						Вход</a>
+							<span>Вход</span>
+						</a>
+						<!-- вход -->
+						<div class="modal modal-login display-none">
+							<h2 class="visually-hidden">Вход в личный кабинет</h2>
+							<form action="#" class="login-form" method="post">
+								<p>
+									<label class="visually-hidden" for="email">Электронная почта</label>
+									<input class="user-email" id="email" type="email" placeholder="Электронная почта" name="email">
+								</p>
+								<p>
+									<label class="visually-hidden" for="user-password">Пароль</label>
+									<input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
+								</p>
+								<div class="login-btn-help">
+									<button class="btn login-btn" type="submit">Войти</button>
+									<p class="login-help">				
+										<a href="#" class="restore">Забыли пароль?</a>
+										<a href="#" class="registration">Новая регистрация</a>
+									</p>			
+								</div>
+							</form>
+						</div>
+					<!-- END OF вход -->
+
 					</li>
-					<li>
-						<a href="basket.html" class="basket basket-empty">
+					<li class="basket basket-empty">
+						<a href="#">
 							<span class="visually-hidden">Корзина пустая</span>
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
 								<path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66 L17.372,13z"/>
 								<circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
 								<circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
 							</svg>
-						Пусто</a>
+						<span>Пусто</span></a>
 					</li>
-					<li>
-					<!-- <li class="visually-hidden"> -->
-						<a href="basket.html" class="basket basket-no-empty">
+					<li class="basket basket-no-empty">
+						<a href="basket.html" >
 							<span class="visually-hidden">Корзина не пуста</span>
-						2 товара</a>
+							<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px"viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+								<polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
+								<circle fill="#343434" cx="6.984" cy="18" r="2"/>
+								<circle fill="#343434" cx="15.984" cy="18" r="2"/>
+								<path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66 L17.372,13z"/>
+							</svg>
+							<span>2 товара</span>
+						</a>
+						<!-- basket with goods -->
+						<div class="modal modal-basket display-none">
+							<h2 class="visually-hidden">Корзина с товарами</h2>
+							<table class="basket-table">
+								<tr>
+									<td><button><span class="basket-del"></span></button></td>
+									<td>
+										<a class="basket-goods" href="">
+											<img src="img/orange-plombir-ice-cream-thumbnail.png" alt="Пломбир с апельсиновым джемом" width="33px" height="33px">
+											<span>Пломбир с апельсиновым джемом</span>
+										</a>
+									</td>
+									<td>1,5 кг х <span class="basket-cost">200 руб.</span></td>
+									<td>300 руб.</td>
+								</tr>
+								<tr>
+									<td><button><span class="basket-del"></span></button></td>
+									<td>
+										<a class="basket-goods" href="">
+											<img src="img/strawberry-plombir-with-white-choco-ice-cream-thumbnail.png" alt="Клубничный пломбир с присыпкой  из белого шоколада" width="33px" height="33px">
+											<span>Клубничный пломбир с присыпкой  из белого шоколада</span>
+										</a>
+									</td>
+									<td>1,5 кг х <span class="basket-cost">300 руб.</span></td>
+									<td>450 руб.</td>
+								</tr>
+							</table>
+							<p class="basket-summ">Итого: 750 руб.</p>
+							<button class="btn basket-btn" type="submit" name="order">Оформить заказ</button>
+						</div>
+						<!-- END OF basket with goods -->
 					</li>
 				</ul>
 				<p class="schedule">С 10 до 20, ежедневно
@@ -152,7 +213,9 @@
 
 		<section>
 			<ul class="hit-section">
-				<li>
+
+
+				<li class="hit-section-li">
 					<a href="#" class="hit">
 						<img src="img/cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 						<p class="hit-price">310&#x20bd;<span>/кг</span></p>
@@ -161,9 +224,21 @@
 						</p>
 					</a>
 					<div class="hit-svg"></div>
+					<div class="fast display-none">
+						<button class="btn fast-view-btn">Быстрый просморт</button>
+					</div>
 				</li>
-				<li>					
+
+
+
+				<li class="hit-section-li2">					
 					<a href="#" class="hit">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="61px" height="61px" viewBox="0 0 61 61" enable-background="new 0 0 61 61" xml:space="preserve">
+							<circle fill="#FFFFFF" cx="30.5" cy="30.5" r="30.5"/>
+							<path fill="#231F20" d="M19.985,18.27c-0.915,2.683-1.718,5.384-2.472,8.094c-0.543-2.863-0.921-5.756-0.958-8.715 c-0.005-0.431-1.939-0.11-1.932,0.518c0.052,4.243,0.8,8.354,1.747,12.432c-1.196,4.58-2.311,9.18-3.579,13.771 c-0.109,0.394,1.771,0.138,1.904-0.344c0.902-3.265,1.726-6.535,2.556-9.8c0.805,3.204,1.644,6.407,2.273,9.657		c0.098,0.508,2.041,0.045,1.932-0.518c-0.864-4.462-2.12-8.836-3.146-13.247c1.068-4.086,2.202-8.157,3.578-12.191		C22.012,17.566,20.151,17.782,19.985,18.27z"/>
+							<path fill="#231F20" d="M34.395,18.798c0.049-1.047-1.919-0.794-1.963,0.128c-0.004,0.08-0.004,0.159-0.008,0.238		c-0.039,0.065-0.084,0.128-0.101,0.204c-1.004,4.463-2.611,8.729-4.056,13.06c-0.644,1.93-1.139,3.898-1.666,5.856		c-0.139-6.623-0.135-13.237-0.165-19.871c-0.005-1.042-1.965-0.769-1.961,0.134c0.037,8.337,0.018,16.641,0.303,24.971		c-0.031,0.095-0.05,0.193-0.034,0.301c0.021,0.148,0.042,0.297,0.064,0.445c0.123,0.856,1.959,0.48,1.944-0.317		c0.005-0.011,0.016-0.018,0.021-0.029c1.636-4.171,2.478-8.591,3.894-12.838c0.521-1.558,1.048-3.108,1.561-4.662		c-0.071,5.987,0.058,11.969,0.211,17.961c0.026,1.012,1.58,0.771,1.91,0.065c0.019-0.04,0.037-0.079,0.056-0.119		c0.112-0.239,0.088-0.423-0.015-0.558C34.179,35.434,34.001,27.132,34.395,18.798z"/>
+							<path fill="#231F20" d="M47.32,17.66c-3.158,0.38-6.312,0.227-9.478,0.048c-0.491-0.028-2.24,0.851-1.221,0.908		c1.093,0.062,2.182,0.109,3.271,0.145c-0.093,0.081-0.161,0.167-0.157,0.265c0.295,8.408-1.054,17.239,0.191,25.564		c0.063,0.424,2.01,0.005,1.932-0.518c-1.229-8.229,0.069-16.951-0.185-25.27c1.776,0.012,3.551-0.052,5.33-0.266		C47.86,18.434,48.672,17.497,47.32,17.66z"/>
+						</svg>
 						<img src="img/cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 						<p class="hit-price">380 &#x20bd;<span>/кг</span></p>
 						<p class="hit-expl">
@@ -171,8 +246,11 @@
 						</p>
 					</a>
 					<div class="hit-svg"></div>
+					<div class="fast display-none">
+						<button class="btn fast-view-btn">Быстрый просморт</button>
+					</div>					
 				</li>
-				<li>
+				<li class="hit-section-li3">
 					<a href="#" class="hit">
 						<img src="img/cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 						<p class="hit-price">355 &#x20bd;<span>/кг</span></p>
@@ -181,8 +259,9 @@
 						</p>
 					</a>
 					<div class="hit-svg"></div>
+					<button class="btn fast-view-btn3">Быстрый просморт</button>
 				</li>
-				<li>
+				<li class="hit-section-li4">
 					<a href="#" class="hit">
 						<img src="img/cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 						<p class="hit-price">415 &#x20bd;<span>/кг</span></p>
@@ -191,6 +270,7 @@
 							Сливочное крем-брюле с <br> карамельной подливкой</span></p>
 					</a>
 					<div class="hit-svg"></div>
+					<button class="btn fast-view-btn4">Быстрый просморт</button>
 				</li>
 			</ul>
 		</section>
@@ -327,12 +407,9 @@
 		<div class="footer-menu">
 			<ul>
 				<li class="footer-heart">
-					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 width="15px" height="13px" viewBox="0 0 15 13" enable-background="new 0 0 15 13" xml:space="preserve">
-<path fill="#FFFFFF" d="M10.799,0c-1.35,0-2.551,0.65-3.3,1.661C6.75,0.65,5.549,0,4.199,0C1.875,0,0,1.806,0,4.044
-	C0,7.223,7.499,13,7.499,13s7.499-5.777,7.499-8.956C14.998,1.806,13.123,0,10.799,0z"/>
-</svg>
-
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="13px" viewBox="0 0 15 13" enable-background="new 0 0 15 13" xml:space="preserve">
+						<path fill="#FFFFFF" d="M10.799,0c-1.35,0-2.551,0.65-3.3,1.661C6.75,0.65,5.549,0,4.199,0C1.875,0,0,1.806,0,4.044 C0,7.223,7.499,13,7.499,13s7.499-5.777,7.499-8.956C14.998,1.806,13.123,0,10.799,0z"/>
+					</svg>
 					<a href="#">Для поставщиков</a></li>
 				<li><a href="#">О производстве</a></li>
 
@@ -354,33 +431,8 @@
 	</footer>
 <!--КОНЕЦ ПОДВАЛА-->
 <!--POP-UP ОКНА-->
-	
-
-	<!-- вход -->
-		<section class="modal modal-login">
-		<h2 class="visually-hidden">Вход в личный кабинет</h2>
-		<form action="#" class="login-form" method="post">
-			<p>
-				<label class="visually-hidden" for="email">Электронная почта</label>
-				<input class="user-email" id="email" type="email" placeholder="Электронная почта" name="email">
-			</p>
-			<p>
-				<label class="visually-hidden" for="user-password">Пароль</label>
-				<input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
-			</p>
-			<button class="btn" type="submit">Войти</button>
-			<p class="login-help">				
-				<a href="#" class="restore">Забыли пароль?</a>
-				<a href="#" class="registration">Новая регистрация</a>
-			</p>			
-		</form>
-	</section>
-	<!-- END OF вход -->
-
-
-
 	<!-- callback -->
-	<section class="modal modal-callback">
+	<section class="modal modal-callback display-none">
 		<h2 class="visually-hidden">Форма обратной связи</h2>
 		<p class="callback-p">Мы обязательно ответим!</h2>
 			<form action="#" class="callback-form" method="post">
@@ -400,36 +452,8 @@
 	</section>
 	<!-- END OF callback -->
 
-	<!-- basket with goods -->
-	<section class="basket-with-goods">
-		<h2 class="visually-hidden">Корзина с товарами</h2>
-		<table>
-			<tr>
-				<td><button class="into-basket"></button></td>
-				<td>
-					<img src="img/orange-plombir-ice-cream-thumbnail.png" alt="Пломбир с апельсиновым джемом">
-				</td>
-				<td>Пломбир с апельсиновым джемом</td>
-				<td>1,5 кг х <span class="basket-cost">200 руб.</span></td>
-				<td>300 руб.</td>
-			</tr>
-			<tr>
-				<td><button class="into-basket"></button></td>
-				<td>
-					<img src="img/strawberry-plombir-with-white-choco-ice-cream-thumbnail.png" alt="Клубничный пломбир с присыпкой  из белого шоколада">
-				</td>
-				<td>Клубничный пломбир с присыпкой  из белого шоколада</td>
-				<td>1,5 кг х <span class="basket-cost">300 руб.</span></td>
-				<td>450 руб.</td>
-			</tr>
-		</table>
-		<hr>
-		<p class="basket-summ">Итого: <span class="basket-summ">750 руб.</span></p>
-		<button class="btn" type="submit" name="order">Оформить заказ</button>
-	</section>
-	<!-- END OF basket with goods -->
+
 <!--КОНЕЦ POP-UP ОКНА-->
- <button>Pfrfp</button>
 	<script src="js/script.js"></script>
 </body>
 </html>
