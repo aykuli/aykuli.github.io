@@ -32,7 +32,10 @@ let fast2 = document.querySelector(".fast2");
 let fast3 = document.querySelector(".fast3");
 let fast4 = document.querySelector(".fast4");
 
-
+let callback = document.querySelector(".callback");
+let popup = document.querySelector(".modal-callback");
+let callbackClose = document.querySelector(".modal-callback-close");
+let overlay = document.querySelector(".modal-overlay-none");
 //спрашиваем у браузера, есть ли у него в локальных записях логин пользователя
 let storage = "";
 let isStorageSupport = true;
@@ -130,11 +133,33 @@ hitSectionLi4.addEventListener("mouseleave", function (evt) {
 		console.log("Убрать подсветку фона хита при наведении");
 		fast4.classList.add("display-none");
 });
+
+callback.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	popup.classList.remove("display-none");	
+	popup.classList.add("modal-show");
+	overlay.classList.add("modal-overlay");
+});
+
+callbackClose.addEventListener("click", function (evt) {
+	popup.classList.add("display-none");
+	overlay.classList.remove("modal-overlay");
+});
+
+overlay.addEventListener("click", function(evt) {
+	console.log("Нажатие по где угодно");
+	popup.classList.add("display-none");
+	overlay.classList.remove("modal-overlay");
+});
+
+
  /*Убрать окошко по ESC*/
 window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
 		modalSearch.classList.add("display-none");
 		modalLogin.classList.add("display-none");
+		overlay.classList.remove("modal-overlay");
+		popup.classList.add("display-none");
 		} 
 });
 /**/

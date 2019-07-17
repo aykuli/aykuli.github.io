@@ -30,8 +30,8 @@
 							</ul>		
 						</div>
 					</li>
-					<li><a href="delivery.html">Доставка и оплата</a></li>
-					<li><a href="about.html">О компании</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">О компании</a></li>
 				</ul>
 			</div>
 			<div class="nav-left">
@@ -163,7 +163,7 @@
 						<label class="choose-both" for="ice-cream1">
 							Крем-брюле и пломбир <br>с малиновым джемом
 						</label>
-						<input type="button" class="btn davai-oba" value="Давайте оба!" accesskey="1">
+						<button type="button" class="btn davai-oba">Давайте оба!</button>
 						<img class="ice-cream-right" src="img/plombir-raspberry.png" alt="Изображение мороженого пломбир с малиной" width='333'	height='519'>
 						<img class="ice-cream-left" src="img/cream-brule.png" alt="Изображение мороженого крем-брюле" width='372'	height='584'>	
 					</li>
@@ -173,7 +173,7 @@
 						<label class="choose-both" for="ice-cream2">
 							Шоколадный пломбир <br>и лимонный сорбет
 						</label>						
-						<input type="button" class="btn davai-oba" value="Давайте оба!" accesskey="2">
+						<button type="submit" class="btn davai-oba">Давайте оба!</button>
 						<img class="ice-cream-right" src="img/lemon-sorbet.png" alt="Изображение мороженого лимонный сорбет" width="338" height="523">
 						<img class="ice-cream-left" src="img/choco-plombir.png" alt="Изображение мороженого шоколадный пломбир" width="375" height="582">
 					</li>
@@ -183,7 +183,7 @@
 						<label for="ice-cream3" class="choose-both">
 							Пломбир с помадкой <br> и клубничный щербет
 						</label>
-						<input type="button" class="btn davai-oba" value="Давайте оба!" accesskey="3">
+						<button type="submit" class="btn davai-oba">Давайте оба!</button>
 						<img class="ice-cream-right" src="img/strawberry-cerbet.png" alt="Изображение мороженого клубничный щербет" width="326" height="523">
 						<img class="ice-cream-left" src="img/plombir-pomadka.png" alt="Изображение мороженого пломбир с помадкой" width="367" height="582">
 					</li>
@@ -325,15 +325,15 @@
 			
 			<section class="subscribe">
 				<div class="subscribe-bg">
-				<h2 class="visually-hidden">Подписаться на новости</h2>
-				<p class="subscribe-txt">
-					Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-				<form action="#" class="subscribe-form" method="post">				
-						<label for="subscribe-form-input" class="visually-hidden">Форма для подписки на рассылку. Введите вашу электронную почту</label>
-						<input id="subscribe-form-input" type="email" name="subscribe" placeholder="Электронная почта">				
-					<button class="btn subscribe-btn" type="submit">Отправить</button>
-				</form>
-			</div>
+					<h2 class="visually-hidden">Подписаться на новости</h2>
+					<p class="subscribe-txt">
+						Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+					<form action="#" class="subscribe-form" method="post">				
+							<label for="subscribe-form-input" class="visually-hidden">Форма для подписки на рассылку. Введите вашу электронную почту</label>
+							<input id="subscribe-form-input" type="email" name="subscribe" placeholder="Электронная почта">				
+						<button class="btn subscribe-btn" type="submit">Отправить</button>
+					</form>
+				</div>
 			</section>
 		</div>
 	</main>
@@ -354,7 +354,7 @@
 					<span class="bold">8 812 450-25-25</span> <br>
 					(с 10 до 20 ежедневно)
 				</p>
-				<button class="btn form-callback">Форма обратной связи</button>
+				<button class="btn callback">Форма обратной связи</button>
 			</div>
 		</section>
 <!-- END OF КАРТА -->
@@ -362,7 +362,7 @@
 	<footer class="main-footer container">
 		<ul class="footer-social">
 			<li>
-				<a href="#">
+				<a href="">
 					<span class="visually-hidden">Твиттер</span>
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
 						<path fill="#FFFFFF" d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z		 M23.944,12.809c-0.251,6.516-3.463,10.832-10.992,10.702c-0.14,0-0.205,0-0.233,0c-0.015,0-0.021,0-0.021,0c-0.029,0-0.094,0-0.232,0c-0.447,0-4.543-0.443-5.344-1.823c2.479,0.19,4.247-0.406,5.12-1.136		c-1.048-0.289-2.923-0.461-3.251-2.848c0.384,0.104,0.618,0.221,1.299,0.113c-1.307-0.824-2.758-1.519-2.679-3.643
@@ -451,25 +451,24 @@
 	<!-- callback -->
 	<section class="modal modal-callback display-none">
 		<h2 class="visually-hidden">Форма обратной связи</h2>
-		<p class="callback-p">Мы обязательно ответим!</h2>
+		<p>Мы обязательно вам ответим!</p>
 			<form action="#" class="callback-form" method="post">
-				<label>
-					<input type="text" placeholder="Как вас зовут?" aria-label="Напишите ваше имя">
-				</label>
-				<label>
-					<input type="text" placeholder="Ваша почта для ответа?" aria-label="Почта для ответа">
-				</label>
-				<label>
-					<input type="textarea" placeholder="Напишите что-нибудь..." aria-label='Место для вашего сообщения'>
-				</label>
-				<button class="btn" type="submit">Отправить</button>
+				<label for="callback-name"></label>
+				<input type="text" placeholder="Как вас зовут?" aria-label="Напишите ваше имя" id="callback-name"  minlength="4" maxlength="20" size="25">
+				
+				<label for="callback-email"></label>
+					<input type="email" placeholder="Ваша почта для ответа?" aria-label="Почта для ответа" id="callback-email"  minlength="4" maxlength="20" size="25">
+				
+				<label for="callback-msg"></label>
+				<textarea placeholder="Напишите что-нибудь..." aria-label='Место для вашего сообщения' id="callback-msg" rows="5" cols="40"></textarea>
+				
+				<button class="btn callback-btn" type="submit">Отправить</button>
 			</form>
-			<button class="modal-close" type="button">Закрыть</button>
+			<button class="modal-callback-close" type="button">Закрыть</button>
 		
 	</section>
 	<!-- END OF callback -->
-
-
+	<div class="modal-overlay-none"></div>
 <!--КОНЕЦ POP-UP ОКНА-->
 	<script src="js/script.js"></script>
 </body>
