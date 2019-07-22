@@ -120,12 +120,49 @@ ul {
 .btn:hover,
 .btn:focus {
 	background: linear-gradient(#f58669, #ec6f5e);
+	cursor: pointer;
 }
 
 .btn:active {
 	transform: translateY(1px);
 	background: linear-gradient(#d74632, #e0603e);
 	box-shadow: 1px -1px 2px #ac1000, -1px -1px 2px #ac1000;
+}
+
+input, textarea {
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	border: 1px solid #d3d3d2;
+	border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+		color: #999;
+		font-weight: 400;
+}
+input:-ms-input-placeholder {
+	color: #999;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+input:hover,
+textarea:hover {
+	outline: 0;
+	border-color: transparent;
+  box-shadow: 0 0 0 2px  #d3d3d2;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {	
+	outline: 0;
+	border-color: transparent;
+  box-shadow: 0 0 0 2px #8fbdec;
 }
 
 .main-navigation {
@@ -241,10 +278,12 @@ ul {
 	padding-right: 25px;
 	padding-top: 6px;
 	padding-bottom: 8px;
+
 	color:#323232;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 400;
+	text-decoration: none;
 }
 
 
@@ -280,6 +319,8 @@ ul {
 	background: none;
 	border: none;
 	vertical-align: middle;
+
+	cursor: pointer;
 }
 
 .user-navigation>li a {
@@ -756,7 +797,7 @@ label.choose-both  {
 	border-radius: 10px;
 }
 
-.hit>svg {
+.hit-svg {
 	position: absolute;
 	top: 8px;
 	left: 15px;
@@ -776,25 +817,21 @@ label.choose-both  {
 	line-height: 45px;
 }
 
-.hit-expl {
+a.hit {
+	text-decoration: none;
+	width: 100%;
+}
+
+h3.hit-expl {
 	margin: 0;
 	padding: 0;
 
 	text-align: center;
 	font-size: 16px;
 	line-height: 22px;		
-
-}
-
-a.hit {
-	text-decoration: none;
-}
-
-h3.hit-expl {
 	text-decoration: underline;
 	text-decoration-color: rgba(255, 255, 255, 0.2);
-	text-align: center;/*
-	z-index: 3;*/
+	text-align: center;
 }
 
 .hit-expl:hover,
@@ -806,31 +843,36 @@ h3.hit-expl {
 }
 
 .fast-view-btn {
-	margin-top: 10px;	
-	margin-left: 45px;
-	margin-right: 55px;
+	margin-top: 20px;	
 	margin-bottom: 20px;	
 	padding: 10px;
 	width: 190px;
-}
-/*
-.fast {
-	position: absolute;	
-	top: 0;	
-	left: 0;
-	
+
+	text-align: center;
+	text-decoration: none;
+
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	text-shadow:0 0 10px #a0200b;
+
+	background: linear-gradient(#f26843, #e74a35);
+	border-radius: 45px;
+	border: 1px solid transparent;
+	box-shadow: 1px 1px 2px #ac1000, -1px 1px 2px #ac1000;
 
 	opacity: 0;
 }
 
-.fast:hover {
+.hit-section li:hover>.fast-view-btn {
 	opacity: 1;
-}*/
+}
 
 .features {
 	margin: 0;
 	padding: 0;
-	margin-top: 40px;
+	margin-top: -40px;
 	padding-top: 25px;
 	padding-left: 20px;
 
@@ -1015,11 +1057,15 @@ padding-right: 20px;
 section.map {
 	position: relative;
 	margin-top: 35px;
+	background-image: url(../img/pin.svg);
+	background-repeat: no-repeat;
+	background-color: #555;
+	z-index: 4;
 }
 
 .map-img {
 	margin-left: -27px;
-	z-index: -1;
+	z-index: -3;
 }
 
 .pin {
@@ -1028,6 +1074,7 @@ section.map {
 	left: 240px;
 
 	z-index: 1;
+
 }
 
 .address {
@@ -1138,38 +1185,25 @@ section.map {
 .modal-callback textarea {
 	display: block;
 	margin-bottom: 20px;
-	padding-left: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	
 
 	font-size: 16px;
 	line-height: 24px;
-	font-weight: 700;	
+	font-weight: 700;
+	resize: none;
 }
 
-input::placeholder,
-textarea::placeholder {
-		color: #999;
-		font-weight: 400;
+.modal-callback textarea {
+	width: 425px;
 }
 
-input:hover,
-textarea:hover {
-	outline: 2px solid #c7c6c5;
-}
-
-input:active,
-textarea:active {
-	outline: 3px solid #8fbdec;
-}
-
-.callback-btn {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 25px;
-	padding-right: 25px;
-	margin-bottom: 25px;
-}
+/*a.callback-btn {
+	margin: 0;
+	text-decoration: none;
+	margin-top: 250px;
+	margin-bottom: 300px;
+	border: 1px solid #000;
+}*/
 
 .modal-callback p {
 	font-size: 24px;
@@ -1206,11 +1240,12 @@ textarea:active {
 /*close buton*/
 .modal-callback-close {
 	position: absolute;
-	top: 5px;
-	right: 10px;
+	top: 20px;
+	right: 20px;
 
-	width: 22px;
-	height: 22px;
+	width: 25px;
+	height: 25px;
+
 	font-size: 0;
 	background-color: transparent;
 	border: 0;
@@ -1225,7 +1260,7 @@ textarea:active {
 	top: 10px;
 	left: 5px;
 
-	width: 22px;
+	width: 25px;
 	height: 3px;
 	background-color: #231f20;
 }
@@ -1238,3 +1273,9 @@ textarea:active {
 	transform: rotate(-45deg);	
 }
 /*END OF close buton*/
+
+@font-face { 
+    font-family: "rouble";
+    src: url("rouble.otf") format("opentype");
+}
+.rub { font-family: "rouble"; }
