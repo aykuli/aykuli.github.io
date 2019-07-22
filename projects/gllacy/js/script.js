@@ -89,50 +89,16 @@ loginLink.addEventListener("mouseleave", function (evt) {
 });
 
 
-basketNoEmpty.addEventListener("mouseenter", function (evt) {
-		evt.preventDefault();
-		console.log("Открытие списка корзины");
-		modalBasket.classList.remove("display-none");
-});
-basketNoEmpty.addEventListener("mouseleave", function (evt) {
-		console.log("Закрытие списка корзины");
-		modalBasket.classList.add("display-none");
-});
+// basketNoEmpty.addEventListener("mouseenter", function (evt) {
+// 		evt.preventDefault();
+// 		console.log("Открытие списка корзины");
+// 		modalBasket.classList.remove("display-none");
+// });
+// basketNoEmpty.addEventListener("mouseleave", function (evt) {
+// 		console.log("Закрытие списка корзины");
+// 		modalBasket.classList.add("display-none");
+// });
 
-
-hitSectionLi1.addEventListener("mouseover", function (evt) {
-		console.log("Подсветка фона хита при наведении");
-		fast1.classList.remove("display-none");
-});
-hitSectionLi1.addEventListener("mouseleave", function (evt) {
-		console.log("Убрать подсветку фона хита при наведении");
-		fast1.classList.add("display-none");
-});
-
-hitSectionLi2.addEventListener("mouseover", function (evt) {
-		console.log("Подсветка фона хита при наведении");
-		fast2.classList.remove("display-none");
-});
-hitSectionLi2.addEventListener("mouseleave", function (evt) {
-		console.log("Убрать подсветку фона хита при наведении");
-		fast2.classList.add("display-none");
-});
-hitSectionLi3.addEventListener("mouseover", function (evt) {
-		console.log("Подсветка фона хита при наведении");
-		fast3.classList.remove("display-none");
-});
-hitSectionLi3.addEventListener("mouseleave", function (evt) {
-		console.log("Убрать подсветку фона хита при наведении");
-		fast3.classList.add("display-none");
-});
-hitSectionLi4.addEventListener("mouseover", function (evt) {
-		console.log("Подсветка фона хита при наведении");
-		fast4.classList.remove("display-none");
-});
-hitSectionLi4.addEventListener("mouseleave", function (evt) {
-		console.log("Убрать подсветку фона хита при наведении");
-		fast4.classList.add("display-none");
-});
 
 callback.addEventListener("click", function (evt) {
 	evt.preventDefault();

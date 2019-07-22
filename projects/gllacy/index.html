@@ -8,17 +8,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet"> 
 </head>
 <body class="bg-image ">
-	<div class="bg bg1"></div>
+	<div class="body-bg">
+	<div class="bg bg1"></div></div>
 <!-- ШАПКА-->
 	<header class="main-header">
 		<nav class="main-navigation container">
 			<div class="nav-right">
-				<a class="main-header-logo">
-					<img src="img/logo.svg" alt="Логотип магазина мороженного 'Гласси'" width="154px" height="64px">
-				</a>
-
+				<img class="main-header-logo" src="img/logo.svg" alt="Логотип магазина мороженного 'Гласси'" width="154px" height="64px">
 				<ul class="site-navigation">
-					<li class="catalog-menu"><a class="catalog-menu-in" href="#">Каталог</a>
+					<li class="catalog-menu">
+						<a class="catalog-menu-in" href="#">Каталог</a>
 						<div class="menu-fall-out display-none">
 							<h2 class="visually-hidden">Выпадающее меню каталога</h2>
 							<ul class="fall-menu">
@@ -97,7 +96,7 @@
 							</svg>
 						<span>Пусто</span></a>
 					</li>
-					<li class="basket basket-no-empty">
+				<!-- 	<li class="basket basket-no-empty">
 						<a href="basket.html" >
 							<span class="visually-hidden">Корзина не пуста</span>
 							<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px"viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
@@ -107,9 +106,9 @@
 								<path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66 L17.372,13z"/>
 							</svg>
 							<span>2 товара</span>
-						</a>
+						</a> -->
 						<!-- basket with goods -->
-						<div class="modal modal-basket display-none">
+						<!-- <div class="modal modal-basket display-none">
 							<h2 class="visually-hidden">Корзина с товарами</h2>
 							<table class="basket-table">
 								<tr>
@@ -137,9 +136,9 @@
 							</table>
 							<p class="basket-summ">Итого: 750 руб.</p>
 							<button class="btn basket-btn" type="submit" name="order">Оформить заказ</button>
-						</div>
+						</div> -->
 						<!-- END OF basket with goods -->
-					</li>
+					<!-- </li> -->
 				</ul>
 				<p class="schedule">С 10 до 20, ежедневно
 					<span class="hdr-phone-numb">8 812 450-25-25</span>
@@ -212,8 +211,9 @@
 		</section>
 
 		<section>
+			<h2 class="visually-hidden">Самое часто покупаемые мороженые</h2>
 			<ul class="hit-section">
-				<li class="hit-section-li1">
+				<li>
 					<a href="#" class="hit">
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="61px" height="61px" viewBox="0 0 61 61" enable-background="new 0 0 61 61" xml:space="preserve">
 							<circle fill="#FFFFFF" cx="30.5" cy="30.5" r="30.5"/>
@@ -223,16 +223,18 @@
 						</svg>
 						<img src="img/cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 						<p class="hit-price">310&#x20bd;<span>/кг</span></p>
-						<p class="hit-expl">
-							<span>Сливочное с апельсиновым <br> джемом и цитрусовой стружкой</span>
+						<h3 class="hit-expl">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
 						</p>
+						<button class="btn fast-view-btn">Быстрый просморт</button>
 					</a>
 					<div class="hit-svg"></div>
-					<div class="fast fast1 display-none">
-						<button class="btn fast-view-btn">Быстрый просморт</button>
-					</div>
+<!-- 					<div class="fast">
+						
+					</div> -->
 				</li>
-				<li class="hit-section-li2">					
+
+
+				<li>					
 					<a href="#" class="hit">
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="61px" height="61px" viewBox="0 0 61 61" enable-background="new 0 0 61 61" xml:space="preserve">
 							<circle fill="#FFFFFF" cx="30.5" cy="30.5" r="30.5"/>
@@ -247,11 +249,11 @@
 						</p>
 					</a>
 					<div class="hit-svg"></div>
-					<div class="fast fast2 display-none">
+					<div class="fast">
 						<button class="btn fast-view-btn">Быстрый просморт</button>
 					</div>					
 				</li>
-				<li class="hit-section-li3">
+				<li>
 					<a href="#" class="hit">
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="61px" height="61px" viewBox="0 0 61 61" enable-background="new 0 0 61 61" xml:space="preserve">
 							<circle fill="#FFFFFF" cx="30.5" cy="30.5" r="30.5"/>
@@ -266,11 +268,11 @@
 						</p>
 					</a>
 					<div class="hit-svg"></div>
-					<div class="fast fast3 display-none">
+					<div class="fast">
 						<button class="btn fast-view-btn">Быстрый просморт</button>
 					</div>	
 				</li>
-				<li class="hit-section-li4">
+				<li>
 					<a href="#" class="hit">
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="61px" height="61px" viewBox="0 0 61 61" enable-background="new 0 0 61 61" xml:space="preserve">
 							<circle fill="#FFFFFF" cx="30.5" cy="30.5" r="30.5"/>
@@ -285,7 +287,7 @@
 							Сливочное крем-брюле с <br> карамельной подливкой</span></p>
 					</a>
 					<div class="hit-svg"></div>
-					<div class="fast fast4 display-none">
+					<div class="fast fast4">
 						<button class="btn fast-view-btn">Быстрый просморт</button>
 					</div>	
 				</li>
@@ -302,8 +304,9 @@
 						</li>
 						<li>
 						Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-					</li>		
+						</li>		
 					</ul>
+
 					<ul class="features-list list2">
 						<li>
 							Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
