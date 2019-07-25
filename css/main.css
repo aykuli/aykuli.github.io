@@ -157,7 +157,7 @@ a {
 
 .project-tile:focus {
   border: 1px solid red;
-  color: #0081CC;
+  /*color: #0081CC;*/
 }
 
 .img-project {
