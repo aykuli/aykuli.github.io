@@ -290,3 +290,30 @@ code {
   }
 
 }
+
+/**************************
+*** certificates page ***
+**************************/
+.certificate__wrapper {
+  /*margin: 0 auto;*/
+  padding: 100px;
+
+  outline: 1px solid red;
+}
+
+.certificate__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+  list-style: none;
+}
+
+.certificate__img {
+  width: 505px;
+  height: 304px;
+}
+
+/*** END of certificates page ***/
