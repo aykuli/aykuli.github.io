@@ -294,8 +294,7 @@ code {
 /**************************
 *** certificates page ***
 **************************/
-.certificate__wrapper {
-  /*margin: 0 auto;*/
+.certificates {
   padding: 100px;
 
   outline: 1px solid red;
