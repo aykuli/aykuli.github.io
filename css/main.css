@@ -304,15 +304,15 @@ code {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   
   list-style: none;
+  border-bottom: 1px dotted #00A2FF;
 }
 
 .certificate__img {
-  width: 505px;
-  height: 304px;
+  margin: 20px 50px 50px;
+  object-fit: cover;
 }
 
 /*** END of certificates page ***/
