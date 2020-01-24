@@ -15,10 +15,10 @@ function renderProject({ id, title, props, repLink, deploy}) {
                 <picture>
                     <source className="project__img" 
                             media="(min-width: 1000px)"
-                            srcSet="http://placekitten.com/400/300" 
+                            srcSet="https://placekitten.com/400/300" 
                     />
                     <img    className="project__img" 
-                            src="http://placekitten.com/300/200"
+                            src="https://placekitten.com/300/200"
                             alt={title} 
                     />
                 </picture>
