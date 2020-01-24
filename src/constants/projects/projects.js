@@ -66,7 +66,7 @@ export default [
     // 9
     {
         id: 'todo-redux',
-        title: 'ToDo App on React+Redux',
+        title: 'ToDo App',
         props: ['React', 'Redux', 'JS'],
         repLink: 'https://github.com/aykuli/todo-react-second',
         deploy: 0,
@@ -74,7 +74,7 @@ export default [
     // 10
     {
         id: 'chuck-norris',
-        title: 'ChuckNorris joke generator',
+        title: 'Joke generator',
         props: ['JS'],
         repLink: 'https://github.com/aykuli/Chuck-NorrisJoke-Generator',
         deploy: 0,

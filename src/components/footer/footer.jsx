@@ -6,8 +6,6 @@ import socialContainer from '../social/social';
 import './footer.scss';
 
 export default function Footer() {
-    const date = new Date();
-    console.log(date.getFullYear());
     return (
         <div className="footer__wrap">
             <footer className="footer">
