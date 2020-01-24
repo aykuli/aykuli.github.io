@@ -134,8 +134,50 @@
     }
 }
 
-picture {
-    height: 0;
-    margin: 0;
-    padding: 0;
+@media (max-width: 800px) {
+    .project {
+        width: calc(100% / 2);
+        height: 300px;
+
+        &__title {
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+        &__prop {
+            font-size: 16px;
+            line-height: 20px;
+
+            &s {
+                top: 0;
+                
+                padding-top: 80px;
+
+                background: linear-gradient(165deg, #fff, rgb(160, 185, 231));
+                opacity: .8;
+            }
+        }
+
+        &__link {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    .project {
+        width: 100%;
+
+        &__img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .project {
+        width: 100%;
+    }
 }

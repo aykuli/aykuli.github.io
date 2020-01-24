@@ -14,7 +14,7 @@ function renderProject({ id, title, props, repLink, deploy}) {
             >
                 <picture>
                     <source className="project__img" 
-                            media="(min-width: 1000px)"
+                            media="(min-width: 800px)"
                             srcSet="https://placekitten.com/400/300" 
                     />
                     <img    className="project__img" 

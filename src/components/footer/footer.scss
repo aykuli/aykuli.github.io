@@ -4,20 +4,22 @@
     padding: 50px;
 
     &__wrap {
-        background: linear-gradient(135deg, #005585, #FF4D61, #4DBEFF, #00A2FF, #265F80);
-        background-size: 500% 100%;
-        -webkit-animation: Gradient 30s ease infinite;
-        -moz-animation: Gradient 30s ease infinite;
-        animation: Gradient 30s ease infinite;
+      background: linear-gradient(135deg, #005585, #FF4D61, #4DBEFF, #00A2FF, #265F80);
+      background-size: 500% 100%;
+      -webkit-animation: Gradient 30s ease infinite;
+      -moz-animation: Gradient 30s ease infinite;
+      animation: Gradient 30s ease infinite;
     }
 
     &__social {
-        display: flex;
-        justify-content: center;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
     }
 
     &__year {
-        text-align: right;
+      margin: 10px 0;
+      text-align: right;
     }
 }
 

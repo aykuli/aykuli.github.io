@@ -3,10 +3,10 @@
   margin: auto;
 
   font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
   color: #fff;
 
   &__wrap {
-    width: 100%;
     padding: 50px 10px;
 
     background: linear-gradient(135deg, #005585, #FF4D61, #4DBEFF, #00A2FF, #265F80);
@@ -34,7 +34,7 @@
 
     font-size: 50px;
     line-height: 68px;
-    font-weight: 900;
+    font-weight: bold;
   }
 
   &__desc {
