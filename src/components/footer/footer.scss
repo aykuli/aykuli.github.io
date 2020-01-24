@@ -1,0 +1,58 @@
+.footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px;
+
+    &__wrap {
+        background: linear-gradient(135deg, #005585, #FF4D61, #4DBEFF, #00A2FF, #265F80);
+        background-size: 500% 100%;
+        -webkit-animation: Gradient 30s ease infinite;
+        -moz-animation: Gradient 30s ease infinite;
+        animation: Gradient 30s ease infinite;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__year {
+        text-align: right;
+    }
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
