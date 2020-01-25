@@ -3,7 +3,7 @@ import './portfolio.scss';
 
 import projects from '../../constants/projects/projects';
 
-function renderProject({ id, title, props, repLink, deploy}) {
+function renderProject({id, title, deploy, props,repLink} ) {
     return (
         <div key={id} className="project">
             <h2 className="project__title">{title}</h2>
@@ -15,7 +15,7 @@ function renderProject({ id, title, props, repLink, deploy}) {
                 <picture>
                     <source className="project__img" 
                             media="(min-width: 800px)"
-                            srcSet="https://placekitten.com/400/300" 
+                            srcSet={`${require(`../../constants/projects/imgs/${id}.jpg`)}`}
                     />
                     <img    className="project__img" 
                             src="https://placekitten.com/300/200"

@@ -13,7 +13,7 @@ export default [
         title: 'Piskel Clone',
         props: ['JS', 'Jest, jsdom testing','simplified piskelapp.com',],
         repLink: 'https://github.com/aykuli/piskel-clone/',
-        deploy: '/piskel-clone/',
+        deploy: 'https://aykuli.github.io/piskel-clone/',
     },
     // 3
     {
