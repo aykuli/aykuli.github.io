@@ -11,9 +11,9 @@ export default [
     {
         id: 'piskel-clone',
         title: 'Piskel Clone',
-        props: ['JS', 'simplified piskelapp.com', 'Jest, jsdom testing'],
-        repLink: 0,
-        deploy: 0,
+        props: ['JS', 'Jest, jsdom testing','simplified piskelapp.com',],
+        repLink: 'https://github.com/aykuli/piskel-clone/',
+        deploy: '/piskel-clone/',
     },
     // 3
     {
