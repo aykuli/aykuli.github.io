@@ -1,17 +1,13 @@
 import React from 'react';
+
 import './portfolio.scss';
 
 import projects from '../../constants/projects/projects';
 
-function renderProject({id, title, deploy, props,repLink} ) {
+function renderProject({id, title, deploy, properties,repLink} ) {
     return (
         <div key={id} className="project">
-            <h2 className="project__title">{title}</h2>
-            <a  className="project__link"
-                href={deploy}
-                title={title}
-                targer="_blank"
-            >
+            <div title={title}>
                 <picture>
                     <source className="project__img" 
                             media="(min-width: 800px)"
@@ -22,10 +18,11 @@ function renderProject({id, title, deploy, props,repLink} ) {
                             alt={title} 
                     />
                 </picture>
-            </a>
+            </div>
             <div className="project__props">
+            <h2 className="project__title">{title}</h2>
                 <ul className="project__props--list">
-                    {props.map((item, index) => <li     key={`${id}-${index}`}
+                    {properties.map((item, index) => <li     key={`${id}-${index}`}
                                                         className="project__prop"
                                                 >{item}</li>
                     )}
@@ -34,12 +31,20 @@ function renderProject({id, title, deploy, props,repLink} ) {
                 <ul className="project__props--list">
                     {repLink ? (
                         <li key={`${id}-rep`} className="project__prop">
-                            <a className="project__link" href={repLink}>repository</a>
+                            <a  className="project__link" 
+                                href={repLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >repository</a>
                         </li>
                     ) : null}
                     {deploy ? (
                         <li key={`${id}-deploy`} className="project__prop">
-                            <a className="project__link" href={deploy}>deploy</a>
+                            <a  className="project__link" 
+                                href={deploy}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >deploy</a>
                         </li>
                     ) : null}
                 </ul>

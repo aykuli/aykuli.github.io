@@ -41,7 +41,7 @@
             margin: 0;
             padding: 60px 30px 10px 30px;
 
-            background-color: rgba($color: #fff, $alpha: .8);
+            background-color: rgba($color: #fff, $alpha: .9);
             opacity: 0;
 
             transition-duration: 2s;
@@ -56,13 +56,36 @@
     }
 
     &__link {
+        position: relative;
+
         font-size: 20px;
         line-height: 24px;
         font-weight: normal;
         color: #0f1c20;
         text-decoration: none;
 
-        border-bottom: 1px solid #0f1c20;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+      
+            background:#0f1c20;
+      
+            transition-duration: 0.3s;
+            transition-property: left, width, color;
+            transition-timing-function: ease;
+          }
+
+          &:hover::before, &:focus::before {
+            left: 0;
+            width: 100%;
+            transition-duration: 0.5s;
+            transition-property: left, width, color;
+            transition-timing-function: ease;
+        }
     }
 
     &__links {
