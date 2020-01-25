@@ -3,15 +3,15 @@ export default [
     {
         id: 'fancy-weather',
         title: 'Fancy Weather',
-        props: ['JS', 'API: mapbox, darksky.net, ipinfo.io, opencagedata.com, unsplash.com', 'Jest, jsdom testing','adaptive up to 320px'],
-        repLink: 0,
-        deploy: 'https://aykuli.github.io/fancy-weather-public/',
+        properties: ['JS', 'API: mapbox, darksky.net, ipinfo.io, opencagedata.com, unsplash.com', 'Jest, jsdom testing','adaptive up to 320px'],
+        repLink: 'https://github.com/aykuli/fancy-weather',
+        deploy: 'https://aykuli.github.io/fancy-weather',
     },
     // 2
     {
         id: 'piskel-clone',
         title: 'Piskel Clone',
-        props: ['JS', 'Jest, jsdom testing','simplified piskelapp.com',],
+        properties: ['JS', 'Jest, jsdom testing','simplified piskelapp.com',],
         repLink: 'https://github.com/aykuli/piskel-clone/',
         deploy: 'https://aykuli.github.io/piskel-clone/',
     },
@@ -19,39 +19,39 @@ export default [
     {
         id: 'virtual-keyboard',
         title: 'Virtual Keyboard',
-        props: ['JS'],
-        repLink: 0,
-        deploy: 0,
+        properties: ['JS'],
+        repLink: 'https://github.com/aykuli/codejam-virtual-keyboard',
+        deploy: 'https://aykuli.github.io/codejam-virtual-keyboard/',
     },
     // 4
     {
         id: 'image-api',
         title: 'Image Api',
-        props: ['JS'],
-        repLink: 0,
-        deploy: 0,
+        properties: ['JS'],
+        repLink: 'https://github.com/aykuli/image-api',
+        deploy: 'https://aykuli.github.io/image-api/',
     },
     // 5
     {
         id: 'meme-generator',
         title: 'Meme Generator',
-        props: ['React', 'JS'],
+        properties: ['React', 'JS'],
         repLink: 'https://github.com/aykuli/meme-generator',
-        deploy: 0,
+        deploy: 'https://aykuli.github.io/meme-generator/',
     },
     // 6
     {
         id: 'repair-design-project',
         title: 'Repair Design Project',
-        props: ['JS', 'CSS3', 'HTML'],
-        repLink: 0,
-        deploy: 0,
+        properties: ['JS', 'CSS3', 'HTML'],
+        repLink: 'https://github.com/aykuli/repair-design-project   ',
+        deploy: 'https://aykuli.github.io/repair-design-project/',
     },
     // 7
     {
         id: 'halbstadt',
         title: 'Halbstadt.info',
-        props: ['Drupal CMS'],
+        properties: ['Drupal CMS'],
         repLink: 0,
         deploy: 'http://halbstadt.info/',
     },
@@ -59,7 +59,7 @@ export default [
     {
         id: 'gllasy',
         title: 'Glassy',
-        props: ['JS', 'CSS3', 'HTML'],
+        properties: ['JS', 'CSS3', 'HTML'],
         repLink: 'https://github.com/aykuli/gllacy-base-23',
         deploy: 0,
     },
@@ -67,16 +67,16 @@ export default [
     {
         id: 'todo-redux',
         title: 'ToDo App',
-        props: ['React', 'Redux', 'JS'],
+        properties: ['React', 'Redux', 'JS'],
         repLink: 'https://github.com/aykuli/todo-react-second',
-        deploy: 0,
+        deploy: 'https://aykuli.github.io/todo-react-second/',
     },
     // 10
     {
         id: 'chuck-norris',
         title: 'Joke generator',
-        props: ['JS'],
+        properties: ['JS'],
         repLink: 'https://github.com/aykuli/Chuck-NorrisJoke-Generator',
-        deploy: 0,
+        deploy: 'https://aykuli.github.io/Chuck-NorrisJoke-Generator/',
     },
 ]
