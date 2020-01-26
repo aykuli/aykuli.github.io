@@ -1,10 +1,57 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './about.scss';
 
-export default class About extends Component {
-    render() {
-        return (
-            <h1>About page</h1>
-        )
-    }
+import table from '../table/table';
+
+import info from '../../constants/about';
+
+function button({ id, title, info, type}) {
+    console.log(info);
+    return (
+        <div key={id} className="about__btn--wrap">
+            <button className="about__btn">
+            <h3 className="about__title">{title}</h3>
+                <svg className="about__arrow" fill="#0f1c20" version="1.1" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M201.5,0.3L16.3,185.5h108.9c0,337.7,261.5,326.8,370.4,326.8C277.7,436.1,277.7,338,277.7,185.5h108.9L201.5,0.3z"/>
+                </svg>
+            </button>
+            {(type === 'table') ? table(info) : null}
+        </div>
+    )
+}
+
+
+
+
+export default function About() {
+    return (
+        <div className="about__wrap">
+            <h2 className="hidden">Page about my education related to front-end development</h2>
+            {info.map(el => button(el))}
+            {/* <button className="about__btn">
+                <h3 className="about__title">What I know</h3>
+                <svg className="about__arrow" fill="#0f1c20" version="1.1" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M201.5,0.3L16.3,185.5h108.9c0,337.7,261.5,326.8,370.4,326.8C277.7,436.1,277.7,338,277.7,185.5h108.9L201.5,0.3z"/>
+                </svg>
+            </button> */}
+            {/* <button className="about__btn">
+                <h3 className="about__title">Front-End Education</h3>
+                <svg className="about__arrow" fill="#0f1c20" version="1.1" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M201.5,0.3L16.3,185.5h108.9c0,337.7,261.5,326.8,370.4,326.8C277.7,436.1,277.7,338,277.7,185.5h108.9L201.5,0.3z"/>
+                </svg>
+            </button>
+            <button className="about__btn">
+                <h3 className="about__title">Common education</h3>
+                <svg className="about__arrow" fill="#0f1c20" version="1.1" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M201.5,0.3L16.3,185.5h108.9c0,337.7,261.5,326.8,370.4,326.8C277.7,436.1,277.7,338,277.7,185.5h108.9L201.5,0.3z"/>
+                </svg>
+            </button>
+            <button className="about__btn">
+            <h3 className="about__title">Certificates</h3>
+                <svg className="about__arrow" fill="#0f1c20" version="1.1" viewBox="0 0 512 512" width="20" height="20">
+                    <path d="M201.5,0.3L16.3,185.5h108.9c0,337.7,261.5,326.8,370.4,326.8C277.7,436.1,277.7,338,277.7,185.5h108.9L201.5,0.3z"/>
+                </svg>
+            </button> */}
+        </div>
+    )
 }

@@ -1,0 +1,61 @@
+.about {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+
+        background-color: #fff;
+        border: 1px solid #ddd;
+
+        transition-duration: .5s;
+        transition-property: background-color, color, border;
+        transition-timing-function: ease;
+
+        &:hover, &:focus {
+            color: #fff;
+
+            background-color: #0f1c20;
+            border: 1px solid #000;
+
+            transition-duration: .5s;
+            transition-property: background-color, color,border;
+            transition-timing-function: ease;
+
+            & .about__arrow {
+                fill: #fff;
+            }
+        }
+
+        &--wrap {
+            color: #0f1c20;            
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    &__arrow {
+        display: block;
+        width: 20px;
+        height: 20px;
+
+        background-image: url(./imgs/arrow.svg);
+        background-position: left 0 top 0;
+        background-repeat: no-repeat;
+
+        transform: rotate(180deg);
+    }
+}
