@@ -14,13 +14,15 @@ export default [
     {   
         id: 'front-end',
         title: 'Front-End Education',
-        info: {
-            languages: [ 'JavaScript', 'HTML5/CSS3' ],
-            versionControl: ['Git'],
-            frameworks: ['React', 'webpack', 'gulp'],
-            methodoligies: ['BEM', 'Bootstrap'],
-            tools: ['Visual Studio Code', 'Sublime', 'Photoshop', 'Figma'],
-        },
+        info: [
+            ['Rolling Scopes School', 'https://rs.school/js/'],
+            ['HTMLAcademy.ru', '#', 'Профессиональный онлайн‑курс HTML и CSS, уровень 1', 'Профессиональный онлайн‑курс HTML и CSS, уровень 2'],
+            ['freecodecamp.org', 
+            'https://www.freecodecamp.org/aynur_shauerman', 
+            'Responsive Web Design Certification (300 hours)', 
+            'Javascript Algorithms And Data Structures Certification (300 hours)'],
+            ['www.futurelearn.com', 'https://www.futurelearn.com/certificates/neuizu4', 'Digital Skills_User Experience']
+        ],
         type: 'list',
     }
 ]

@@ -2,6 +2,7 @@ import React from 'react';
 import './about.scss';
 
 import table from '../table/table';
+import list from '../list/list';
 
 import info from '../../constants/about';
 
@@ -15,7 +16,7 @@ function button({ id, title, info, type}) {
                     <path d="M201.5,0.3L16.3,185.5h108.9c0,337.7,261.5,326.8,370.4,326.8C277.7,436.1,277.7,338,277.7,185.5h108.9L201.5,0.3z"/>
                 </svg>
             </button>
-            {(type === 'table') ? table(info) : null}
+            {(type === 'table') ? table(info) : list(info)}
         </div>
     )
 }
@@ -24,7 +25,7 @@ export default function About() {
     return (
         <div className="about__wrap">
             <h2 className="hidden">Page about my education related to front-end development</h2>
-            {info.map(el => button(el))}
+            {info.map(el => button(el))}            
             {/* <button className="about__btn">
                 <h3 className="about__title">What I know</h3>
                 <svg className="about__arrow" fill="#0f1c20" version="1.1" viewBox="0 0 512 512" width="20" height="20">
