@@ -1,0 +1,36 @@
+.list {
+    margin: 30px 15px;
+
+    &__item {
+        & a {
+            position: relative;
+
+            color: #233f5f;
+            text-decoration: none;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+        
+                background:#233f5f;
+        
+                transition-duration: 0.3s;
+                transition-property: left, width, color;
+                transition-timing-function: ease;
+            }
+
+            &:hover::before, &:focus::before {
+                left: 0;
+                width: 100%;
+                transition-duration: 0.5s;
+                transition-property: left, width, color;
+                transition-timing-function: ease;
+            }
+
+        }
+    }
+}
