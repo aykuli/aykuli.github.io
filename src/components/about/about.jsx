@@ -20,9 +20,6 @@ function button({ id, title, info, type}) {
     )
 }
 
-
-
-
 export default function About() {
     return (
         <div className="about__wrap">
