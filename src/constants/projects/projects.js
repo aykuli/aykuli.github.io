@@ -9,20 +9,20 @@ export default [
     },
     // 2
     {
-        id: 'piskel-clone',
-        title: 'Piskel Clone',
-        properties: ['JS', 'Jest, jsdom testing','simplified piskelapp.com',],
-        repLink: 'https://github.com/aykuli/piskel-clone/',
-        deploy: 'https://aykuli.github.io/piskel-clone/',
-    },
-    // 3
-    {
         id: 'virtual-keyboard',
         title: 'Virtual Keyboard',
         properties: ['JS'],
         repLink: 'https://github.com/aykuli/codejam-virtual-keyboard',
         deploy: 'https://aykuli.github.io/codejam-virtual-keyboard/',
     },
+    // 3
+    {
+        id: 'piskel-clone',
+        title: 'Piskel Clone',
+        properties: ['JS', 'Jest, jsdom testing','simplified piskelapp.com',],
+        repLink: 'https://github.com/aykuli/piskel-clone/',
+        deploy: 'https://aykuli.github.io/piskel-clone/',
+    },    
     // 4
     {
         id: 'image-api',
@@ -39,7 +39,13 @@ export default [
         repLink: 'https://github.com/aykuli/meme-generator',
         deploy: 'https://aykuli.github.io/meme-generator/',
     },
-    // 6
+    {
+        id: 'todo-redux',
+        title: 'ToDo App',
+        properties: ['React', 'Redux', 'JS'],
+        repLink: 'https://github.com/aykuli/todo-react-second',
+        deploy: 'https://aykuli.github.io/todo-react-second/',
+    },
     {
         id: 'repair-design-project',
         title: 'Repair Design Project',
@@ -61,17 +67,8 @@ export default [
         title: 'Glassy',
         properties: ['JS', 'CSS3', 'HTML'],
         repLink: 'https://github.com/aykuli/gllacy-base-23',
-        deploy: 0,
+        deploy: 'https://aykuli.github.io/gllacy-base-23/index.html',
     },
-    // 9
-    {
-        id: 'todo-redux',
-        title: 'ToDo App',
-        properties: ['React', 'Redux', 'JS'],
-        repLink: 'https://github.com/aykuli/todo-react-second',
-        deploy: 'https://aykuli.github.io/todo-react-second/',
-    },
-    // 10
     {
         id: 'chuck-norris',
         title: 'Joke generator',
