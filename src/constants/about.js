@@ -15,7 +15,7 @@ export default [
         id: 'front-end',
         title: 'Front-End Education',
         info: [
-            ['Rolling Scopes School', 'https://rs.school/js/'],
+            ['Rolling Scopes School', 'https://rs.school/js/', 'Курс «JavaScript/Front-end» 2019Q3'],
             ['HTMLAcademy.ru', '#', 'Профессиональный онлайн‑курс HTML и CSS, уровень 1', 'Профессиональный онлайн‑курс HTML и CSS, уровень 2'],
             ['freecodecamp.org', 
             'https://www.freecodecamp.org/aynur_shauerman', 
