@@ -18,7 +18,7 @@ function renderProject({id, title, deploy, props,repLink} ) {
                             srcSet={`${require(`../../constants/projects/imgs/${id}.jpg`)}`}
                     />
                     <img    className="project__img" 
-                            src="https://placekitten.com/300/200"
+                            src="https://placekitten.com/300/225"
                             alt={title} 
                     />
                 </picture>
