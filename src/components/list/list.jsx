@@ -1,9 +1,9 @@
 import React from 'react';
 import './list.scss';
 
-export default function list(info) {
+export default function list(info, isOpen) {
     return (
-        <ul className="list hidden" key={info[0][0]}>
+        <ul className={ isOpen ? "list" : "list hidden"} key={info[0][0]}>
             {info.map((item,index) => item.map((el, i) => subList(item, el, i)))}
         </ul>
     );

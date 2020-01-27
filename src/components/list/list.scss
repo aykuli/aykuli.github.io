@@ -1,7 +1,13 @@
 .list {
     margin: 30px 15px;
 
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+
     &__item {
+        margin-top: 15px;
+
         & a {
             position: relative;
 
@@ -31,6 +37,16 @@
                 transition-timing-function: ease;
             }
 
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .list {
+        margin-left: 5px;
+        & ul {
+            margin-left: 5px;
+            padding-left: 5px;
         }
     }
 }

@@ -31,6 +31,8 @@
             transition-property: background-color, color,border;
             transition-timing-function: ease;
 
+            outline: none;
+
             & .about__arrow {
                 fill: #fff;
             }

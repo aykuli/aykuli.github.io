@@ -1,9 +1,9 @@
 import React from 'react';
 import './table.scss';
 
-export default function table(info) {
+export default function table(info,isOpen) {
     return (
-        <table className="table hidden">
+        <table className={isOpen ? "table" : "table hidden"}>
             <tbody>
                 {info.map((row, index) => <tr   key={`row-${index}`} 
                                                 className="table__row">
