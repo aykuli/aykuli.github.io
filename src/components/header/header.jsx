@@ -14,7 +14,7 @@ export default function Header() {
                 <div className="header__logo"></div>
                 <nav className="header__nav">
                     <NavLink className="nav__link" exact to='/about'>About</NavLink>
-                    <NavLink className="nav__link" exact to='/#portfolio'>Portfolio</NavLink>
+                    <NavLink className="nav__link" exact to='/'>Portfolio</NavLink>
                 </nav>
                 <div className="header__info">
                     <h1 className="header__title">{`${mainInfo.name} ${mainInfo.surName}`}</h1>
