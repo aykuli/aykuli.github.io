@@ -14,8 +14,8 @@ ReactDOM.render(
     <App>
         <Switch>
             <Route exact path='/' component={Portfolio} />
-            <Route path='/about' component={About} />
-            <Route path='*' component={ErrorPage} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='*' component={ErrorPage} />
         </Switch>
     </App>
 </BrowserRouter>, document.getElementById('root'));

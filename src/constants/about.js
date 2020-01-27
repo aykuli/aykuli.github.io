@@ -8,6 +8,7 @@ export default [
             ['Frameworks', 'React', 'webpack', 'gulp', ''],
             ['Methodoligies', 'BEM', 'Bootstrap', '', ''],
             ['Tools', 'Visual Studio Code', 'Sublime', 'Photoshop', 'Figma'],
+            ['English', 'B1', '', '', ''],
         ],
         type: 'table',
     },
