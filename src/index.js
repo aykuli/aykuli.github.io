@@ -7,7 +7,7 @@ import './index.scss';
 
 import Portfolio from './components/portfolio/portfolio';
 import About from './components/about/about';
-import ErrorPage from './components/error/error'
+import ErrorPage from './components/error/error';
 
 ReactDOM.render(
 <BrowserRouter>

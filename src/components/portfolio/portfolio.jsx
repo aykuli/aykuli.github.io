@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './portfolio.scss';
 
 import projects from '../../constants/projects/projects';
+import mainInfo from '../../constants/main';
 
 function renderProject({id, title, deploy, properties,repLink} ) {
     return (
@@ -53,13 +54,23 @@ function renderProject({id, title, deploy, properties,repLink} ) {
     )
 }
 
+function useDocumentTitle(title) {
+    useEffect(() =>{
+        document.title = title;
+    });
+}
+
 export default function Portfolio() {
+    const title = `${mainInfo.name} ${mainInfo.surName}`;
+    useDocumentTitle(title);
+    
     const data = projects;
-        return (
-            <div className="projects__wrap">
-                <section className="projects">
-                    {data.map(el => renderProject(el))}
-                </section>
-            </div>
-        )
+
+    return (
+        <div className="projects__wrap">
+            <section className="projects">
+                {data.map(el => renderProject(el))}
+            </section>
+        </div>
+    )
 }

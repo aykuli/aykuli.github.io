@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import social from '../../constants/contact';
+import mainInfo from '../../constants/main';
 import socialContainer from '../social/social';
 
 import './header.scss';
@@ -16,8 +17,8 @@ export default function Header() {
                     <NavLink className="nav__link" exact to='/#portfolio'>Portfolio</NavLink>
                 </nav>
                 <div className="header__info">
-                    <h1 className="header__title">Aynur Shauerman</h1>
-                    <p className="header__desc">Front-End Developer</p>
+                    <h1 className="header__title">{`${mainInfo.name} ${mainInfo.surName}`}</h1>
+                    <p className="header__desc">{`${mainInfo.profession}`}</p>
                     {socialContainer(social)}
                 </div>
             </header>

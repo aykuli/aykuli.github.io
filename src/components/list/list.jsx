@@ -14,7 +14,10 @@ function subList(arr, el, i) {
         case 0:
             return (
                 <li key={el} className="list__item">
-                    <a href={arr[i+1]} target="_blank">{el}</a>
+                    <a  href={arr[i+1]} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >{el}</a>
                 </li>
             );
         case 1:
