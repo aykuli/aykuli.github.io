@@ -22,7 +22,7 @@ function subList(arr, el, i) {
         default: 
             return (
                 <ul key={el}>
-                    <li key={`${el}-${i}`}>{el}</li>
+                    <li key={`${el}-${i}`} className="list__item--sub">{el}</li>
                 </ul>
             );
     }

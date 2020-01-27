@@ -1,15 +1,25 @@
 .list {
     margin: 30px 15px;
 
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: normal;
+
 
     &__item {
-        margin-top: 15px;
+        margin: 15px 0 0 0;
+
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: normal;
+
+        list-style-image: url(./imgs/rectangle.svg);
+
+        &--sub {
+            list-style-type: square;
+        }
 
         & a {
             position: relative;
+
+            margin-left: -25px;
 
             color: #233f5f;
             text-decoration: none;
