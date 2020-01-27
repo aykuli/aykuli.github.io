@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import social from '../../constants/contact';
 import socialContainer from '../social/social';
@@ -12,6 +13,10 @@ export default function Footer() {
                 <div className="footer__social">
                     {socialContainer(social)}
                 </div>
+                <nav className="footer__nav">
+                    <NavLink className="nav__link" exact to='/about'>About</NavLink>
+                    <NavLink className="nav__link" exact to='/#portfolio'>Portfolio</NavLink>
+                </nav>
                 <p className="footer__year">© {new Date().getFullYear()} Aynur Shauerman</p>
             </footer>
         </div>

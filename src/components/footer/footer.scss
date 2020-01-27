@@ -18,7 +18,14 @@
     }
 
     &__year {
-      margin: 10px 0;
+      margin: 20px 0;
+
+      font-size: 24px;
+      line-height: 32px;
+      text-align: right;
+    }
+
+    &__nav {
       text-align: right;
     }
 }
