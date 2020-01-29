@@ -76,4 +76,11 @@ export default [
         repLink: 'https://github.com/aykuli/Chuck-NorrisJoke-Generator',
         deploy: 'https://aykuli.github.io/Chuck-NorrisJoke-Generator/',
     },
+    {
+        id: 'tic-tac-toe-react',
+        title: 'Tic-Tac-Toe on React',
+        properties: ['React', 'JS'],
+        repLink: 'https://github.com/aykuli/tic-tac-toe-react',
+        deploy: 'https://aykuli.github.io/tic-tac-toe-react/',
+    },
 ]
