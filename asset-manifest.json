@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.29f719c9.chunk.css",
-    "main.js": "./static/js/main.f03e2826.chunk.js",
-    "main.js.map": "./static/js/main.f03e2826.chunk.js.map",
+    "main.css": "./static/css/main.7f34c05e.chunk.css",
+    "main.js": "./static/js/main.e99c7e1e.chunk.js",
+    "main.js.map": "./static/js/main.e99c7e1e.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.44af3553.js",
     "runtime-main.js.map": "./static/js/runtime-main.44af3553.js.map",
-    "static/js/2.75bf0dbd.chunk.js": "./static/js/2.75bf0dbd.chunk.js",
-    "static/js/2.75bf0dbd.chunk.js.map": "./static/js/2.75bf0dbd.chunk.js.map",
+    "static/js/2.7f683da3.chunk.js": "./static/js/2.7f683da3.chunk.js",
+    "static/js/2.7f683da3.chunk.js.map": "./static/js/2.7f683da3.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.0a25dacc2c52201723966756ccec3922.js": "./precache-manifest.0a25dacc2c52201723966756ccec3922.js",
+    "precache-manifest.801bace64847f4b2f6ada1afb829873e.js": "./precache-manifest.801bace64847f4b2f6ada1afb829873e.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.29f719c9.chunk.css.map": "./static/css/main.29f719c9.chunk.css.map",
-    "static/js/2.75bf0dbd.chunk.js.LICENSE": "./static/js/2.75bf0dbd.chunk.js.LICENSE",
+    "static/css/main.7f34c05e.chunk.css.map": "./static/css/main.7f34c05e.chunk.css.map",
+    "static/js/2.7f683da3.chunk.js.LICENSE": "./static/js/2.7f683da3.chunk.js.LICENSE",
     "static/media/about.scss": "./static/media/arrow.2aea532b.svg",
     "static/media/chuck-norris.jpg": "./static/media/chuck-norris.0aed2ac2.jpg",
     "static/media/chuck-norris_300x225.jpg": "./static/media/chuck-norris_300x225.7e47f166.jpg",
@@ -29,6 +29,8 @@
     "static/media/meme-generator_300x225.jpg": "./static/media/meme-generator_300x225.5227fb8a.jpg",
     "static/media/piskel-clone.jpg": "./static/media/piskel-clone.f34ed349.jpg",
     "static/media/piskel-clone_300x225.jpg": "./static/media/piskel-clone_300x225.defb0c1b.jpg",
+    "static/media/product-filter.jpg": "./static/media/product-filter.20b9626e.jpg",
+    "static/media/product-filter_300x225.jpg": "./static/media/product-filter_300x225.2bcb7e01.jpg",
     "static/media/list.scss": "./static/media/rectangle.d85d5675.svg",
     "static/media/repair-design-project.jpg": "./static/media/repair-design-project.c71f542c.jpg",
     "static/media/repair-design-project_300x225.jpg": "./static/media/repair-design-project_300x225.0cd6a1ef.jpg",
@@ -40,8 +42,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.44af3553.js",
-    "static/js/2.75bf0dbd.chunk.js",
-    "static/css/main.29f719c9.chunk.css",
-    "static/js/main.f03e2826.chunk.js"
+    "static/js/2.7f683da3.chunk.js",
+    "static/css/main.7f34c05e.chunk.css",
+    "static/js/main.e99c7e1e.chunk.js"
   ]
 }
