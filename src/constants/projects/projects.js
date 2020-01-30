@@ -83,4 +83,11 @@ export default [
         repLink: 'https://github.com/aykuli/tic-tac-toe-react',
         deploy: 'https://aykuli.github.io/tic-tac-toe-react/',
     },
+    {
+        id: 'product-filter',
+        title: 'Pproduct Filter on React',
+        properties: ['React', 'JS'],
+        repLink: 'https://github.com/aykuli/product-filter',
+        deploy: 'https://aykuli.github.io/product-filter/',
+    },
 ]

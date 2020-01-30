@@ -25,7 +25,7 @@ export default function About() {
     return (
         <div className="about__wrap">
             <h2 className="hidden">Page about my education related to front-end development</h2>
-            {info.map(el => <Button {...el} />)}
+            {info.map(el => <Button key={el.id} {...el} />)}
         </div>
     )
 }
