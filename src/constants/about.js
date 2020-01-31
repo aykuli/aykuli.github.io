@@ -5,8 +5,9 @@ export default [
         info: [
             ['Languages', 'JavaScript', 'HTML5/CSS3', '', '' ],
             ['Version control', 'Git', '', '', '' ],
-            ['Frameworks', 'React', 'webpack', 'gulp', ''],
-            ['Methodoligies', 'BEM', 'Bootstrap', '', ''],
+            ['Libs', 'React', 'Redux', '', ''],
+            ['Bundlers', 'webpack', 'gulp', 'parsel', ''],
+            ['Methodoligies', 'BEM', '', '', ''],
             ['Tools', 'Visual Studio Code', 'Sublime', 'Photoshop', 'Figma'],
             ['English', 'B1', '', '', ''],
         ],

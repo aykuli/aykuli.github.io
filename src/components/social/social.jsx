@@ -5,14 +5,14 @@ import './social.scss';
 export default function socialContainer(social) {
     return (
         <div className="social">
-            {social.map(el => {
+            {social.map(({ id, href }) => {
                 return (
-                    <a  key={el.id}
-                        className={`social__icon social__${el.id}`} 
-                        href={el.href}
-                        title={el.href}
+                    <a  key={id}
+                        className={`social__icon social__${id}`} 
+                        href={href}
+                        title={href}
                     >
-                        <span className="social__hidden">Account on {el.id}</span>
+                        <span className="social__hidden">Account on {id}</span>
                     </a>
                 )
             })}
