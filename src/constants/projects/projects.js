@@ -9,11 +9,11 @@ export default [
     },
     // 2
     {
-        id: 'virtual-keyboard',
-        title: 'Virtual Keyboard',
-        properties: ['JS'],
-        repLink: 'https://github.com/aykuli/codejam-virtual-keyboard',
-        deploy: 'https://aykuli.github.io/codejam-virtual-keyboard/',
+        id: 'songbird',
+        title: 'Songbird quiz',
+        properties: ['React'],
+        repLink: 'https://github.com/aykuli/songbird/tree/songbird',
+        deploy: 'https://aykuli.github.io/songbird/',
     },
     // 3
     {
@@ -24,6 +24,13 @@ export default [
         deploy: 'https://aykuli.github.io/piskel-clone/',
     },    
     // 4
+    {
+        id: 'virtual-keyboard',
+        title: 'Virtual Keyboard',
+        properties: ['JS'],
+        repLink: 'https://github.com/aykuli/codejam-virtual-keyboard',
+        deploy: 'https://aykuli.github.io/codejam-virtual-keyboard/',
+    },
     {
         id: 'image-api',
         title: 'Image Api',
