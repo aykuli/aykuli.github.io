@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.7f34c05e.chunk.css",
-    "main.js": "./static/js/main.869d1782.chunk.js",
-    "main.js.map": "./static/js/main.869d1782.chunk.js.map",
+    "main.css": "./static/css/main.f2c64fb2.chunk.css",
+    "main.js": "./static/js/main.a1b77d25.chunk.js",
+    "main.js.map": "./static/js/main.a1b77d25.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.44af3553.js",
     "runtime-main.js.map": "./static/js/runtime-main.44af3553.js.map",
-    "static/js/2.4b4b22f5.chunk.js": "./static/js/2.4b4b22f5.chunk.js",
-    "static/js/2.4b4b22f5.chunk.js.map": "./static/js/2.4b4b22f5.chunk.js.map",
+    "static/js/2.e47bb617.chunk.js": "./static/js/2.e47bb617.chunk.js",
+    "static/js/2.e47bb617.chunk.js.map": "./static/js/2.e47bb617.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.1dc33046c4ebd4700baaac296fa03645.js": "./precache-manifest.1dc33046c4ebd4700baaac296fa03645.js",
+    "precache-manifest.b720eb9135385c67149aaf9f4755a1d5.js": "./precache-manifest.b720eb9135385c67149aaf9f4755a1d5.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.7f34c05e.chunk.css.map": "./static/css/main.7f34c05e.chunk.css.map",
-    "static/js/2.4b4b22f5.chunk.js.LICENSE": "./static/js/2.4b4b22f5.chunk.js.LICENSE",
+    "static/css/main.f2c64fb2.chunk.css.map": "./static/css/main.f2c64fb2.chunk.css.map",
+    "static/js/2.e47bb617.chunk.js.LICENSE": "./static/js/2.e47bb617.chunk.js.LICENSE",
     "static/media/about.scss": "./static/media/arrow.2aea532b.svg",
     "static/media/chuck-norris.jpg": "./static/media/chuck-norris.0aed2ac2.jpg",
     "static/media/chuck-norris_300x225.jpg": "./static/media/chuck-norris_300x225.7e47f166.jpg",
@@ -34,6 +34,8 @@
     "static/media/list.scss": "./static/media/rectangle.d85d5675.svg",
     "static/media/repair-design-project.jpg": "./static/media/repair-design-project.c71f542c.jpg",
     "static/media/repair-design-project_300x225.jpg": "./static/media/repair-design-project_300x225.0cd6a1ef.jpg",
+    "static/media/songbird.jpg": "./static/media/songbird.d1a5284d.jpg",
+    "static/media/songbird_300x225.jpg": "./static/media/songbird_300x225.471de2a2.jpg",
     "static/media/tic-tac-toe-react.jpg": "./static/media/tic-tac-toe-react.518e8311.jpg",
     "static/media/tic-tac-toe-react_300x225.jpg": "./static/media/tic-tac-toe-react_300x225.05ddd713.jpg",
     "static/media/todo-redux.jpg": "./static/media/todo-redux.fa71657a.jpg",
@@ -42,8 +44,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.44af3553.js",
-    "static/js/2.4b4b22f5.chunk.js",
-    "static/css/main.7f34c05e.chunk.css",
-    "static/js/main.869d1782.chunk.js"
+    "static/js/2.e47bb617.chunk.js",
+    "static/css/main.f2c64fb2.chunk.css",
+    "static/js/main.a1b77d25.chunk.js"
   ]
 }
