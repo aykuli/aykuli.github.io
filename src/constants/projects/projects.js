@@ -1,5 +1,11 @@
 export default [
-    // 1
+    {
+        id: 'belarus-writers',
+        title: 'Belarus Writers',
+        properties: ['Gatsby', 'material-ui', 'Typescript', 'Storybook', 'adaptive up to 320px'],
+        repLink: 'https://github.com/aykuli/belarus-writers',
+        deploy: 'https://belarus-writers.netlify.com/',
+    },
     {
         id: 'fancy-weather',
         title: 'Fancy Weather',
