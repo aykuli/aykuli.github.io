@@ -1,5 +1,12 @@
 export default [
     {
+        id: 'datagrid',
+        title: 'Datagrid',
+        properties: ['React', 'Redux', 'material-ui'],
+        repLink: 'https://github.com/aykuli/datagrid/tree/datagrid',
+        deploy: 'https://aykuli.github.io/datagrid-gh-pages/',
+    },
+    {
         id: 'belarus-writers',
         title: 'Belarus Writers',
         properties: ['Gatsby', 'material-ui', 'Typescript', 'Storybook', 'adaptive up to 320px'],
@@ -81,6 +88,13 @@ export default [
         properties: ['JS', 'CSS3', 'HTML'],
         repLink: 'https://github.com/aykuli/gllacy-base-23',
         deploy: 'https://aykuli.github.io/gllacy-base-23/index.html',
+    },
+    {
+        id: 'welcome-landmark',
+        title: 'Welcome Landmark',
+        properties: ['React'],
+        repLink: 'https://github.com/aykuli/welcome-landmark',
+        deploy: 'https://aykuli.github.io/welcome-landmark/',
     },
     {
         id: 'chuck-norris',
