@@ -20,7 +20,6 @@ export default [
         repLink: 'https://github.com/aykuli/fancy-weather',
         deploy: 'https://aykuli.github.io/fancy-weather',
     },
-    // 2
     {
         id: 'songbird',
         title: 'Songbird quiz',
@@ -28,15 +27,13 @@ export default [
         repLink: 'https://github.com/aykuli/songbird/tree/songbird',
         deploy: 'https://aykuli.github.io/songbird/',
     },
-    // 3
     {
         id: 'piskel-clone',
         title: 'Piskel Clone',
         properties: ['JS', 'Jest, jsdom testing','simplified piskelapp.com',],
         repLink: 'https://github.com/aykuli/piskel-clone/',
         deploy: 'https://aykuli.github.io/piskel-clone/',
-    },    
-    // 4
+    },
     {
         id: 'virtual-keyboard',
         title: 'Virtual Keyboard',
@@ -51,7 +48,6 @@ export default [
         repLink: 'https://github.com/aykuli/image-api',
         deploy: 'https://aykuli.github.io/image-api/',
     },
-    // 5
     {
         id: 'meme-generator',
         title: 'Meme Generator',
@@ -73,7 +69,6 @@ export default [
         repLink: 'https://github.com/aykuli/repair-design-project   ',
         deploy: 'https://aykuli.github.io/repair-design-project/',
     },
-    // 7
     {
         id: 'halbstadt',
         title: 'Halbstadt.info',
@@ -81,7 +76,6 @@ export default [
         repLink: 0,
         deploy: 'http://halbstadt.info/',
     },
-    // 8
     {
         id: 'gllasy',
         title: 'Glassy',
