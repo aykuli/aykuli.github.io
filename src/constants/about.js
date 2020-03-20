@@ -3,9 +3,11 @@ export default [
         id: 'technologies',
         title: 'What I know',
         info: [
-            ['Languages', 'JavaScript', 'HTML5/CSS3', '', '' ],
+            ['Languages', 'JavaScript', 'Typescript', 'HTML5/CSS3', ''],
             ['Version control', 'Git', '', '', '' ],
-            ['Libs', 'React', 'Redux', '', ''],
+            ['Frameworks', 'React', 'Redux', 'Gatsby', 'GraphQL'],
+            ['Testing', 'Jest', '', '', ''],
+            ['Libs', 'material-ui', 'Styled-components', 'react-redux','canvas'],
             ['Bundlers', 'webpack', 'gulp', 'parsel', ''],
             ['Methodoligies', 'BEM', '', '', ''],
             ['Tools', 'Visual Studio Code', 'Sublime', 'Photoshop', 'Figma'],
