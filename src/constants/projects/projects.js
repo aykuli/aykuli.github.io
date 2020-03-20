@@ -11,7 +11,7 @@ export default [
         title: 'Belarus Writers',
         properties: ['Gatsby', 'material-ui', 'Typescript', 'Storybook', 'adaptive up to 320px'],
         repLink: 'https://github.com/aykuli/belarus-writers',
-        deploy: 'https://belarus-writers.netlify.com/',
+        deploy: 'https://belarusian-writers.netlify.com/',
     },
     {
         id: 'fancy-weather',
