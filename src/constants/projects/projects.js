@@ -4,7 +4,7 @@ export default [
         title: 'Datagrid',
         properties: ['React', 'Redux', 'material-ui'],
         repLink: 'https://github.com/aykuli/datagrid/tree/datagrid',
-        deploy: 'https://aykuli.github.io/datagrid-gh-pages/',
+        deploy: 'https://aykuli.github.io/datagrid/',
     },
     {
         id: 'belarus-writers',
