@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f1e23d34e609ec0841a40ca7911a9e6",
+    "revision": "f8272fe6cf8cf218c90363d9396b0fea",
     "url": "./index.html"
   },
   {
-    "revision": "32a23c80801469a590f3",
-    "url": "./static/css/main.8c073483.chunk.css"
+    "revision": "3e1d76e354a70d110183",
+    "url": "./static/css/main.caa1621b.chunk.css"
   },
   {
-    "revision": "4a461b7d57954bc08954",
-    "url": "./static/js/2.be0f6abc.chunk.js"
+    "revision": "6def45ce7c7c9c18b453",
+    "url": "./static/js/2.7d865e3d.chunk.js"
   },
   {
     "revision": "e928fe768baa9832b5bc57eae021f30c",
-    "url": "./static/js/2.be0f6abc.chunk.js.LICENSE"
+    "url": "./static/js/2.7d865e3d.chunk.js.LICENSE"
   },
   {
-    "revision": "32a23c80801469a590f3",
-    "url": "./static/js/main.ab180ca7.chunk.js"
+    "revision": "3e1d76e354a70d110183",
+    "url": "./static/js/main.a18e1fd3.chunk.js"
   },
   {
     "revision": "5196e3e099fec11c45ff",
@@ -42,6 +42,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7e47f166bf1afe7ae8895f0e346a5b50",
     "url": "./static/media/chuck-norris_300x225.7e47f166.jpg"
+  },
+  {
+    "revision": "12e028b02e8740fe2da2b298510dda43",
+    "url": "./static/media/clouds-and-blur.12e028b0.jpg"
+  },
+  {
+    "revision": "04b572de2be65193458aed670ba387ff",
+    "url": "./static/media/clouds-and-blur_300x225.04b572de.jpg"
   },
   {
     "revision": "fc6b18c9a13d45512872a6400d6398d8",
@@ -74,6 +82,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f858e0c88996a4633202a181426f286a",
     "url": "./static/media/halbstadt_300x225.f858e0c8.jpg"
+  },
+  {
+    "revision": "231f28803ede9646cf4d46465d6e3fae",
+    "url": "./static/media/haskyjam-weather.231f2880.jpg"
+  },
+  {
+    "revision": "2da1f69e00068c99f62eec70d42ab262",
+    "url": "./static/media/haskyjam-weather_300x225.2da1f69e.jpg"
   },
   {
     "revision": "7228d601b6a6d4a7d097db64f0530975",
