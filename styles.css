@@ -1,6 +1,7 @@
 body {
   font-family: monospace;
   font-size: 20px;
+  line-height: 45px;
 }
 
 .container {
@@ -12,4 +13,15 @@ li {
 }
 .video {
   display: block;
+  line-height: 20px;
+}
+
+.cv-container {
+  display: flex;
+  align-items: flex-end;
+}
+.cv {
+  display: block;
+  line-height: 20px;
+  margin-right: 20px;
 }
