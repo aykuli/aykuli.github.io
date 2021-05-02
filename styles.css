@@ -1,0 +1,15 @@
+body {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.container {
+  padding: 50px;
+}
+
+li {
+  padding-bottom: 10px;
+}
+.video {
+  display: block;
+}
