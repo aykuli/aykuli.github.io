@@ -1,1 +1,6 @@
 theme: jekyll-theme-hacker
+name: Aynur Shauerman
+description: CV, activity in frontend community
+url: "https://aykuli.github.io/"
+markdown: kramdown
+highlighter: rouge
