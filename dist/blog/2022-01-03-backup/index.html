@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/main.bundle.css">
+      <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+  <script src="/assets/main.bundle.js" defer></script>
+  <title>Ubuntu backup command</title>
+  
+</head>
+<body class="flex flex-col min-h-screen">
+<header class="text-gray-800 bg-white border-t border-b body-font">
+  <div class="container flex flex-col flex-wrap -5 mx-auto md:item-center md:flex-row">
+    <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto md:mr-auto">
+      <a href="/" class="mr-6 text-md font-semibold hover:text-gray-800">Home</a>
+      <a href="/about" class="mr-6 text-md font-semibold hover:text-gray-800">About</a>
+    </nav>
+  </div>
+</header>
+<main class="container flex-grow py-8">
+ 
+<article class="prose prose-lg max-w-2xl px-8 mx-auto bg-white">
+  <h2 class="py-8">Ubuntu backup command</h2>
+  <p>Новый год начинается во время каникул, поэтому время провести надо с пользой, иначе совесть жить не даст в этом году.</p>
+<p>Итак, я прочитала книгу &quot;Командная строка Linux&quot; Уильямса Шоттса.</p>
+<p>Выделю для себя нужные команды здесь:</p>
+<ol>
+<li>
+<p>в файле .bashrc:</p>
+<pre><code>alias backup=&quot;sudo rsync -av --delete /etc /home /usr/local /media/BigDisk/backup'
+</code></pre>
+<p><em>rsync</em> - программа, синхронизирующщая локальные и удаленные каталоги,</p>
+<p>параметры <em>-а</em> обеспечивает рекурсивный обход и сохранение атрибутов файла,</p>
+<p><em>-v</em> - подробный вывод,</p>
+<p><em>--delete</em> - удалить файлы, которые могут присутствовать на устройстве с резервной копией,</p>
+<p><em>/media/BigDisk/backup</em> - каталог в смонтированном диске (у вас может быть другой путь),</p>
+</li>
+<li>
+<p>Мониторинг содержимого файла /var/log/messages или /var/log/syslog в режиме реального времени</p>
+</li>
+</ol>
+<pre><code>tail -f /var/log/messages
+</code></pre>
+<p>где <em>tail</em> - программа, показывающая посление 10 записей данного файла на стандартный вывод.</p>
+<p>Напомню, что информацию по любой программе вы можете получить с атрибутом <code>--help</code>. Например,</p>
+<pre><code>tail --help
+</code></pre>
+<p>и получите:</p>
+<pre><code>a$ tail --help
+Использование: tail [ПАРАМЕТР]… [ФАЙЛ]…
+Печатает последние 10 строк каждого из ФАЙЛОВ на стандартный вывод.
+Если задано несколько ФАЙЛОВ, сначала печатает заголовок с именем файла.
+
+Если ФАЙЛ не задан или задан как -, читает стандартный ввод.
+
+Аргументы, обязательные для длинных параметров, обязательны и для коротких.
+  -c, --bytes=[+]Н         показать последние Н байт; или укажите -c +Н,
+                           чтобы начать вывод каждого файла с Н-го байта
+  -f, --follow[={name|descriptor}]
+
+...(остальное посмотрите сами в терминале при необходимости)
+
+</code></pre>
+
+
+
+</article>
+ </main>
+<footer class="text-gray-700 bg-white border-t body-font">
+  <div>
+    <div class="container flex flex-col flex-wrap px-5 py-6 lg:px-20 sm:flex-row">
+      <div class="flex flex-wrap items-center justufy-center text-base">
+        <p class="mr-5 text-sm text-center text-gray-400">Aynur Shauerman</p>
+        <a href="#" class="justify-center mr-5 text-sm text-center text-blueGray-200 hover:text-blue-700">link1</a>
+        <a href="#" class="justify-center mr-5 text-sm text-center text-blueGray-200 hover:text-blue-700">link2</a>
+        <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-end">
+          <p class="mr-5 text-sm text-center text-gray-400">FrontEnd developer</p>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>  
+</body>
+</html>
