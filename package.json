@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all clean -p build",
+    "build": "cross-env NODE_ENV=production npm-run-all clean -p build:webpack build:eleventy",
     "build:eleventy": "eleventy",
     "build:webpack": "webpack",
     "clean": "rm -rf dist",
