@@ -1,11 +1,14 @@
 /* Colors */
 :root {
   --lightgray: #e0e0e0;
-  --gray: #C0C0C0;
+  --gray: #c0c0c0;
   --darkgray: #333;
-  --navy: #17050F;
+  --navy: #17050f;
   --blue: #082840;
   --white: #fff;
+  /* Mine */
+  --deep-green: #004156;
+  --light-mint: #e4fff9;
 }
 
 /* Global stylesheet */
@@ -17,7 +20,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, system-ui, sans-serif;
+  font-family: "Kaisei HarunoUmi", -apple-system, system-ui, serif;
   color: var(--darkgray);
   background-color: var(--white);
 }
@@ -63,7 +66,10 @@ table th {
 
 pre,
 code {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+    "Courier New", Courier, monospace;
   line-height: 1.5;
 }
 pre {
@@ -82,7 +88,7 @@ pre {
   -ms-hyphens: none;
   hyphens: none;
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   background-color: #f6f6f6;
 }
 code {
@@ -110,7 +116,7 @@ code {
 }
 .highlight-line-active {
   background-color: #444;
-  background-color: hsla(0, 0%, 27%, .8);
+  background-color: hsla(0, 0%, 27%, 0.8);
 }
 .highlight-line-add {
   background-color: #45844b;
@@ -123,8 +129,10 @@ code {
 .home {
   padding: 0 1rem;
   float: left;
-  margin: 1rem 0; /* 16px /16 */
+  padding: 1rem; /* 16px /16 */
+  margin: 0;
   font-size: 1em; /* 16px /16 */
+  border-bottom: 1px solid var(--lightgray);
 }
 .home :link:not(:hover) {
   text-decoration: none;
@@ -132,14 +140,16 @@ code {
 
 /* Nav */
 .nav {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
   list-style: none;
-  float: left;
-  margin-left: 1em;
+  margin: 0;
+  border-bottom: 1px solid var(--lightgray);
 }
 .nav-item {
   display: inline-block;
-  margin-right: 1em;
+  margin-bottom: 0.5rem;
 }
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
@@ -177,8 +187,8 @@ code {
   word-spacing: -0.5px;
 }
 .postlist-link {
-  padding-left: .25em;
-  padding-right: .25em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
   text-underline-position: from-font;
   text-underline-offset: 0;
   text-decoration-thickness: 1px;
@@ -190,7 +200,6 @@ code {
   font-size: 1.1875em; /* 19px /16 */
   font-weight: 700;
 }
-
 
 /* Tags */
 .post-tag {
@@ -235,7 +244,7 @@ a[href].post-tag:focus {
   font-family: sans-serif;
   text-decoration: none;
   font-style: normal;
-  margin-left: .1em;
+  margin-left: 0.1em;
 }
 a[href].direct-link,
 a[href].direct-link:visited {
