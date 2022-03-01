@@ -14,3 +14,22 @@
   padding-top: 20px;
   background-color: var(--light-mint);
 }
+
+.nav-resume {
+  align-items: center;
+}
+.nav-resume a {
+  margin-bottom: 0.5rem;
+}
+
+.cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  cursor: pointer;
+}
