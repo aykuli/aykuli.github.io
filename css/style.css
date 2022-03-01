@@ -6,10 +6,10 @@
 
 .header {
   position: absolute;
-  left: -100px;
+  left: -50px;
   display: flex;
   flex-direction: column;
-  width: 100px;
+  width: 50px;
   height: 100vh;
   padding-top: 20px;
   background-color: var(--light-mint);
@@ -32,4 +32,26 @@
   border: 1px solid var(--blue);
   color: var(--blue);
   cursor: pointer;
+}
+
+.pet-projects {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.pet-projects a {
+  display: block;
+  margin-right: 10px;
+}
+
+.employer {
+  color: var(--blue);
+  text-decoration: none;
+}
+.employer:hover,
+.employer:focus {
+  color: var(--lightblue);
+  text-decoration: underline;
 }

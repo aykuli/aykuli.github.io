@@ -20,20 +20,19 @@
         <h1 class="home">
           <a href="{{ '/' | url }}">{{ metadata.title }}</a>
         </h1>
-        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-        <ul class="nav">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-              <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-            </li>
-          {%- endfor %}
-        </ul>
+        {# <ul class="nav">
+                                  {%- for entry in collections.all | eleventyNavigation %}
+                                    <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+                                      <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+                                    </li>
+                                  {%- endfor %}
+                                </ul> #}
         <div class="nav nav-resume">
           <a class="cv">
             CV
           </a>
-          {%- if metadata.resumeList.Linkedin %}
-            {%- for resume, data in metadata.resumeList %}
+          {%- if metadata.resumeList %}
+            {%- for _, data in metadata.resumeList %}
               <a href="{{ data.url }}">
                 <img width="32" height="32" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
               </a>
@@ -42,31 +41,7 @@
         </div>
       </nav>
     </header>
-    <main
-      {% if templateClass %} class="{{ templateClass }} container" {% endif %}>
-      <!-- Delete this message -->
-      <div class="warning">
-        <ol>
-          <li>Edit the
-            <code>_data/metadata.json</code>
-            with your blog’s information.</li>
-          <li>(Optional) Edit
-            <code>.eleventy.js</code>
-            with your
-            <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-          <li>Delete this message from
-            <code>_includes/layouts/base.njk</code>.</li>
-        </ol>
-        <p>
-          <em>This is an
-            <a href="https://www.11ty.dev/">Eleventy project</a>
-            created from the
-            <a href="https://github.com/11ty/eleventy-base-blog">
-              <code>eleventy-base-blog</code>
-              repo</a>.</em>
-        </p>
-      </div>
-      <!-- Stop deleting -->
+    <main {% if templateClass %} class="{{ templateClass }} container" {% endif %}>
       {{ content | safe }}
     </main>
     <footer class="container"></footer>

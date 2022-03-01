@@ -14,7 +14,10 @@
     "url": "https://example.com/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
+    "name": "Aynur Shauerman",
+    "prof": "Frontend engineer",
+    "employer": "StandardProject",
+    "employerurl": "https://stdpr.ru/",
     "email": "youremailaddress@example.com",
     "url": "https://example.com/about-me/"
   },
@@ -33,6 +36,16 @@
       "title": "Habr",
       "url": "https://career.habr.com/aykuli",
       "img": "habr.png"
+    }
+  },
+  "pet-projects": {
+    "piskel-clone": {
+      "title": "Piskel clone",
+      "url": "https://aykuli.github.io/piskel-clone/"
+    },
+    "fancy-weather": {
+      "title": "Fancy weather",
+      "url": "https://aykuli.github.io/fancy-weather/"
     }
   }
 }
