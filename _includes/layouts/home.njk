@@ -5,18 +5,28 @@ templateClass: tmpl-home
 
 {% set author = metadata.author %}
 
-<h1>{{ author.name }}</h1>
-<p>{{ author.prof }} at <a target="_blank" class="employer" href="{{ author.employerurl }}" title="{{ author.employer }}">{{ author.employer }}</a></p>
-<div class="pet-projects">
-{%- if metadata["pet-projects"] %}
-            {%- for name, data in metadata["pet-projects"] %}
-              <a target="_blank" href="{{ data.url }}" title="{{ data.title }}">
-                <img width="150" height="100" src="../../img/pet-projects/{{ name }}.jpg" alt="{{ data.title }}"/>
-              </a>
-            {%- endfor %}
-          {% endif %}
+<div class="author-info">
+  <img src="../../img/aynur_shauerman_small.jpg" alt="Aynur Shauerman" title="Aynur Shauerman" >
+  <div>
+    <h1>{{ author.name }}</h1>
+    <p>{{ author.prof }} at <a target="_blank" class="employer" href="{{ author.employerurl }}" title="{{ author.employer }}">{{ author.employer }}</a></p>
   </div>
+</div>
+
+<p class="author-desc">{{ author.desc }}</p>
+
+
+<div class="pet-projects">
+  {%- if metadata["pet-projects"] %}
+    {%- for name, data in metadata["pet-projects"] %}
+      <a target="_blank" href="{{ data.url }}" title="{{ data.title }}">
+        <img width="150" height="100" src="../../img/pet-projects/{{ name }}.jpg" alt="{{ data.title }}"/>
+      </a>
+    {%- endfor %}
+  {% endif %}
+</div>
 
 {% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+
+{{ content | safe }}
 
