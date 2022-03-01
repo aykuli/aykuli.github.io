@@ -35,7 +35,7 @@
 }
 
 .pet-projects {
-  padding: 20px;
+  padding: 20px 0;
   border-top: 1px solid var(--lightgray);
   border-bottom: 1px solid var(--lightgray);
 }
@@ -58,13 +58,36 @@
 }
 
 .author-desc {
+  margin: 0;
 }
-
 .author-info {
   display: flex;
+  margin-bottom: 2rem;
 }
-
 .author-info img {
   width: 100px;
   margin-right: 20px;
+}
+.author-tags {
+  padding: 1rem 0;
+}
+
+.author-tags a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  padding: 0.08333333333333em 0.3333333333333em;
+  margin-right: 1rem;
+  color: var(--darkgray);
+  border: 1px solid var(--gray);
+  border-radius: 0.25em;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.author-tags a:hover,
+.author-tags a:focus {
+  background-color: var(--lightgray);
 }

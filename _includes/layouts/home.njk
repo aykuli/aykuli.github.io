@@ -14,10 +14,13 @@ templateClass: tmpl-home
 </div>
 
 <p class="author-desc">{{ author.desc }}</p>
-{% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{% endfor %}
+
+<div class="author-tags">
+  {% for tag in collections.tagList %}
+    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+    <a href="{{ tagUrl | url }}">{{ tag }}</a>
+  {% endfor %}
+</div>
 
 
 <div class="pet-projects">
