@@ -10,4 +10,9 @@ eleventyNavigation:
 
 
 {% set postslist = collections.posts %}
+{% set maxPosts = collections.posts.length | min(3) %}
+{% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
+
+<p>More posts can be found in <a href="{{ '/posts/' | url }}">the notes page</a>.</p>
+
