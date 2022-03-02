@@ -1,6 +1,6 @@
 /* Colors */
 :root {
-  --lightgray: #e0e0e0;
+  --lightgray: #f2f2f2;
   --gray: #c0c0c0;
   --darkgray: #333;
   --navy: #17050f;
@@ -8,8 +8,9 @@
   --white: #fff;
   /* Mine */
   --lightblue: #5586ab;
-  --deepgreen: #004156;
-  --lightmint: #effffb;
+  --deepgreen: #2b6777;
+  --lightmint: #e4f9f7;
+  --mint: #91cbbf;
 }
 
 /* Global stylesheet */
@@ -25,6 +26,12 @@ body {
   color: var(--darkgray);
   background-color: var(--white);
 }
+h1 {
+  padding: 0;
+  margin: 0;
+  font-family: "Kaisei HarunoUmi", -apple-system, system-ui, serif;
+  color: var(--darkgray);
+}
 p:last-child {
   margin-bottom: 0;
 }
@@ -37,12 +44,7 @@ p,
 .tmpl-post li {
   line-height: 1.45;
 }
-a[href] {
-  color: var(--blue);
-}
-a[href]:visited {
-  color: var(--navy);
-}
+
 main {
   padding: 1rem;
 }
@@ -120,7 +122,7 @@ code {
   background-color: hsla(0, 0%, 27%, 0.8);
 }
 .highlight-line-add {
-  background-color: #45844b;
+  background-color: var(--mint);
 }
 .highlight-line-remove {
   background-color: #902f2f;
@@ -128,14 +130,19 @@ code {
 
 /* Header */
 .home {
-  padding: 0 1rem;
-  float: left;
-  padding: 1rem; /* 16px /16 */
+  display: block;
+  width: 100%;
+  padding: 1rem 0; /* 16px /16 */
   margin: 0;
-  font-size: 1em; /* 16px /16 */
-  border-bottom: 1px solid var(--lightgray);
+  font-size: 1rem; /* 16px /16 */
+  color: var(--darkgray);
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
 }
-.home :link:not(:hover) {
+.home:hover {
+  transition: background-color 2s easy;
+  background-color: var(--mint);
   text-decoration: none;
 }
 
@@ -143,21 +150,35 @@ code {
 .nav {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  list-style: none;
+  align-items: center;
   margin: 0;
-  border-bottom: 1px solid var(--lightgray);
+  padding: 0;
+  list-style: none;
+  border-bottom: 2px solid #fff;
+}
+.nav li {
+  width: 100%;
 }
 .nav-item {
-  display: inline-block;
-  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+.nav-item a {
+  text-decoration: none;
+}
+.nav-item:hover,
+.nav-item:focus {
+  background-color: var(--mint);
 }
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
 }
 .nav-item-active {
   font-weight: 700;
-  text-decoration: underline;
 }
 
 /* Posts list */

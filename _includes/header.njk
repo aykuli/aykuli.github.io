@@ -1,26 +1,31 @@
 <header class="container">
   <nav class="header">
-    <h1 class="home">
-      <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+    <h1>
+      <a class="home" href="{{ '/' | url }}">{{ metadata.title }}</a>
     </h1>
     <ul class="nav">
       {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-        </li>
-      {%- endfor %}
-    </ul>
-    <div class="nav nav-resume">
-      <a class="cv">
-        CV
-      </a>
-      {%- if metadata.resumeList %}
-        {%- for _, data in metadata.resumeList %}
-          <a href="{{ data.url }}">
-            <img width="32" height="32" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
-          </a>
+        <li>
+          <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %}nav-item-active{% endif %}">
+            {%- if entry.title === 'CV' %}
+              <span class="cv">
+                {{ entry.title }}
+              </span>
+            {% else %}
+              <img src="../../img/icons/{{ entry.title }}.svg" width="34" height="34" alt="{{ entry.title }}">
+              {% endif %}
+            </a>
+          </li>
         {%- endfor %}
-      {% endif %}
-    </div>
-  </nav>
-</header>
+      </ul>
+      <div class="nav nav-resume">
+        {%- if metadata.resumeList %}
+          {%- for _, data in metadata.resumeList %}
+            <a href="{{ data.url }}" class="nav-item">
+              <img width="32" height="32" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
+            </a>
+          {%- endfor %}
+        {% endif %}
+      </div>
+    </nav>
+  </header>
