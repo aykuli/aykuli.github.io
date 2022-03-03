@@ -9,7 +9,7 @@
   /* Mine */
   --lightblue: #5586ab;
   --deepgreen: #2b6777;
-  --lightmint: #e4f9f7;
+  --lightmint: #91cbbf55;
   --mint: #91cbbf;
 }
 
@@ -138,6 +138,7 @@ code {
   color: var(--darkgray);
   text-align: center;
   text-decoration: none;
+  border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
 .home:hover {

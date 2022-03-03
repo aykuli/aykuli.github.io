@@ -1,7 +1,14 @@
+{% set state = 'opened' %}
 <header class="container">
   <nav class="header">
+    <button class="header-menu-btn {% if state == 'closed' %} display-none {% endif %}" onclick={{ state | onToggleMenu }}>
+      <img src='../../img/icons/align-justify.svg' title="open menu" width="20" height="20"/>
+    </button>
+    <button class="header-menu-btn {% if state == 'opened' %} display-none {% endif %}">
+      <img src='../../img/icons/cross.svg' title="close menu" width="20" height="20"/>
+    </button>
     <h1>
-      <a class="home" href="{{ '/' | url }}">{{ metadata.title }}</a>
+      <a class=" home" href=" {{ '/' | url }} ">{{ metadata.title }}</a>
     </h1>
     <ul class="nav">
       {%- for entry in collections.all | eleventyNavigation %}
