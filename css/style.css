@@ -13,7 +13,13 @@
   box-shadow: 5px 5px 25px rgb(0 0 0 / 20%);
   z-index: 2;
 }
-.header-menu-btn {
+.header__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+}
+.header__menu-btn {
   width: 100px;
   height: 70px;
   border: none;

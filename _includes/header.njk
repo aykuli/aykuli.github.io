@@ -5,17 +5,25 @@
     @keydown.escape="isOpen = false"
     @click.away="isOpen = false"
     x-transition>
-    <button class="header-menu-btn" @click="isOpen = !isOpen" type="button">
-      <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40" x-show="!isOpen"/>
-      <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40" x-show="isOpen"/>
-    </button>
-    <h1 class="home" x-show="isOpen" x-transition>
-      <a href="{{ '/' | url }}">{{ metadata.title }}</a>
-    </h1>
+    <div class="header__title" x-bind:style="isOpen ? 'border-bottom: 2px solid #fff;' : 'none'">
+      <button class="header__menu-btn" @click="isOpen = !isOpen" type="button">
+        <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40" x-show="!isOpen"/>
+        <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40" x-show="isOpen"/>
+      </button>
+      <h1>
+        {{ metadata.title }}
+      </h1>
+    </div>
     <ul class="nav" x-show="isOpen" x-transition>
+      <li>
+        <a class="nav-item" href=" {{ '/' | url }} " x-show=" isOpen" x-transition>Main page</a>
+      </li>
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
-          <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %}nav-item-active{% endif %}" target="_blank">
+          <a
+            href=" {{ entry.url | url }} "
+            title=" {{ entry.title }} "
+            class=" nav-item {% if entry.url == page.url %} nav-item-active {% endif %} ">
             {%- if entry.title === 'CV' %}
               <span class="cv">
                 {{ entry.title }}

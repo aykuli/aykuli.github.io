@@ -129,8 +129,6 @@ code {
 }
 
 /* Header */
-.home {
-}
 .home a {
   display: flex;
   justify-content: start;
@@ -160,6 +158,9 @@ code {
   list-style: none;
   border-bottom: 2px solid #fff;
 }
+.nav:last-child {
+  border-bottom: none;
+}
 .nav li {
   width: 100%;
   border-bottom: 1px solid #fff;
@@ -176,7 +177,11 @@ code {
   padding: 1.5rem 2rem;
   text-decoration: none;
 }
-.nav-item a {
+a.nav-item {
+  text-decoration: none;
+  color: var(--darkgray);
+  font-size: 2rem; /* 16px /16 */
+  line-height: 2rem; /* 16px /16 */
   text-decoration: none;
 }
 .nav-item:hover,
