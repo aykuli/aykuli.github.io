@@ -11,25 +11,24 @@
         <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40" x-show="isOpen"/>
       </button>
       <h1>
-        {{ metadata.title }}
+        <a class="main-link" href=" {{ '/' | url }}">
+          {{ metadata.title }}
+        </a>
       </h1>
     </div>
     <ul class="nav" x-show="isOpen" x-transition>
-      <li>
-        <a class="nav-item" href=" {{ '/' | url }} " x-show=" isOpen" x-transition>Main page</a>
-      </li>
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
-          <a
-            href=" {{ entry.url | url }} "
-            title=" {{ entry.title }} "
-            class=" nav-item {% if entry.url == page.url %} nav-item-active {% endif %} ">
+          <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %} nav-item-active {% endif %} ">
             {%- if entry.title === 'CV' %}
               <span class="cv">
                 {{ entry.title }}
               </span>
             {% else %}
               <img src="../../img/icons/{{ entry.title }}.svg" width="40" height="40" alt="{{ entry.title }}">
+                <span class="nav-item__key">
+                  {{ entry.key }}
+                </span>
               {% endif %}
             </a>
           </li>

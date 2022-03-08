@@ -177,11 +177,13 @@ code {
   padding: 1.5rem 2rem;
   text-decoration: none;
 }
-a.nav-item {
+.nav-item__key {
+  padding-left: 1rem;
   text-decoration: none;
   color: var(--darkgray);
-  font-size: 2rem; /* 16px /16 */
-  line-height: 2rem; /* 16px /16 */
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
   text-decoration: none;
 }
 .nav-item:hover,
@@ -193,6 +195,14 @@ a.nav-item {
 }
 .nav-item-active {
   font-weight: 700;
+}
+
+.main-link {
+  text-decoration: none;
+  color: var(--darkgray);
+  font-size: 1.5rem; /* 16px /16 */
+  line-height: 2rem; /* 16px /16 */
+  text-decoration: none;
 }
 
 /* Posts list */
