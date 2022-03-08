@@ -134,7 +134,7 @@ code {
   width: 100%;
   padding: 1rem 0; /* 16px /16 */
   margin: 0;
-  font-size: 1rem; /* 16px /16 */
+  font-size: 2rem; /* 16px /16 */
   color: var(--darkgray);
   text-align: center;
   text-decoration: none;
@@ -165,7 +165,7 @@ code {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
   text-decoration: none;
 }
 .nav-item a {

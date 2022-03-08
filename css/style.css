@@ -9,15 +9,14 @@
   /* left: -50px; */
   display: flex;
   flex-direction: column;
-  width: 50px;
+  width: 100px;
   height: 100vh;
-  padding-top: 20px;
-  background-color: var(--lightmint);
+  background-color: var(--mint);
   z-index: 2;
 }
 .header-menu-btn {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -32,9 +31,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 34px;
-  height: 34px;
+  width: 56px;
+  height: 56px;
   color: var(--deepgreen);
+  font-size: 2rem;
   font-weight: 800;
   cursor: pointer;
   border-radius: 50%;
