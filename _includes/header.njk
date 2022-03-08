@@ -1,10 +1,5 @@
 <header class="container">
-  <nav
-    class="header"
-    x-data="{ isOpen: false }"
-    @keydown.escape="isOpen = false"
-    @click.away="isOpen = false"
-    x-transition>
+  <nav class="header" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
     <div class="header__title" x-bind:style="isOpen ? 'border-bottom: 2px solid #fff;' : 'none'">
       <button class="header__menu-btn" @click="isOpen = !isOpen" type="button">
         <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40" x-show="!isOpen"/>

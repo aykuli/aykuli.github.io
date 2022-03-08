@@ -250,8 +250,8 @@ code {
   position: absolute;
   top: -3px;
   left: -6px;
-  width: 70px;
-  height: 20px;
+  width: 125px;
+  height: 30px;
   background-color: var(--lightmint);
   text-decoration: none;
 }
