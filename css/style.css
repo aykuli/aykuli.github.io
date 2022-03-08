@@ -119,18 +119,21 @@
 
 .videolist__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: baseline;
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
   line-height: 1.8;
   border-bottom: 1px solid var(--gray);
 }
 
 .videolist__link {
-  display: block;
   font-size: 1.2rem;
   color: var(--black);
   font-weight: 500;
   text-decoration: none;
+  z-index: 2;
 }
 .videolist__link:hover,
 .videolist__link:focus {
@@ -141,19 +144,33 @@
   text-decoration: none;
   color: rgba(var(--black), 0.1);
 }
-.videolist__link::before {
+.videolist__link::after {
   content: "";
   position: absolute;
   top: -3px;
   left: -6px;
   width: 125px;
-  height: 30px;
+  height: 22px;
   background-color: var(--lightmint);
-  text-decoration: none;
 }
-
 .videolist__date {
-  display: block;
+  align-self: end;
   font-size: 0.8125em;
   color: var(--darkgray);
+}
+.videolist__year {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--darkgray);
+}
+.videolist__title {
+  margin-bottom: 0;
+}
+.videolist__lang {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+.videolist__lang span {
+  margin-right: 0.5rem;
 }
