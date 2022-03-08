@@ -159,6 +159,7 @@
   color: var(--darkgray);
 }
 .videolist__year {
+  margin: 1rem 0;
   font-size: 1.25em;
   font-weight: 600;
   color: var(--darkgray);
@@ -170,6 +171,7 @@
   display: flex;
   align-items: center;
   margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 .videolist__lang span {
   margin-right: 0.5rem;

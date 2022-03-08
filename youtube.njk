@@ -13,20 +13,23 @@ layout: layouts/home.njk
 </div>
 
 {% set videoList = youtube %}
+{% set videosLen = youtube.length %}
 
-{% for year, data in videoList %}
-  <p class="videolist__year">
-    {{year}}
-  </p>
-  <ul class="videolist">
-    {% for video in videoList[year] %}
-    <li class="videolist__item">
-      <a href="{{ video.url }}" class="videolist__link">
-        {{ video.title}}
-      </a>
-      <time class="videolist__date" datetime="{{ video.date | htmlDateString }}">{{ video.date  }}</time>
-    </li>
-    {% endfor %}
-  </ul>
+{% for info in videoList %}
+  <details open>
+    <summary class="videolist__year">
+    {{info.year}}
+    </summary>
+    <ul class="videolist">
+      {% for video in info.data %}
+      <li class="videolist__item">
+        <a href="{{ video.url }}" class="videolist__link">
+          {{ video.title}}
+        </a>
+        <time class="videolist__date" datetime="{{ video.date | htmlDateString }}">{{ video.date  }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
 {% endfor %}
 
