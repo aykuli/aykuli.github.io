@@ -1,16 +1,16 @@
-{% set state = 'opened' %}
 <header class="container">
-  <nav class="header">
-    <button class="header-menu-btn {% if state == 'closed' %} display-none {% endif %}" onclick={{ state | onToggleMenu }}>
-      <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40"/>
-    </button>
-    <button class="header-menu-btn {% if state == 'opened' %} display-none {% endif %}">
-      <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40"/>
+  <nav class="header" x-data="{ isOpen: false }">
+    <button class="header-menu-btn">
+      {%- if state === 'closed' %}
+        <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40"/>
+      {% else %}
+        <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40"/>
+      {% endif %}
     </button>
     <h1>
       <a class=" home" href=" {{ '/' | url }} ">{{ metadata.title }}</a>
     </h1>
-    <ul class="nav">
+    <ul class="nav" x-show="isOpen">
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
           <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %}nav-item-active{% endif %}">

@@ -6,12 +6,14 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
-const { onToggleMenu } = require("./scripts");
-
 module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
+  eleventyConfig.addPassthroughCopy("./favicon.ico");
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/alpinejs/dist/cdn.min.js": "./static/js/alpine.js",
+  });
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -100,8 +102,6 @@ module.exports = function (eleventyConfig) {
     ui: false,
     ghostMode: false,
   });
-
-  eleventyConfig.addFilter("onToggleMenu", onToggleMenu);
 
   return {
     // Control which files Eleventy will process
