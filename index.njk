@@ -2,4 +2,14 @@
 layout: layouts/home.njk
 ---
 
-<h1>Aynur Shauerman information</h1>
+
+
+<h1>Notes</h1>
+
+
+{% set postslist = collections.posts %}
+{% set maxPosts = collections.posts.length | min(3) %}
+{% set postslistCounter = 10 %}
+{% include "postslist.njk" %}
+
+<p>More posts can be found in <a href="{{ '/posts/' | url }}">the notes page</a>.</p>

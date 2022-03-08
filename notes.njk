@@ -1,9 +1,13 @@
 ---
 layout: layouts/home.njk
-permalink: /notes/
+permalink: /notes/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
 eleventyNavigation:
   key: Notes
   order: 2
+pagination:
+  data: collections.all
+  size: 6
+  alias: entries
 ---
 
 <h1>Notes</h1>
