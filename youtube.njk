@@ -1,0 +1,29 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: videos
+  addAllPagesToCollections: true
+layout: layouts/home.njk
+---
+<h2>Youtube livestreames</h2>
+<p>Russian language<p>
+
+{% set videoList = youtube %}
+
+{% for year, data in videoList %}
+  <p>
+    {{year}}
+  </p>
+  <ul class="videolist">
+    {% for video in videoList[year] %}
+    <li class="videolist__item">
+      <a href="{{ video.url }}" class="videolist__link">
+        {{ video.title}}
+      </a>
+      <time class="videolist__date" datetime="{{ video.date | htmlDateString }}">{{ video.date  }}</time>
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+

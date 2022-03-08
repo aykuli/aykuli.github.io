@@ -25,17 +25,26 @@
     "Linkedin": {
       "title": "Linkedin",
       "url": "https://www.linkedin.com/in/aynur-shauerman-1830751b4/",
-      "img": "linkedin.svg"
+      "img": "linkedin.svg",
+      "redirect": true
     },
     "HH": {
       "title": "HH",
       "url": "https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50",
-      "img": "hh.svg"
+      "img": "hh.svg",
+      "redirect": true
     },
     "Habr": {
       "title": "Habr",
       "url": "https://career.habr.com/aykuli",
-      "img": "habr.png"
+      "img": "habr.png",
+      "redirect": true
+    },
+    "youtube": {
+      "title": "youtube",
+      "url": "/youtube",
+      "img": "youtube.svg",
+      "redirect": false
     }
   },
   "pet-projects": {

@@ -1,0 +1,64 @@
+{
+  "2021": [
+    {
+      "title": "JavaScript Classes and Prototypes",
+      "date": "2021-11-21",
+      "url": "JavaScript Classes and Prototypes"
+    },
+    {
+      "title": "Chrome DevTools",
+      "date": "2021-10-20",
+      "url": "https://youtu.be/mZ5HBZYTo4E"
+    },
+    {
+      "title": "Git basics",
+      "date": "2021-09-12",
+      "url": "https://youtu.be/8im0_M2cV7c"
+    },
+    {
+      "title": "React. API",
+      "date": "2021-08-06",
+      "url": "https://youtu.be/W9czPM2N65Y"
+    },
+    {
+      "title": "Talks with mentors 2021. Dzianis Sheko, Alexey, Zaphar, Natalya, Aynur Shauerman.",
+      "date": "2021-05-01",
+      "url": "https://www.youtube.com/watch?v=JXxxWC272I0"
+    },
+    {
+      "title": "Classes in JavaScript",
+      "date": "2021-04-21",
+      "url": "https://www.youtube.com/watch?v=uy_6CeZ6MTU"
+    },
+    {
+      "title": "Functions. Context. this in JavaScript. Part 1",
+      "date": "2021-04-01",
+      "url": "https://www.youtube.com/watch?v=pd_arTRUoVo"
+    },
+    {
+      "title": "Functions. Context. this in JavaScript. Part 2",
+      "date": "2021-03-31",
+      "url": "https://www.youtube.com/watch?v=VaxzLAZHxxU"
+    },
+    {
+      "title": " Scope. Hoisting. Closures",
+      "date": "2021-04-02",
+      "url": "https://www.youtube.com/watch?v=ljkURC300w0"
+    },
+    {
+      "title": "DOM Events",
+      "date": "2021-03-17",
+      "url": "https://www.youtube.com/watch?v=eLpud--JYmo"
+    },
+    {
+      "title": "DOM Events #2",
+      "date": "2021-03-19",
+      "url": "https://www.youtube.com/watch?v=vSYRWhqjXSM"
+    },
+    {
+      "title": "DevTools Chrome",
+      "date": "2021-03-11",
+      "url": "https://www.youtube.com/watch?v=5y8tehnvWTQ"
+    }
+  ]
+}

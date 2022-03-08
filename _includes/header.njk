@@ -32,7 +32,7 @@
       <div class="nav nav-resume" x-show="isOpen" x-transition>
         {%- if metadata.resumeList %}
           {%- for _, data in metadata.resumeList %}
-            <a href="{{ data.url }}" class="nav-item" target="_blank">
+            <a href="{{ data.url }}" class="nav-item" target="{% if data.redirect %}_blank{% else %}_parent{% endif %}">
               <img width="40" height="40" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
             </a>
           {%- endfor %}

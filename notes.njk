@@ -10,13 +10,12 @@ pagination:
   alias: entries
 ---
 
-<h1>Notes</h1>
-
+<h2>Notes</h2>
 
 {% set postslist = collections.posts %}
 {% set maxPosts = collections.posts.length | min(3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the notes page</a>.</p>
+<p>More notes <a href="{{ '/posts/' | url }}">here</a>.</p>
 

@@ -224,7 +224,7 @@ code {
 }
 
 .postlist__date {
-  font-size: 0.8125em; /* 13px /16 */
+  font-size: 0.8125em;
   color: var(--darkgray);
 }
 .postlist__date {
