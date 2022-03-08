@@ -17,9 +17,7 @@
   </head>
   <body>
     {% include "header.njk" %}
-    <main {% if templateClass %} class="{{ templateClass }} container" {% endif %}>
-      {{ content | safe }}
-    </main>
+    {% include "main.njk" %}
     <footer class="container"></footer>
     <!-- Current page: {{ page.url | url }} -->
   </body>
