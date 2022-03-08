@@ -5,21 +5,20 @@
 }
 
 .header {
-  position: absolute;
-  /* left: -50px; */
+  position: fixed;
   display: flex;
   flex-direction: column;
-  width: 100px;
+  width: 100%;
   background-color: var(--mint);
+  box-shadow: 5px 5px 25px rgb(0 0 0 / 20%);
   z-index: 2;
 }
 .header-menu-btn {
   width: 100px;
-  height: 100px;
+  height: 70px;
   border: none;
   background: transparent;
   cursor: pointer;
-  border-bottom: 1px solid #fff;
 }
 
 .nav-resume {

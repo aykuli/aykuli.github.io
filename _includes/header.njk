@@ -15,7 +15,7 @@
     <ul class="nav" x-show="isOpen" x-transition>
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
-          <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %}nav-item-active{% endif %}">
+          <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %}nav-item-active{% endif %}" target="_blank">
             {%- if entry.title === 'CV' %}
               <span class="cv">
                 {{ entry.title }}
@@ -30,7 +30,7 @@
       <div class="nav nav-resume" x-show="isOpen" x-transition>
         {%- if metadata.resumeList %}
           {%- for _, data in metadata.resumeList %}
-            <a href="{{ data.url }}" class="nav-item">
+            <a href="{{ data.url }}" class="nav-item" target="_blank">
               <img width="40" height="40" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
             </a>
           {%- endfor %}

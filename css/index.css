@@ -52,7 +52,7 @@ main :first-child {
   margin-top: 0;
 }
 header {
-  border-bottom: 1px dashed var(--lightgray);
+  height: 70px;
 }
 header:after {
   content: "";
@@ -130,24 +130,22 @@ code {
 
 /* Header */
 .home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 2rem 0; /* 16px /16 */
-  margin: 0;
-  text-align: center;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
 }
 .home a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 2rem; /* 16px /16 */
+  margin: 0;
+  text-align: center;
   color: var(--darkgray);
   font-size: 2rem; /* 16px /16 */
   line-height: 2rem; /* 16px /16 */
   text-decoration: none;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 .home:hover {
-  transition: background-color 2s easy;
   background-color: var(--mint);
   text-decoration: none;
 }
@@ -164,13 +162,18 @@ code {
 }
 .nav li {
   width: 100%;
+  border-bottom: 1px solid #fff;
+}
+.nav li:last-child {
+  width: 100%;
+  border-bottom: none;
 }
 .nav-item {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.5rem 2rem;
   text-decoration: none;
 }
 .nav-item a {
@@ -223,10 +226,6 @@ code {
 }
 .postlist-item-active .postlist-link {
   font-weight: bold;
-}
-.tmpl-home .postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
-  font-weight: 700;
 }
 
 /* Tags */
