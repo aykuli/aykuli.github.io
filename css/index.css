@@ -214,10 +214,9 @@ code {
   grid-template-columns: 3fr 1fr;
   flex-wrap: wrap;
   align-items: baseline;
-  counter-increment: start-from -1;
-  line-height: 1.8;
-  outline: 1px solid red;
   margin-bottom: 1rem;
+  line-height: 1.8;
+  border-bottom: 1px solid var(--gray);
 }
 .post__main-info {
   display: flex;

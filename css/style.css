@@ -56,6 +56,12 @@
 }
 .pet-projects-list {
   display: flex;
+  flex-direction: column;
+}
+.pet-project {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
 }
 
 .employer {
@@ -76,7 +82,6 @@
   margin-bottom: 2rem;
 }
 .author-info img {
-  width: 100px;
   margin-right: 20px;
 }
 .author-tags {

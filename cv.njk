@@ -8,20 +8,11 @@ eleventyNavigation:
 {% set author = metadata.author %}
 
 <div class="author-info">
-  <img src="../../img/aynur_shauerman_small.jpg" alt="Aynur Shauerman" title="Aynur Shauerman" >
+  <img src="../../img/aynur_shauerman_small.jpg" alt="Aynur Shauerman" title="Aynur Shauerman" width="200" height="266">
   <div>
     <h1>{{ author.name }}</h1>
     <p>{{ author.prof }} at <a target="_blank" class="employer" href="{{ author.employerurl }}" title="{{ author.employer }}">{{ author.employer }}</a></p>
   </div>
-</div>
-
-<p class="author-desc">{{ author.desc }}</p>
-
-<div class="author-tags">
-  {% for tag in collections.tagList %}
-    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-    <a href="{{ tagUrl | url }}">{{ tag }}</a>
-  {% endfor %}
 </div>
 
 
@@ -30,9 +21,14 @@ eleventyNavigation:
   <div class="pet-projects-list">
   {%- if metadata["pet-projects"] %}
     {%- for name, data in metadata["pet-projects"] %}
+    <div class="pet-project">
       <a target="_blank" href="{{ data.url }}" title="{{ data.title }}">
         <img width="150" height="100" src="../../img/pet-projects/{{ name }}.jpg" alt="{{ data.title }}"/>
       </a>
+<div>
+    <a href="{{data.url}}">{{ data.title }} </a>
+  </div>
+      </div>
     {%- endfor %}
   {% endif %}
   </div>
