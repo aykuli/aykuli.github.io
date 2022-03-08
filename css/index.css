@@ -130,16 +130,21 @@ code {
 
 /* Header */
 .home {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 1rem 0; /* 16px /16 */
+  padding: 2rem 0; /* 16px /16 */
   margin: 0;
-  font-size: 2rem; /* 16px /16 */
-  color: var(--darkgray);
   text-align: center;
-  text-decoration: none;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
+}
+.home a {
+  color: var(--darkgray);
+  font-size: 2rem; /* 16px /16 */
+  line-height: 2rem; /* 16px /16 */
+  text-decoration: none;
 }
 .home:hover {
   transition: background-color 2s easy;

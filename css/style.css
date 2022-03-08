@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   width: 100px;
-  height: 100vh;
   background-color: var(--mint);
   z-index: 2;
 }

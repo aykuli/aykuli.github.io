@@ -1,16 +1,18 @@
 <header class="container">
-  <nav class="header" x-data="{ isOpen: false }">
-    <button class="header-menu-btn">
-      {%- if state === 'closed' %}
-        <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40"/>
-      {% else %}
-        <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40"/>
-      {% endif %}
+  <nav
+    class="header"
+    x-data="{ isOpen: false }"
+    @keydown.escape="isOpen = false"
+    @click.away="isOpen = false"
+    x-transition>
+    <button class="header-menu-btn" @click="isOpen = !isOpen" type="button">
+      <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40" x-show="!isOpen"/>
+      <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40" x-show="isOpen"/>
     </button>
-    <h1>
-      <a class=" home" href=" {{ '/' | url }} ">{{ metadata.title }}</a>
+    <h1 class="home" x-show="isOpen" x-transition>
+      <a href="{{ '/' | url }}">{{ metadata.title }}</a>
     </h1>
-    <ul class="nav" x-show="isOpen">
+    <ul class="nav" x-show="isOpen" x-transition>
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
           <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %}nav-item-active{% endif %}">
@@ -25,7 +27,7 @@
           </li>
         {%- endfor %}
       </ul>
-      <div class="nav nav-resume">
+      <div class="nav nav-resume" x-show="isOpen" x-transition>
         {%- if metadata.resumeList %}
           {%- for _, data in metadata.resumeList %}
             <a href="{{ data.url }}" class="nav-item">
