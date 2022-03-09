@@ -8,14 +8,30 @@ eleventyNavigation:
 {% set author = metadata.author %}
 
 <div class="author-info">
-  <img src="../../img/aynur_shauerman_small.jpg" alt="Aynur Shauerman" title="Aynur Shauerman" width="200" height="266">
+  <img class="author-info__photo" src="../../img/aynur_shauerman_small.jpg" alt="Aynur Shauerman" title="Aynur Shauerman" width="200" height="266">
   <div>
     <h2>{{ author.name }}</h2>
-    <p>{{ author.prof }} </p>
-    <p>
-<time datetime="{{ author['birth-date'] | htmlDateString }}">{{ author["birth-date"] | getYear }}</time>
+    <p class="author-info__prof">{{ author.prof }} </p>
+    <time  class="author-info__txt" datetime="{{ author['birth-date'] }}">{{ author["birth-date"] }} - 35 years old</time>
+    <p class="author-info__txt">Current work:
+      <a href="{{author.employerurl}}" target="_blank">
+        {{author.employer}}
+      </a>
     </p>
-    <p>{{ author.prof }} at <a target="_blank" class="employer" href="{{ author.employerurl }}" title="{{ author.employer }}">{{ author.employer }}</a></p>
+    <div>
+    <p class="author-info__contact">
+      <span>@</span> 
+      <a href = "mailto:{{author.email}}?subject = Work">
+        {{author.email}}
+      </a>
+    </p>
+    <p class="author-info__contact">
+      <img src="../img/icons/telegram.svg" alt="{{ author.telegram}}" width="20" height="20">
+      <a href="{{author.telegram}}">
+        {{author.telegram}}
+      </a>
+    </p>
+    </div>
   </div>
 </div>
 
@@ -23,7 +39,7 @@ eleventyNavigation:
 
 <div>
   {% for title,info in cvData %}
-    <details open>
+    <details>
       <summary  class="cv-list__title">
         {{title}}
       </summary>

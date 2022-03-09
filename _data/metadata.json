@@ -16,11 +16,26 @@
   "author": {
     "name": "Aynur Shauerman",
     "prof": "Frontend engineer",
-    "employer": "StandardProject",
+    "employer": "StandardProject co.",
     "employerurl": "https://stdpr.ru/",
-    "desc": "Here I save my notes related to",
     "email": "aykuli@ya.ru",
-    "birth-date": "1987-02-19"
+    "birth-date": "1987-02-19",
+    "telegram": "https://t.me/Sib_aynur",
+    "experince": {
+      "frontend": [
+        "React",
+        "Vue",
+        "Angular"
+      ],
+      "backend": [
+        "Node.js",
+        "Adonis",
+        "Express"
+      ],
+      "other": [
+        "git"
+      ]
+    }
   },
   "resumeList": {
     "youtube": {
