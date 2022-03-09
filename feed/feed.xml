@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Aynur Shauerman</title>
+	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
+	
+	<link href="https://aykuli.github.io/feed/feed.xml" rel="self"/>
+	<link href="https://aykuli.github.io/"/>
+	<updated>2022-01-31T00:00:00Z</updated>
+	<id>https://aykuli.github.io/</id>
+	<author>
+		<name>Aynur Shauerman</name>
+		<email>aykuli@ya.ru</email>
+	</author>
+	
+	<entry>
+		<title>My List of Apps to Install on Ubuntu</title>
+		<link href="https://aykuli.github.io/posts/2022-01-30-ubuntu-install-list/"/>
+		<updated>2022-01-31T00:00:00Z</updated>
+		<id>https://aykuli.github.io/posts/2022-01-30-ubuntu-install-list/</id>
+		<content type="html">&lt;p&gt;List of applications, that I use for the last 6 years:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git&lt;/li&gt;
+&lt;li&gt;nodejs&lt;/li&gt;
+&lt;li&gt;vscode&lt;/li&gt;
+&lt;li&gt;npm&lt;/li&gt;
+&lt;li&gt;yarn&lt;/li&gt;
+&lt;li&gt;docker&lt;/li&gt;
+&lt;li&gt;chrome-browser&lt;/li&gt;
+&lt;li&gt;opera&lt;/li&gt;
+&lt;li&gt;gimp&lt;/li&gt;
+&lt;li&gt;kazam&lt;/li&gt;
+&lt;li&gt;zoom&lt;/li&gt;
+&lt;li&gt;nemo&lt;/li&gt;
+&lt;li&gt;obs&lt;/li&gt;
+&lt;li&gt;deepin-screenshot&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+	</entry>
+</feed>
