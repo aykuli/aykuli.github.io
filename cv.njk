@@ -26,13 +26,17 @@ eleventyNavigation:
       <ul class="cv-list">
         {% for workData in info %}
         <li class="cv-list__item">
+        <a href="{{ workData.url }}" target="_blank">
           <img src="../img/cv/{{ workData.img }}" width="100" height="100" alt="{{ workData['company-name'] }}">
-          <div class="cv-list__item--info">
-            <a href="{{ workData.url }}">{{workData['company-name']}}</a>
-            <p class="cv-list__item--date">{{workData.time}}</p>
-            <p>{{workData.location}}</p>
+        </a>
+        <div class="cv-list__item--info">
+          <a href="{{ workData.url }}" target="_blank">{{workData['company-name']}}</a>
+          <p class="cv-list__item--date">{{workData.time}}</p>
+          <p>{{workData.location}}</p>
+          {%if workData['work-type']%}
             <p><b>Project type: </b>{{workData['work-type']}}</p>
-          </div>
+          {%endif%}
+        </div>
         </li>
         {% endfor %}
       </ul>

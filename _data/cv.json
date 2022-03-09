@@ -59,7 +59,7 @@
         ]
       },
       "location": "Novosibirsk, Russia",
-      "work-type": "Application for handling telecommunication devices",
+      "work-type": "Application for monitoring and configuring telecommunication devices",
       "img": "eltex.jpg"
     },
     {
@@ -73,25 +73,47 @@
   ],
   "Education": [
     {
-      "time": "2000-2004",
-      "url": "https://almaty.fizmat.kz/",
-      "title": "National School of Physics and Math"
-    },
-    {
-      "time": "2004-2010",
-      "url": "https://sibsutis.ru/",
-      "title": "Siberian State University of Telecommunication and Informatics",
-      "degree": "master's degree"
+      "time": "Oct 2021",
+      "url": "https://stepik.org/cert/1030872",
+      "company-name": "Python Stepik Courses",
+      "img": "2021_stepic_phyton.png"
     },
     {
       "time": "Aug 2021 - Sep 2021",
       "url": "https://stepik.org/certificate/12fd128f517f74dd971fe09de2c556b93163a05b.pdf",
-      "title": "Introduction to Data Science and Machine Learning"
+      "company-name": "Introduction to Data Science and Machine Learning",
+      "img": "2021_stepic_ml.png"
     },
     {
-      "time": "March 2020 - May 2020",
-      "url": "https://stepik.org/certificate/12fd128f517f74dd971fe09de2c556b93163a05b.pdf",
-      "title": "Introduction to Data Science and Machine Learning"
+      "time": "2020",
+      "url": "https://app.rs.school/certificate/pjvmcw48",
+      "company-name": "React in Rolling Scopes School",
+      "img": "2020_RSS_React.png"
+    },
+    {
+      "time": "2020",
+      "url": "https://app.rs.school/certificate/bhkjjpnh",
+      "company-name": "Node.js in Rolling Scopes School",
+      "img": "2020_RSS_Nodejs.png"
+    },
+    {
+      "time": "2020",
+      "url": "https://app.rs.school/certificate/wh99o3oh ",
+      "company-name": "JavaScript in Rolling Scopes School",
+      "img": "2020_RSS_js.png"
+    },
+    {
+      "time": "2004-2010",
+      "url": "https://sibsutis.ru/",
+      "company-name": "Siberian State University of Telecommunication and Informatics",
+      "degree": "Master's degree",
+      "img": "sibsutis.png"
+    },
+    {
+      "time": "2000-2004",
+      "url": "https://almaty.fizmat.kz/",
+      "company-name": "National School of Physics and Math",
+      "img": "physmath.png"
     }
   ]
 }
