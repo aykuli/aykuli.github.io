@@ -115,5 +115,46 @@
       "company-name": "National School of Physics and Math",
       "img": "physmath.png"
     }
+  ],
+  "Science activity": [
+    {
+      "company-name": "IEEE",
+      "time": "2009-2011",
+      "url": "https://ieeexplore.ieee.org/author/37546761600",
+      "topic": "Adaptive signal processing",
+      "img": "ieee.png"
+    },
+    {
+      "company-name": "Hardware development",
+      "time": "2009-2011",
+      "urls": [
+        {
+          "title": "Intro",
+          "url": "http://labfor.ru/articles/dip/intro"
+        },
+        {
+          "title": "Analytical review of modern digital oscilloscopes",
+          "url": "http://labfor.ru/articles/dip/1"
+        },
+        {
+          "title": "Development of a block diagram",
+          "url": "http://labfor.ru/articles/dip/2"
+        },
+        {
+          "title": "Hardware development",
+          "url": "http://labfor.ru/articles/dip/3"
+        },
+        {
+          "title": "Development of the software part of the set-top box oscilloscope",
+          "url": "http://labfor.ru/articles/dip/4"
+        },
+        {
+          "title": "Determination of metrological characteristics and experimental study of the set-top box oscilloscope",
+          "url": "http://labfor.ru/articles/dip/5"
+        }
+      ],
+      "tools": "MathCAD, MatLAB, LabVIEW",
+      "img": "dip.png"
+    }
   ]
 }

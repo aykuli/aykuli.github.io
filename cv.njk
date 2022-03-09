@@ -11,6 +11,10 @@ eleventyNavigation:
   <img src="../../img/aynur_shauerman_small.jpg" alt="Aynur Shauerman" title="Aynur Shauerman" width="200" height="266">
   <div>
     <h2>{{ author.name }}</h2>
+    <p>{{ author.prof }} </p>
+    <p>
+<time datetime="{{ author['birth-date'] | htmlDateString }}">{{ author["birth-date"] | getYear }}</time>
+    </p>
     <p>{{ author.prof }} at <a target="_blank" class="employer" href="{{ author.employerurl }}" title="{{ author.employer }}">{{ author.employer }}</a></p>
   </div>
 </div>
@@ -32,9 +36,26 @@ eleventyNavigation:
         <div class="cv-list__item--info">
           <a href="{{ workData.url }}" target="_blank">{{workData['company-name']}}</a>
           <p class="cv-list__item--date">{{workData.time}}</p>
-          <p>{{workData.location}}</p>
+          {%if workData.location%}
+            <p>{{workData.location}}</p>
+          {%endif%}
           {%if workData['work-type']%}
             <p><b>Project type: </b>{{workData['work-type']}}</p>
+          {%endif%}
+          {%if workData.tools%}
+            <p><b>Tools:</b> {{workData.tools}}</p>
+          {%endif%}
+          {%if workData.topic%}
+            <p><b>Topic: </b>{{workData.topic}}</p>
+          {%endif%}
+          {%if workData.urls%}
+            <ul class="article-urls">
+            {% for article in workData.urls %}
+            <li>
+              <a href="{{ article.url }}" target="_blank">{{article.title}}</a>
+            </li>
+            {% endfor %}
+            </ul>
           {%endif%}
         </div>
         </li>

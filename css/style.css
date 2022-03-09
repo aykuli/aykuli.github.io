@@ -239,12 +239,26 @@
 }
 
 .cv-list__title {
+  margin: 0.75rem 0;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 p.cv-list__item--date {
   font-size: 0.8rem;
   line-height: 1.2rem;
+}
+.article-urls {
+  padding-left: 15px;
+  list-style-type: disc;
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem 1rem 1rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--mint);
 }
 
 @media (min-width: 768px) {
