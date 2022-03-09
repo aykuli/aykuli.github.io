@@ -15,6 +15,32 @@ eleventyNavigation:
   </div>
 </div>
 
+{% set cvData = cv %}
+
+<div>
+  {% for title,info in cvData %}
+    <details open>
+      <summary  class="cv-list__title">
+        {{title}}
+      </summary>
+      <ul class="cv-list">
+        {% for workData in info %}
+        <li class="cv-list__item">
+          <img src="../img/cv/{{ workData.img }}" width="100" height="100" alt="{{ workData['company-name'] }}">
+          <div class="cv-list__item--info">
+            <a href="{{ workData.url }}">{{workData['company-name']}}</a>
+            <p class="cv-list__item--date">{{workData.time}}</p>
+            <p>{{workData.location}}</p>
+            <p><b>Project type: </b>{{workData['work-type']}}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+  {% endfor %}
+</div>
+
+
 
 <div class="pet-projects">
   <h2>Pet projects</h2>

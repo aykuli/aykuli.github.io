@@ -11,7 +11,7 @@
         </a>
       </h1>
     </div>
-    <ul class="nav" x-show="isOpen" x-transition="x-transition">
+    <ul class="nav" x-show="isOpen" x-transition>
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
           <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %} nav-item-active {% endif %} ">
@@ -29,7 +29,7 @@
         </li>
       {%- endfor %}
     </ul>
-    <div class="nav nav-resume" x-show="isOpen" x-transition="x-transition">
+    <div class="nav nav-resume" x-show="isOpen" x-transition>
       {%- if metadata.resumeList %}
         {%- for _, data in metadata.resumeList %}
           <a href="{{ data.url }}" class="nav-item" target="{% if data.redirect %}_blank{% else %}_parent{% endif %}">

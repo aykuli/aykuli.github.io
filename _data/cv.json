@@ -1,0 +1,97 @@
+{
+  "Work experience": [
+    {
+      "company-name": "StandardProject",
+      "time": "Nov 2021 - Present",
+      "url": "https://www.stdpr.ru/",
+      "technologies": {
+        "frontend": [
+          "React",
+          "Redux",
+          "Redux-Saga"
+        ]
+      },
+      "location": "Moscow, Russia",
+      "work-type": "Application for document handling for goverment department",
+      "img": "stpj.jpg"
+    },
+    {
+      "company-name": "Rolling Scopes School",
+      "time": "Nov 2020 - Present",
+      "url": "https://rs.school/",
+      "technologies": {
+        "frontend": [
+          "React",
+          "JavaScript"
+        ]
+      },
+      "location": "Minsk, Belarus",
+      "work-type": "Mentor",
+      "img": "rss.jpg"
+    },
+    {
+      "company-name": "Stormwall",
+      "time": "Sep 2020 - Nov 2021",
+      "url": "https://stormwall.network/",
+      "technologies": {
+        "frontend": [
+          "React",
+          "Vue",
+          "Redux",
+          "Material-ui"
+        ],
+        "backend": [
+          "Adonis",
+          "minio"
+        ]
+      },
+      "location": "Moscow, Russia",
+      "work-type": "Application for monitoring ddos attack on servers",
+      "img": "stormwall.png"
+    },
+    {
+      "company-name": "Eltex co.",
+      "time": "June 2020 - Sep 2020",
+      "url": "https://eltex-co.ru/",
+      "technologies": {
+        "frontend": [
+          "Angular"
+        ]
+      },
+      "location": "Novosibirsk, Russia",
+      "work-type": "Application for handling telecommunication devices",
+      "img": "eltex.jpg"
+    },
+    {
+      "company-name": "Siberian State University of Telecommunication and Informatics",
+      "time": "June 2008 - Sep 2015",
+      "url": "https://sibsutis.ru/",
+      "location": "Novosibirsk, Russia",
+      "work-type": "Certification and declaration telecommunication devices for sell foreighn companies in Russia",
+      "img": "sibsutis.png"
+    }
+  ],
+  "Education": [
+    {
+      "time": "2000-2004",
+      "url": "https://almaty.fizmat.kz/",
+      "title": "National School of Physics and Math"
+    },
+    {
+      "time": "2004-2010",
+      "url": "https://sibsutis.ru/",
+      "title": "Siberian State University of Telecommunication and Informatics",
+      "degree": "master's degree"
+    },
+    {
+      "time": "Aug 2021 - Sep 2021",
+      "url": "https://stepik.org/certificate/12fd128f517f74dd971fe09de2c556b93163a05b.pdf",
+      "title": "Introduction to Data Science and Machine Learning"
+    },
+    {
+      "time": "March 2020 - May 2020",
+      "url": "https://stepik.org/certificate/12fd128f517f74dd971fe09de2c556b93163a05b.pdf",
+      "title": "Introduction to Data Science and Machine Learning"
+    }
+  ]
+}
