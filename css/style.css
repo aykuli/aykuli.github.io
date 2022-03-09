@@ -17,10 +17,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 .header__menu-btn {
-  width: 100px;
+  width: 80px;
   height: 70px;
   border: none;
   background: transparent;

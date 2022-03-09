@@ -8,7 +8,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-Sometimes I need to reinstall my operation system. last time it happened because free space for OS is ended. And i always tried to rememeber what it should be installed.
+List of applications, that I use for the last 6 years:
 
 - git
 - nodejs

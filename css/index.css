@@ -303,6 +303,64 @@ a[href].post__tag:focus {
   align-self: center;
 }
 
+.note__crumbs {
+  display: flex;
+}
+.note__crumbs p {
+  padding: 0;
+  margin: 0;
+}
+.note__title {
+  margin-bottom: 0.5rem;
+}
+.note__time {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.note__tags {
+  margin-bottom: 1.5rem;
+}
+.note__tags a {
+  margin-right: 0.5rem;
+}
+.note-md {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--mint);
+}
+.note-md p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 0;
+}
+.note-md ul {
+  margin: 1rem 0;
+}
+.note__pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.note__pagination a {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  text-decoration: none;
+}
+.note__pagination a:hover,
+.note__pagination a:focus {
+  background-color: var(--lightmint);
+  border-radius: 0.25rem;
+}
+.note__pagination-arrow {
+  font-size: 1rem;
+}
+.note__pagination-arrow--left {
+  margin-right: 0.5rem;
+}
+.note__pagination-arrow--right {
+  margin-left: 0.5rem;
+}
+
 /* Warning */
 .warning {
   background-color: #ffc;
