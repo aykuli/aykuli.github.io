@@ -4,6 +4,7 @@ permalink: /notes/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/
 eleventyNavigation:
   key: Notes
   order: 2
+  img: note.png
 pagination:
   data: collections.all
   size: 6
@@ -16,6 +17,4 @@ pagination:
 {% set maxPosts = collections.posts.length | min(3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
-
-<p>More notes <a href="{{ '/posts/' | url }}">here</a>.</p>
 

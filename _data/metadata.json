@@ -22,6 +22,12 @@
     "email": "aykuli@ya.ru"
   },
   "resumeList": {
+    "youtube": {
+      "title": "youtube",
+      "url": "/youtube",
+      "img": "youtube.svg",
+      "redirect": false
+    },
     "Linkedin": {
       "title": "Linkedin",
       "url": "https://www.linkedin.com/in/aynur-shauerman-1830751b4/",
@@ -39,12 +45,6 @@
       "url": "https://career.habr.com/aykuli",
       "img": "habr.png",
       "redirect": true
-    },
-    "youtube": {
-      "title": "youtube",
-      "url": "/youtube",
-      "img": "youtube.svg",
-      "redirect": false
     }
   },
   "pet-projects": {

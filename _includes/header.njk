@@ -11,7 +11,7 @@
         </a>
       </h1>
     </div>
-    <ul class="nav" x-show="isOpen" x-transition>
+    <ul class="nav" x-show="isOpen" x-transition="x-transition">
       {%- for entry in collections.all | eleventyNavigation %}
         <li>
           <a href="{{ entry.url | url }}" title="{{ entry.title }}" class="nav-item {% if entry.url == page.url %} nav-item-active {% endif %} ">
@@ -20,23 +20,60 @@
                 {{ entry.title }}
               </span>
             {% else %}
-              <img src="../../img/icons/{{ entry.title }}.svg" width="40" height="40" alt="{{ entry.title }}">
-                <span class="nav-item__key">
-                  {{ entry.key }}
-                </span>
-              {% endif %}
-            </a>
+              <img src="../../img/icons/{{ entry.img }}" width="40" height="40" alt="{{ entry.title }}">
+              <span class="nav-item__key">
+                {{ entry.key }}
+              </span>
+            {% endif %}
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+    <div class="nav nav-resume" x-show="isOpen" x-transition="x-transition">
+      {%- if metadata.resumeList %}
+        {%- for _, data in metadata.resumeList %}
+          <a href="{{ data.url }}" class="nav-item" target="{% if data.redirect %}_blank{% else %}_parent{% endif %}">
+            <img width="40" height="40" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
+          </a>
+        {%- endfor %}
+      {% endif %}
+    </div>
+  </nav>
+
+  <nav class="header__big">
+    <ul class="nav__big">
+      <li class="nav__big--item">
+        <h1>
+          <a class="main-link" href=" {{ '/' | url }}">
+            <img src="../../img/icons/home.svg" width="30" height="30" alt="home">
+
+          </a>
+        </h1>
+      </li>
+      {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav__big--item {% if entry.url == page.url %} nav-item-active {% endif %}">
+          <a href="{{ entry.url | url }}" title="{{ entry.title }}">
+            {%- if entry.title === 'CV' %}
+              <span class="cv cv__big">
+                {{ entry.title }}
+              </span>
+            {% else %}
+              <img src="../../img/icons/{{ entry.img }}" width="30" height="30" alt="{{ entry.title }}">
+            {% endif %}
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+    <ul class="nav__big nav-resume">
+      {%- if metadata.resumeList %}
+        {%- for _, data in metadata.resumeList %}
+        <li class="nav__big--item {% if entry.url == page.url %} nav-item-active {% endif %}">
+          <a href="{{ data.url }}" target="{% if data.redirect %}_blank{% else %}_parent{% endif %}">
+            <img width="30" height="30" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
+          </a>
           </li>
         {%- endfor %}
-      </ul>
-      <div class="nav nav-resume" x-show="isOpen" x-transition>
-        {%- if metadata.resumeList %}
-          {%- for _, data in metadata.resumeList %}
-            <a href="{{ data.url }}" class="nav-item" target="{% if data.redirect %}_blank{% else %}_parent{% endif %}">
-              <img width="40" height="40" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
-            </a>
-          {%- endfor %}
-        {% endif %}
-      </div>
-    </nav>
-  </header>
+      {% endif %}
+    </div>
+  </nav>
+</header>

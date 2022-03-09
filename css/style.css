@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  max-width: 800px;
+  max-width: 768px;
   margin: 0 auto;
 }
 
@@ -43,6 +43,11 @@
   cursor: pointer;
   border-radius: 50%;
   border: 2px solid var(--deepgreen);
+}
+.cv__big {
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
 }
 
 .pet-projects {
@@ -133,7 +138,6 @@
   color: var(--black);
   font-weight: 500;
   text-decoration: none;
-  z-index: 2;
 }
 .videolist__link:hover,
 .videolist__link:focus {
@@ -175,4 +179,42 @@
 }
 .videolist__lang span {
   margin-right: 0.5rem;
+}
+
+.header__big {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--mint);
+  box-shadow: 5px 5px 25px rgb(0 0 0 / 20%);
+}
+.nav__big {
+  display: flex;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav__big--item {
+  display: flex;
+  align-items: end;
+  height: 100%;
+}
+.nav__big--item a {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  line-height: 1rem;
+}
+.nav__big--item h1 {
+  line-height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: none;
+  }
 }

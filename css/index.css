@@ -12,7 +12,16 @@
   --lightmint: #91cbbf55;
   --mint: #91cbbf;
   --black: #121312;
+
+  /* breakpoints */
+  --middle: "768px";
+  --large: "1240px";
 }
+/*
+Breakpoints:
+768
+1240
+*/
 
 /* Global stylesheet */
 * {
@@ -48,6 +57,11 @@ p,
 
 main {
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  main {
+    padding: 1rem 0;
+  }
 }
 header {
   height: 70px;
@@ -196,10 +210,9 @@ code {
 }
 
 .main-link {
-  text-decoration: none;
   color: var(--darkgray);
-  font-size: 1.5rem; /* 16px /16 */
-  line-height: 2rem; /* 16px /16 */
+  font-size: 1.5rem;
+  line-height: 2rem;
   text-decoration: none;
 }
 
@@ -296,7 +309,7 @@ a[href].post__tag:visited {
 }
 a[href].post__tag:hover,
 a[href].post__tag:focus {
-  background-color: var(--lightgray);
+  background-color: var(--lightmint);
 }
 .postlist__item > .post__tag {
   align-self: center;
@@ -327,4 +340,23 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+@media (min-width: 768px) {
+  .postlist__item {
+    display: block;
+  }
+  .post__tags {
+    flex-direction: row;
+  }
+  .post__tag {
+    max-width: 200px;
+    margin-right: 0.5rem;
+  }
+  .main-link {
+    display: block;
+    color: var(--darkgray);
+    font-size: 1rem;
+    line-height: 1rem;
+  }
 }
