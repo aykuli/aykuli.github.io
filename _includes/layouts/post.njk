@@ -27,22 +27,26 @@ templateClass: tmpl-post
 {%- if nextPost or previousPost %}
 
 <div class="note__pagination">
-  {%- if nextPost %}
-  <a href="{{ nextPost.url | url }}">
-      <span class="note__pagination-arrow--right">
-        >
-      </span>
-      {{ nextPost.data.title }}
-    </a>
-  {% endif %}
-  {%- if previousPost %}
-    <a href="{{ previousPost.url | url }}">
-      <span class="note__pagination-arrow--left">
-        <
-      </span>
-      {{ previousPost.data.title }}
-    </a>
-  {% endif %}
+  <div>
+    {%- if nextPost %}
+    <a href="{{ nextPost.url | url }}">
+        <span class="note__pagination-arrow--right">
+          <
+        </span>
+        {{ nextPost.data.title }}
+      </a>
+    {% endif %}
+  </div>
+  <div>
+    {%- if previousPost %}
+      <a href="{{ previousPost.url | url }}">
+        {{ previousPost.data.title }}
+        <span class="note__pagination-arrow--left">
+          >
+        </span>
+      </a>
+    {% endif %}
+  </div>
 </div>
 {%- endif %}
 {%- endif %}
