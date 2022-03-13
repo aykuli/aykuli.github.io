@@ -46,4 +46,4 @@ result:
 
 - `diff posts/2022-03-13-linux-commands/index.md posts/2022-01-30-ubuntu-install-list.md` - difference between this files
 
-`df` - disk space information
+- `df` - disk space information

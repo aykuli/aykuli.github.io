@@ -20,8 +20,14 @@ eleventyNavigation:
     </p>
     <div>
     <p class="author-info__contact">
+      <img src="../img/icons/github.svg" alt="{{ author.github}}" width="20" height="20">
+      <a href="{{author.github}}">
+        {{author.github}}
+      </a>
+    </p>
+    <p class="author-info__contact">
       <span>@</span> 
-      <a href = "mailto:{{author.email}}?subject = Work">
+      <a href="mailto:{{author.email}}?subject = Work">
         {{author.email}}
       </a>
     </p>
