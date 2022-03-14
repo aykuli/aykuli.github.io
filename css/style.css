@@ -107,6 +107,7 @@
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: 0.25rem;
+  align-items: center;
 }
 .author-tags {
   padding: 1rem 0;

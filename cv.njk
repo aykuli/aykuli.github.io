@@ -20,7 +20,7 @@ eleventyNavigation:
     </p>
     <div>
     <p class="author-info__contact">
-      <img src="../img/icons/github.svg" alt="{{ author.github}}" width="20" height="20">
+      <img src="../img/icons/github.png" alt="{{ author.github}}" width="20" height="20">
       <a href="{{author.github}}">
         {{author.github}}
       </a>
@@ -85,26 +85,6 @@ eleventyNavigation:
       </ul>
     </details>
   {% endfor %}
-</div>
-
-
-
-<div class="pet-projects">
-  <h2>Pet projects</h2>
-  <div class="pet-projects-list">
-  {%- if metadata["pet-projects"] %}
-    {%- for name, data in metadata["pet-projects"] %}
-    <div class="pet-project">
-      <a target="_blank" href="{{ data.url }}" title="{{ data.title }}">
-        <img width="150" height="100" src="../../img/pet-projects/{{ name }}.jpg" alt="{{ data.title }}"/>
-      </a>
-<div>
-    <a href="{{data.url}}">{{ data.title }} </a>
-  </div>
-      </div>
-    {%- endfor %}
-  {% endif %}
-  </div>
 </div>
 
 

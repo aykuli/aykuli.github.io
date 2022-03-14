@@ -156,5 +156,27 @@
       "tools": "MathCAD, MatLAB, LabVIEW",
       "img": "dip.png"
     }
+  ],
+  "Pet projects": [
+    {
+      "company-name": "Piskel clone",
+      "img": "piskel-clone.jpg",
+      "url": "https://aykuli.github.io/piskel-clone/"
+    },
+    {
+      "img": "fancy-weather.jpg",
+      "company-name": "Fancy weather",
+      "url": "https://aykuli.github.io/fancy-weather/"
+    },
+    {
+      "img": "image-api",
+      "company-name": "CodeJam - Image API",
+      "url": "https://aykuli.github.io/image-api/"
+    },
+    {
+      "img": "belarus-writers",
+      "company-name": "Writers of Belarus",
+      "url": "https://belarusian-writers.netlify.app/en/"
+    }
   ]
 }

@@ -63,23 +63,5 @@
       "img": "habr.png",
       "redirect": true
     }
-  },
-  "pet-projects": {
-    "piskel-clone": {
-      "title": "Piskel clone",
-      "url": "https://aykuli.github.io/piskel-clone/"
-    },
-    "fancy-weather": {
-      "title": "Fancy weather",
-      "url": "https://aykuli.github.io/fancy-weather/"
-    },
-    "image-api": {
-      "title": "CodeJam - Image API",
-      "url": "https://aykuli.github.io/image-api/"
-    },
-    "belarus-writers": {
-      "title": "Writers of Belarus",
-      "url": "https://belarusian-writers.netlify.app/en/"
-    }
   }
 }
