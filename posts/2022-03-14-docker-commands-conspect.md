@@ -44,7 +44,7 @@ COPY *.json ./
 ```docker
 # comment line
 SHELL ["/bin/sh", "-c]
-RUN acho hello
+RUN echo hello
 
 ENV FOO = 1
 ENV BAR=$FOO
