@@ -73,11 +73,11 @@ EXPOSE 80/tcp
 
 - `CMD` will be overridden when running the container with alternative arguments.[^1]
 
-|                            | No ENTRYPOINT                    | ENTRYPOINT exec_entry p1_entry | ENTRYPOINT [“exec_entry”, “p1_entry”]          |
-| -------------------------- | -------------------------------- | ------------------------------ | ---------------------------------------------- |
-| No CMD                     | error, not allowed               | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry                            |
-| CMD [“exec_cmd”, “p1_cmd”] | exec_cmd p1_cmd                  | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry exec_cmd p1_cmd            |
-| CMD [“p1_cmd”, “p2_cmd”]   | p1_cmd p2_cmd                    | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry p1_cmd p2_cmd              |
-| CMD exec_cmd p1            | \_cmd /bin/sh -c exec_cmd p1_cmd | /bin/sh -c exec_entry p1_entry | exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd |
+|                              | No ENTRYPOINT                      | ENTRYPOINT exec_entry p1_entry   | ENTRYPOINT [“exec_entry”, “p1_entry”]            |
+| ---------------------------- | ---------------------------------- | -------------------------------- | ------------------------------------------------ |
+| No CMD                       | error, not allowed                 | `/bin/sh -c exec_entry p1_entry` | `exec_entry p1_entry`                            |
+| `CMD [“exec_cmd”, “p1_cmd”]` | `exec_cmd p1_cmd`                  | `/bin/sh -c exec_entry p1_entry` | `exec_entry p1_entry exec_cmd p1_cmd`            |
+| `CMD [“p1_cmd”, “p2_cmd”]`   | `p1_cmd p2_cmd`                    | `/bin/sh -c exec_entry p1_entry` | `exec_entry p1_entry p1_cmd p2_cmd`              |
+| `CMD exec_cmd p1`            | `\_cmd /bin/sh -c exec_cmd p1_cmd` | `/bin/sh -c exec_entry p1_entry` | `exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd` |
 
 [^1]: [Understand how CMD and ENTRYPOINT interact](https://docs.docker.com/engine/reference/builder/#entrypoint)
