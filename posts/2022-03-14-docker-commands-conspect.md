@@ -1,6 +1,6 @@
 ---
-title: Dockerfile Commands Кésumé
-date: 2022-01-31
+title: Dockerfile Commands Resume
+date: 2022-03-14
 tags:
   - docker
 layout: layouts/post.njk

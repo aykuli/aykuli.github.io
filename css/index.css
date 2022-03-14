@@ -90,7 +90,7 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  padding: 1em;
+  padding: 1em 0.5em;
   margin: 0.5em 0;
   background-color: #f6f6f6;
 }
@@ -326,6 +326,11 @@ a[href].post__tag:focus {
 .note-md {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--mint);
+}
+.note-md hr {
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+  color: var(--lightmint);
 }
 .note-md p {
   font-size: 1rem;
