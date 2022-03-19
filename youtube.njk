@@ -23,8 +23,9 @@ layout: layouts/home.njk
     <ul class="videolist">
       {% for video in info.data %}
       <li class="videolist__item">
-        <a href="{{ video.url }}" class="videolist__link">
-          {{ video.title}}
+        <a href="{{ video.url }}" class="videolist__link" target="_blank">
+          <span title="{{ video.title }}">{{ video.title}}</span>
+          <img src="../img/icons/youtube.svg" title="watch on youtube" class="videolist__btn--watch" width="20" >
         </a>
         <time class="videolist__date" datetime="{{ video.date | htmlDateString }}">{{ video.date  }}</time>
       </li>

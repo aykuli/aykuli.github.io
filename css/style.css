@@ -182,15 +182,24 @@
 }
 
 .videolist__link {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  align-items: center;
   font-size: 1.2rem;
   color: var(--black);
   font-weight: 500;
   text-decoration: none;
   z-index: 2;
 }
+.videolist__link span {
+  margin-right: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .videolist__link:hover,
 .videolist__link:focus {
-  color: rgba(var(--black), 0.5);
+  color: rgba(var(--mint), 0.5);
 }
 .videolist__link:visited {
   font-weight: 600;
@@ -358,4 +367,8 @@ p.cv-list__item--date {
   .header {
     display: none;
   }
+}
+
+.videolist__btn--watch {
+  backdrop-filter: grayscale(30%);
 }
