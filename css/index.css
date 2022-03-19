@@ -328,6 +328,7 @@ a[href].post__tag:focus {
 
 .note__crumbs {
   display: flex;
+  font-size: 1em;
 }
 .note__crumbs p {
   padding: 0;
@@ -342,6 +343,8 @@ a[href].post__tag:focus {
 }
 .note__tags {
   margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--lightmint);
 }
 .note__tags a {
   margin-right: 0.5rem;
@@ -360,16 +363,17 @@ a[href].post__tag:focus {
 .note__pagination a:hover,
 .note__pagination a:focus {
   background-color: var(--lightmint);
-  border-radius: 0.25rem;
+  border-radius: 0.4rem;
+  padding: 0 0.5rem 0 0.25rem;
 }
 .note__pagination-arrow {
   font-size: 1rem;
 }
 .note__pagination-arrow--left {
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 .note__pagination-arrow--right {
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 /* Warning */
