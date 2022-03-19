@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dockerfile Commands Resume</title>
+    <meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/md.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Aynur Shauerman">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Aynur Shauerman">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico"/>
+    <script src="/static/js/alpine.js" defer></script>
+  </head>
+  <body>
+    <header class='header-container'>
+  <nav class="header" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+    <div class="header__bg"  x-show="isOpen"> </div>
+    <div class="header__title" x-bind:style="isOpen ? 'border-bottom: 2px solid #fff;' : 'border-bottom: none'">
+      <button class="header__menu-btn" @click="isOpen = !isOpen" type="button">
+        <img src='../../img/icons/align-justify.svg' title="open menu" width="35" height="35" x-show="!isOpen"/>
+        <img src='../../img/icons/cross.svg' title="close menu" width="35" height="35" x-show="isOpen"/>
+      </button>
+      <h1>
+        <a class="main-link" href=" /" title="home">
+          Aynur Shauerman
+        </a>
+      </h1>
+    </div>
+    <ul class="nav" x-show="isOpen" x-transition>
+        <li>
+          <a href="/cv/" title="CV" class="nav-item  ">
+              <span class="cv">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li>
+          <a href="/notes/" title="Notes" class="nav-item  ">
+              <img src="../../img/icons/note.png" width="40" height="40" alt="Notes">
+              <span class="nav-item__key">
+                Notes
+              </span>
+            
+          </a>
+        </li>
+    </ul>
+    <div class="nav nav-resume" x-show="isOpen" x-transition>
+          <a href="/youtube" class="nav-item" target="_parent">
+            <img width="40" height="40" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          <a href="https://www.linkedin.com/in/ainur-shauerman/" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          <a href="https://career.habr.com/aykuli" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+      
+    </div>
+  </nav>
+  
+
+  <nav class="header__big container">
+    <ul class="nav__big">
+      <li class="nav__big--item ">
+        <h1>
+          <a class="main-link" href=" /" title="Main page">
+            <img src="../../img/icons/home.svg" width="30" height="30" alt="home">
+
+          </a>
+        </h1>
+      </li>
+        <li class="nav__big--item ">
+          <a href="/cv/" title="CV" >
+              <span class="cv cv__big">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li class="nav__big--item ">
+          <a href="/notes/" title="Notes" >
+              <img src="../../img/icons/note.png" width="30" height="30" alt="Notes">
+            
+          </a>
+        </li>
+    </ul>
+    <ul class="nav__big nav-resume">
+        <li class="nav__big--item ">
+          <a href="/youtube" target="_parent"
+          title="youtube">
+            <img width="30" height="30" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://www.linkedin.com/in/ainur-shauerman/" target="_blank"
+          title="Linkedin">
+            <img width="30" height="30" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" target="_blank"
+          title="HH">
+            <img width="30" height="30" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://career.habr.com/aykuli" target="_blank"
+          title="Habr">
+            <img width="30" height="30" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+          </li>
+      
+    </div>
+  </nav>
+</header>
+<div class="header__big--mock"></div>
+    <main class="container" >
+  
+<div class="note__crumbs"> 
+  <a href='/notes'>Notes</a>
+  <p>&nbsp / &nbsp Dockerfile Commands Resume</p>
+</div>
+
+<h2 class="note__title">Dockerfile Commands Resume</h2>
+
+<time class="note__time" datetime="2022-03-14">14 Mar 2022</time>
+<div class="note__tags"><a href="/tags/docker/" class="post__tag">docker</a>
+</div>
+<div class="note-md">
+  <p>Every line will be layer. The less lines in Dockerfile is better.</p>
+<p><code>Context</code> - folder containing Dockerfile</p>
+<p><code>.dockerignore</code> - ignoring folders/files</p>
+<hr>
+<pre class="language-docker"><code class="language-docker"><span class="token instruction"><span class="token keyword">ARG</span> CODE_VERSION=latest</span><br><br><span class="token instruction"><span class="token keyword">FROM</span> node:14-alpine <span class="token keyword">as</span> build</span><br><br><span class="token instruction"><span class="token keyword">LABEL</span> version=<span class="token string">"1.0"</span></span><br><br><span class="token instruction"><span class="token keyword">USER</span> root</span><br><span class="token instruction"><span class="token keyword">WORKDIR</span> /opt/app</span><br><br><span class="token instruction"><span class="token keyword">ADD</span> *.json ./</span><br><span class="token instruction"><span class="token keyword">ADD</span> <span class="token options"><span class="token property">--chown</span><span class="token punctuation">=</span><span class="token string">root</span></span> files* /somedir/</span><br><span class="token instruction"><span class="token keyword">ADD</span> archive.tar.gz /somedir/</span><br><span class="token instruction"><span class="token keyword">ADD</span> http://link.com/some.tar.gz /somedir/</span><br><span class="token instruction"><span class="token keyword">COPY</span> *.json ./</span><br></code></pre>
+<p><code>ARG</code> - arguments that used only while building, but it doesn't exist in result image<br>
+<code>FROM</code> - every Dockerfile shpuld have it<br>
+<code>LABEL</code> - some meta information<br>
+<code>WORKDIR</code> - working directory<br>
+<code>ADD</code> - copy from host machine (first argument) into container folder(second argument). Can work with archives, urls, make permissions for exact user, <code>COPY</code> can't do that.<br>
+<code>COPY</code> - allows to copy from local machine and from previos images while multistage building</p>
+<hr>
+<pre class="language-docker"><code class="language-docker"><span class="token comment"># comment line</span><br><span class="token instruction"><span class="token keyword">SHELL</span> [<span class="token string">"/bin/sh"</span>, "-c]</span><br><span class="token instruction"><span class="token keyword">RUN</span> echo hello</span><br><br><span class="token instruction"><span class="token keyword">ENV</span> FOO = 1</span><br><span class="token instruction"><span class="token keyword">ENV</span> BAR=<span class="token variable">$FOO</span></span><br><span class="token instruction"><span class="token keyword">RUN</span> DEBIAN_FRONTEND=noninteractive apt-get update &amp;&amp; apt-get install -y</span><br><br><span class="token instruction"><span class="token keyword">ENTRYPOINT</span> [<span class="token string">"top"</span>, <span class="token string">"-c"</span>]</span><br><span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">"node"</span>,<span class="token string">"./dist/apps/api/main.js"</span>]</span><br><span class="token instruction"><span class="token keyword">CMD</span> node ./dist/apps/api/main.js</span><br><span class="token instruction"><span class="token keyword">EXPOSE</span> 80/tcp</span></code></pre>
+<p><code>SHELL</code> - allows to select what shell will be used inside container. <code>/bin/sh</code> - default shell<br>
+<code>RUN</code> - runs shell commands<br>
+<code>ENV</code> - environment variables that will be saved inside container<br>
+<code>EXPOSE</code> - documeantaion for developer about used ports<br>
+<code>ENTRYPOINT</code> - command gets executed when running a container<br>
+<code>CMD</code> - does the same as <code>ENTRYPOINT</code>, difference is</p>
+<ul>
+<li>
+<p>Dockerfile should specify at least one of <code>CMD</code> or <code>ENTRYPOINT</code> commands.</p>
+</li>
+<li>
+<p><code>ENTRYPOINT</code> has more precedence than <code>CMD</code></p>
+</li>
+<li>
+<p><code>ENTRYPOINT</code> should be defined when using the container as an executable.</p>
+</li>
+<li>
+<p><code>CMD</code> should be used as a way of defining default arguments for an <code>ENTRYPOINT</code> command or for executing an ad-hoc command in a container.</p>
+</li>
+<li>
+<p><code>CMD</code> will be overridden when running the container with alternative arguments.[^1]</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>No ENTRYPOINT</th>
+<th>ENTRYPOINT exec_entry p1_entry</th>
+<th>ENTRYPOINT [“exec_entry”, “p1_entry”]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No CMD</td>
+<td>error, not allowed</td>
+<td><code>/bin/sh -c exec_entry p1_entry</code></td>
+<td><code>exec_entry p1_entry</code></td>
+</tr>
+<tr>
+<td><code>CMD [“exec_cmd”, “p1_cmd”]</code></td>
+<td><code>exec_cmd p1_cmd</code></td>
+<td><code>/bin/sh -c exec_entry p1_entry</code></td>
+<td><code>exec_entry p1_entry exec_cmd p1_cmd</code></td>
+</tr>
+<tr>
+<td><code>CMD [“p1_cmd”, “p2_cmd”]</code></td>
+<td><code>p1_cmd p2_cmd</code></td>
+<td><code>/bin/sh -c exec_entry p1_entry</code></td>
+<td><code>exec_entry p1_entry p1_cmd p2_cmd</code></td>
+</tr>
+<tr>
+<td><code>CMD exec_cmd p1</code></td>
+<td><code>\_cmd /bin/sh -c exec_cmd p1_cmd</code></td>
+<td><code>/bin/sh -c exec_entry p1_entry</code></td>
+<td><code>exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd</code></td>
+</tr>
+</tbody>
+</table>
+<p>[^1]: <a href="https://docs.docker.com/engine/reference/builder/#entrypoint">Understand how CMD and ENTRYPOINT interact</a></p>
+
+</div>
+
+<div class="note__pagination">
+  <div>
+    <a href="/posts/2022-03-14-how-to-delete-line-in-nano-editor/">
+        <span class="note__pagination-arrow--right"><</span>
+        <span style="text-align: left">Delete Line in Nano Editor</span>
+      </a>
+    
+  </div>
+  <div>
+      <a href="/posts/2022-03-13-linux-commands/">
+        <span style="text-align: right">Frequently used Linux Commands</span>
+        <span class="note__pagination-arrow--left">></span>
+      </a>
+    
+  </div>
+</div>
+
+</main>
+    
+  </body>
+</html>

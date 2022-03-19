@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Aynur Shauerman</title>
+	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
+	
+	<link href="https://aykuli.github.io/feed/feed.xml" rel="self"/>
+	<link href="https://aykuli.github.io/"/>
+	<updated>2022-03-16T00:00:00Z</updated>
+	<id>https://aykuli.github.io/</id>
+	<author>
+		<name>Aynur Shauerman</name>
+		<email>aykuli@ya.ru</email>
+	</author>
+	
+	<entry>
+		<title>Adding DNS to New Container</title>
+		<link href="https://aykuli.github.io/posts/2022-03-16-docker-network-commands-conspect/"/>
+		<updated>2022-03-16T00:00:00Z</updated>
+		<id>https://aykuli.github.io/posts/2022-03-16-docker-network-commands-conspect/</id>
+		<content type="html">&lt;p&gt;Command to see what namespace is used by current machine&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cat /etc/resolve.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details style=&quot;padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea&quot;&gt;
+    &lt;summary&gt;Result&lt;/summary&gt;
+    &lt;pre style=&quot;background-color: #daeeea&quot;&gt;
+# This file is managed by man:systemd-resolved(8). Do not edit.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run &quot;resolvectl status&quot; to see details about the uplink DNS servers
+# currently in use.
+#
+# Third party programs must not access this file directly, but only through the
+# symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a different way,
+# replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+nameserver 127.0.0.53
+options edns0 trust-ad
+    &lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;Adding DNS of Google to new container&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run --name node8 -d --dns 8.8.8.8 demo-3
+docker exec -it node8 sh
+/opt/app# cat /etc/resolv.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details style=&quot;padding-bottom:10px;&quot;&gt;
+    &lt;summary&gt;Result&lt;/summary&gt;
+    &lt;pre style=&quot;background-color: #daeeea&quot;&gt;
+nameserver 8.8.8.8
+    &lt;/pre&gt;
+&lt;/details&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Dockerfile Network Commands Conspect</title>
+		<link href="https://aykuli.github.io/posts/2022-03-15-docker-network-commands-conspect/"/>
+		<updated>2022-03-15T00:00:00Z</updated>
+		<id>https://aykuli.github.io/posts/2022-03-15-docker-network-commands-conspect/</id>
+		<content type="html">&lt;h3 id=&quot;network-drivers&quot; tabindex=&quot;-1&quot;&gt;Network drivers &lt;a class=&quot;direct-link&quot; href=&quot;https://aykuli.github.io/posts/2022-03-15-docker-network-commands-conspect/#network-drivers&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;bridge&lt;/code&gt; - isolated network between containers. Works only in one host.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;host&lt;/code&gt; - remove network isolation between the container&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;overlay&lt;/code&gt; - Docker swarm&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;macvlan&lt;/code&gt; - unique MAC address from container&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;null&lt;/code&gt; - container without network&lt;/p&gt;
+&lt;h3 id=&quot;commands&quot; tabindex=&quot;-1&quot;&gt;Commands &lt;a class=&quot;direct-link&quot; href=&quot;https://aykuli.github.io/posts/2022-03-15-docker-network-commands-conspect/#commands&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;connect
+create
+diconnect
+inspect
+ls
+rm
+prune
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;examples&quot; tabindex=&quot;-1&quot;&gt;Examples &lt;a class=&quot;direct-link&quot; href=&quot;https://aykuli.github.io/posts/2022-03-15-docker-network-commands-conspect/#examples&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;docker network ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details style=&quot;padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea&quot;&gt;
+&lt;summary&gt;Result&lt;/summary&gt;
+&lt;pre style=&quot;background-color: #daeeea&quot;&gt;
+NETWORK ID     NAME          DRIVER    SCOPE
+8177523a8087   ayn-network   bridge    local
+19588a186fed   bridge        bridge    local
+5450493e59b7   host          host      local
+fa699046eb10   none          null      local
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;docker network inspect bridge
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details style=&quot;padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea&quot;&gt;
+&lt;summary&gt;Result&lt;/summary&gt;
+&lt;pre style=&quot;background-color: #daeeea&quot;&gt;
+[
+    {
+        &quot;Name&quot;: &quot;bridge&quot;,
+        &quot;Id&quot;: &quot;19588a186fed23412c698e7bd0fc8cc7b97bc8f3b2123784fe6d30845c3784d9&quot;,
+        &quot;Created&quot;: &quot;2022-03-15T15:01:03.274362572Z&quot;,
+        &quot;Scope&quot;: &quot;local&quot;,
+        &quot;Driver&quot;: &quot;bridge&quot;,
+        &quot;EnableIPv6&quot;: false,
+        &quot;IPAM&quot;: {
+            &quot;Driver&quot;: &quot;default&quot;,
+            &quot;Options&quot;: null,
+            &quot;Config&quot;: [
+                {
+                    &quot;Subnet&quot;: &quot;172.17.0.0/16&quot;,
+                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;
+                }
+            ]
+        },
+        &quot;Internal&quot;: false,
+        &quot;Attachable&quot;: false,
+        &quot;Ingress&quot;: false,
+        &quot;ConfigFrom&quot;: {
+            &quot;Network&quot;: &quot;&quot;
+        },
+        &quot;ConfigOnly&quot;: false,
+        &lt;div style=&quot;background-color: #FEE&quot;&gt;
+        &quot;Containers&quot;: {
+            &quot;480849852ab9df8156166f5e821e6f2a72195abffc9809dd0958167cc71779ff&quot;: {
+                &quot;Name&quot;: &quot;node1&quot;,
+                &quot;EndpointID&quot;: &quot;7e76de9eda40652eea458cbbbde534b413de5da354b96e3d2d8199eccea31e4c&quot;,
+                &quot;MacAddress&quot;: &quot;02:42:ac:11:00:03&quot;,
+                &quot;IPv4Address&quot;: &quot;172.17.0.3/16&quot;,
+                &quot;IPv6Address&quot;: &quot;&quot;
+            },
+            &quot;88f61bcb695ca7647916b07f5dc6bbaaec51e0181e11cada99cdf8c0912bcbb5&quot;: {
+                &quot;Name&quot;: &quot;stupefied_chatterjee&quot;,
+                &quot;EndpointID&quot;: &quot;8b71507e712adda9d535187e82b488df3d9731bab87cd61a56365752434e70a0&quot;,
+                &quot;MacAddress&quot;: &quot;02:42:ac:11:00:02&quot;,
+                &quot;IPv4Address&quot;: &quot;172.17.0.2/16&quot;,
+                &quot;IPv6Address&quot;: &quot;&quot;
+            },
+            &quot;abde5f3677d0b97987ab265c5de6b35b3be2db79a0cd10c612f98b30c8971641&quot;: {
+                &quot;Name&quot;: &quot;node2&quot;,
+                &quot;EndpointID&quot;: &quot;6a5cae843b651c20b8cfe83b6d6c8b78b830d85c14e114502496a05960e68e74&quot;,
+                &quot;MacAddress&quot;: &quot;02:42:ac:11:00:04&quot;,
+                &quot;IPv4Address&quot;: &quot;172.17.0.4/16&quot;,
+                &quot;IPv6Address&quot;: &quot;&quot;
+            },
+            &quot;ed6a0c472ad8c00b33cfec7de1775fd8c7bfaec1fdfa3241aab5f155397d01b2&quot;: {
+                &quot;Name&quot;: &quot;node3&quot;,
+                &quot;EndpointID&quot;: &quot;31e2b0ac774eda44afbc82f772dbcb6cbbd6ac12742f79271898f9c6ac7dc5bf&quot;,
+                &quot;MacAddress&quot;: &quot;02:42:ac:11:00:05&quot;,
+                &quot;IPv4Address&quot;: &quot;172.17.0.5/16&quot;,
+                &quot;IPv6Address&quot;: &quot;&quot;
+            }
+        },
+        &lt;/div&gt;
+        &quot;Options&quot;: {
+            &quot;com.docker.network.bridge.default_bridge&quot;: &quot;true&quot;,
+            &quot;com.docker.network.bridge.enable_icc&quot;: &quot;true&quot;,
+            &quot;com.docker.network.bridge.enable_ip_masquerade&quot;: &quot;true&quot;,
+            &quot;com.docker.network.bridge.host_binding_ipv4&quot;: &quot;0.0.0.0&quot;,
+            &quot;com.docker.network.bridge.name&quot;: &quot;docker0&quot;,
+            &quot;com.docker.network.driver.mtu&quot;: &quot;1500&quot;
+        },
+        &quot;Labels&quot;: {}
+    }
+]
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;docker create ayn-network
+docker network ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details style=&quot;padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea&quot;&gt;
+&lt;summary&gt;Result&lt;/summary&gt;
+&lt;pre style=&quot;background-color: #daeeea&quot;&gt;
+NETWORK ID     NAME          DRIVER    SCOPE
+8177523a8087   ayn-network   bridge    local
+19588a186fed   bridge        bridge    local
+5450493e59b7   host          host      local
+fa699046eb10   none          null      local
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;docker connect ayn-network node1
+docker connect ayn-network node2
+docker network inspect
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details style=&quot;padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea&quot;&gt;
+&lt;summary&gt;Result&lt;/summary&gt;
+&lt;pre style=&quot;background-color: #daeeea&quot;&gt;
+[
+    {
+        &quot;Name&quot;: &quot;ayn-network&quot;,
+        &quot;Id&quot;: &quot;8177523a808757893a0f240da2c3ab78f77ea16d166f41687627c893eb4f10ce&quot;,
+        &quot;Created&quot;: &quot;2022-03-15T15:54:47.29301923Z&quot;,
+        &quot;Scope&quot;: &quot;local&quot;,
+        &quot;Driver&quot;: &quot;bridge&quot;,
+        &quot;EnableIPv6&quot;: false,
+        &quot;IPAM&quot;: {
+            &quot;Driver&quot;: &quot;default&quot;,
+            &quot;Options&quot;: {},
+            &quot;Config&quot;: [
+                {
+                    &quot;Subnet&quot;: &quot;172.18.0.0/16&quot;,
+                    &quot;Gateway&quot;: &quot;172.18.0.1&quot;
+                }
+            ]
+        },
+        &quot;Internal&quot;: false,
+        &quot;Attachable&quot;: false,
+        &quot;Ingress&quot;: false,
+        &quot;ConfigFrom&quot;: {
+            &quot;Network&quot;: &quot;&quot;
+        },
+        &quot;ConfigOnly&quot;: false,
+        &lt;div style=&quot;background-color: #FEE&quot;&gt;
+        &quot;Containers&quot;: {
+            &quot;480849852ab9df8156166f5e821e6f2a72195abffc9809dd0958167cc71779ff&quot;: {
+                &quot;Name&quot;: &quot;node1&quot;,
+                &quot;EndpointID&quot;: &quot;e0750851f2ed267ae5bf8ad20c236d6165e7f58ed85f7b58b2518b66bc2e5fd5&quot;,
+                &quot;MacAddress&quot;: &quot;02:42:ac:12:00:02&quot;,
+                &quot;IPv4Address&quot;: &quot;172.18.0.2/16&quot;,
+                &quot;IPv6Address&quot;: &quot;&quot;
+            },
+            &quot;abde5f3677d0b97987ab265c5de6b35b3be2db79a0cd10c612f98b30c8971641&quot;: {
+                &quot;Name&quot;: &quot;node2&quot;,
+                &quot;EndpointID&quot;: &quot;dae5e0b3b0995f830a4f837e3431b929ba9c267eb604be2bd05ea238285d9396&quot;,
+                &quot;MacAddress&quot;: &quot;02:42:ac:12:00:03&quot;,
+                &quot;IPv4Address&quot;: &quot;172.18.0.3/16&quot;,
+                &quot;IPv6Address&quot;: &quot;&quot;
+            }
+        },
+        &lt;/div&gt;
+        &quot;Options&quot;: {},
+        &quot;Labels&quot;: {}
+    }
+]
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;pre&gt;&lt;code&gt;docker run --name=node3 --network ayn-network -p 3001:3000 -d demo:latest
+curl localhost:3001
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This container exits in &lt;code&gt;ayn-network&lt;/code&gt; only and doesn&#39;t exist in &lt;code&gt;bridge&lt;/code&gt;. Port 3001 on host shows port 3000 of container with name node3&lt;/p&gt;
+&lt;details style=&quot;padding-bottom:10px&quot;&gt;
+&lt;summary&gt;Result&lt;/summary&gt;
+&lt;pre style=&quot;background-color: #daeeea&quot;&gt;
+{&quot;eth0&quot;:[&quot;172.18.0.5&quot;]}
+&lt;/pre&gt;
+&lt;/details&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Delete Line in Nano Editor</title>
+		<link href="https://aykuli.github.io/posts/2022-03-14-how-to-delete-line-in-nano-editor/"/>
+		<updated>2022-03-14T00:00:00Z</updated>
+		<id>https://aykuli.github.io/posts/2022-03-14-how-to-delete-line-in-nano-editor/</id>
+		<content type="html">&lt;p&gt;Just &lt;code&gt;Ctrl + K&lt;/code&gt;. Step by step.&lt;/p&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Press &lt;code&gt;CTRL + Shift + 6&lt;/code&gt; to mark the start of your block&lt;/li&gt;
+&lt;li&gt;Shift the cursor to the end of the block with the arrow keys, and it will outline the text.&lt;/li&gt;
+&lt;li&gt;Press CTRL + K to cut/delete a block and it will remove a line in nano.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://aykuli.github.io/img/posts/2022-03-14-how-to-delete-line-in-nano-editor.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sources&quot; tabindex=&quot;-1&quot;&gt;Sources &lt;a class=&quot;direct-link&quot; href=&quot;https://aykuli.github.io/posts/2022-03-14-how-to-delete-line-in-nano-editor/#sources&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://monovm.com/blog/how-to-delete-line-in-nano-delete-all/&quot;&gt;https://monovm.com/blog/how-to-delete-line-in-nano-delete-all/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Dockerfile Commands Resume</title>
+		<link href="https://aykuli.github.io/posts/2022-03-14-docker-commands-conspect/"/>
+		<updated>2022-03-14T00:00:00Z</updated>
+		<id>https://aykuli.github.io/posts/2022-03-14-docker-commands-conspect/</id>
+		<content type="html">&lt;p&gt;Every line will be layer. The less lines in Dockerfile is better.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Context&lt;/code&gt; - folder containing Dockerfile&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.dockerignore&lt;/code&gt; - ignoring folders/files&lt;/p&gt;
+&lt;hr /&gt;
+&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ARG&lt;/span&gt; CODE_VERSION=latest&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; node:14-alpine &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; build&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;LABEL&lt;/span&gt; version=&lt;span class=&quot;token string&quot;&gt;&quot;1.0&quot;&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;USER&lt;/span&gt; root&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;WORKDIR&lt;/span&gt; /opt/app&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ADD&lt;/span&gt; *.json ./&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ADD&lt;/span&gt; &lt;span class=&quot;token options&quot;&gt;&lt;span class=&quot;token property&quot;&gt;--chown&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;root&lt;/span&gt;&lt;/span&gt; files* /somedir/&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ADD&lt;/span&gt; archive.tar.gz /somedir/&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ADD&lt;/span&gt; http://link.com/some.tar.gz /somedir/&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;COPY&lt;/span&gt; *.json ./&lt;/span&gt;&lt;br /&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;ARG&lt;/code&gt; - arguments that used only while building, but it doesn&#39;t exist in result image&lt;br /&gt;
+&lt;code&gt;FROM&lt;/code&gt; - every Dockerfile shpuld have it&lt;br /&gt;
+&lt;code&gt;LABEL&lt;/code&gt; - some meta information&lt;br /&gt;
+&lt;code&gt;WORKDIR&lt;/code&gt; - working directory&lt;br /&gt;
+&lt;code&gt;ADD&lt;/code&gt; - copy from host machine (first argument) into container folder(second argument). Can work with archives, urls, make permissions for exact user, &lt;code&gt;COPY&lt;/code&gt; can&#39;t do that.&lt;br /&gt;
+&lt;code&gt;COPY&lt;/code&gt; - allows to copy from local machine and from previos images while multistage building&lt;/p&gt;
+&lt;hr /&gt;
+&lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# comment line&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SHELL&lt;/span&gt; [&lt;span class=&quot;token string&quot;&gt;&quot;/bin/sh&quot;&lt;/span&gt;, &quot;-c]&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;RUN&lt;/span&gt; echo hello&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt; FOO = 1&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt; BAR=&lt;span class=&quot;token variable&quot;&gt;$FOO&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;RUN&lt;/span&gt; DEBIAN_FRONTEND=noninteractive apt-get update &amp;amp;&amp;amp; apt-get install -y&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ENTRYPOINT&lt;/span&gt; [&lt;span class=&quot;token string&quot;&gt;&quot;top&quot;&lt;/span&gt;, &lt;span class=&quot;token string&quot;&gt;&quot;-c&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;CMD&lt;/span&gt; [&lt;span class=&quot;token string&quot;&gt;&quot;node&quot;&lt;/span&gt;,&lt;span class=&quot;token string&quot;&gt;&quot;./dist/apps/api/main.js&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;CMD&lt;/span&gt; node ./dist/apps/api/main.js&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;EXPOSE&lt;/span&gt; 80/tcp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;SHELL&lt;/code&gt; - allows to select what shell will be used inside container. &lt;code&gt;/bin/sh&lt;/code&gt; - default shell&lt;br /&gt;
+&lt;code&gt;RUN&lt;/code&gt; - runs shell commands&lt;br /&gt;
+&lt;code&gt;ENV&lt;/code&gt; - environment variables that will be saved inside container&lt;br /&gt;
+&lt;code&gt;EXPOSE&lt;/code&gt; - documeantaion for developer about used ports&lt;br /&gt;
+&lt;code&gt;ENTRYPOINT&lt;/code&gt; - command gets executed when running a container&lt;br /&gt;
+&lt;code&gt;CMD&lt;/code&gt; - does the same as &lt;code&gt;ENTRYPOINT&lt;/code&gt;, difference is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Dockerfile should specify at least one of &lt;code&gt;CMD&lt;/code&gt; or &lt;code&gt;ENTRYPOINT&lt;/code&gt; commands.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ENTRYPOINT&lt;/code&gt; has more precedence than &lt;code&gt;CMD&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ENTRYPOINT&lt;/code&gt; should be defined when using the container as an executable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CMD&lt;/code&gt; should be used as a way of defining default arguments for an &lt;code&gt;ENTRYPOINT&lt;/code&gt; command or for executing an ad-hoc command in a container.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CMD&lt;/code&gt; will be overridden when running the container with alternative arguments.[^1]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;No ENTRYPOINT&lt;/th&gt;
+&lt;th&gt;ENTRYPOINT exec_entry p1_entry&lt;/th&gt;
+&lt;th&gt;ENTRYPOINT [“exec_entry”, “p1_entry”]&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;No CMD&lt;/td&gt;
+&lt;td&gt;error, not allowed&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/bin/sh -c exec_entry p1_entry&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;exec_entry p1_entry&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CMD [“exec_cmd”, “p1_cmd”]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;exec_cmd p1_cmd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/bin/sh -c exec_entry p1_entry&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;exec_entry p1_entry exec_cmd p1_cmd&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CMD [“p1_cmd”, “p2_cmd”]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;p1_cmd p2_cmd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/bin/sh -c exec_entry p1_entry&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;exec_entry p1_entry p1_cmd p2_cmd&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CMD exec_cmd p1&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\_cmd /bin/sh -c exec_cmd p1_cmd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/bin/sh -c exec_entry p1_entry&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;[^1]: &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#entrypoint&quot;&gt;Understand how CMD and ENTRYPOINT interact&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Frequently used Linux Commands</title>
+		<link href="https://aykuli.github.io/posts/2022-03-13-linux-commands/"/>
+		<updated>2022-03-03T00:00:00Z</updated>
+		<id>https://aykuli.github.io/posts/2022-03-13-linux-commands/</id>
+		<content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;pwd&lt;/code&gt; - current directory&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ls -al&lt;/code&gt; - list of fileas and directi=ories in folder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rm file_or_dir_name&lt;/code&gt; - remove&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cp file1 file2&lt;/code&gt; - copy content of file1 to file2&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tail -N&lt;/code&gt; - see last N lines in file&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;head -N&lt;/code&gt; - see first N lines in file&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;less filename&lt;/code&gt; - see content of file&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cat package.json | grep &amp;quot;@11ty/&amp;quot;&lt;/code&gt; - see lines which contain string &lt;code&gt;@11ty/&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;result:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;quot;@11ty/eleventy&amp;quot;: &amp;quot;^1.0.0&amp;quot;,
+    &amp;quot;@11ty/eleventy-navigation&amp;quot;: &amp;quot;^0.3.2&amp;quot;,
+    &amp;quot;@11ty/eleventy-plugin-rss&amp;quot;: &amp;quot;^1.1.2&amp;quot;,
+    &amp;quot;@11ty/eleventy-plugin-syntaxhighlight&amp;quot;: &amp;quot;^3.1.3&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cat package.json | head -3&lt;/code&gt; - see first 3 lines in file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;result:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;name&amp;quot;: &amp;quot;Aynur Shuaerman&#39;s notes&amp;quot;,
+  &amp;quot;version&amp;quot;: &amp;quot;1.0.0&amp;quot;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;find . -name index&lt;/code&gt; - find in current folder files containing string &lt;code&gt;index&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;diff posts/2022-03-13-linux-commands/index.md posts/2022-01-30-ubuntu-install-list.md&lt;/code&gt; - difference between this files&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;df&lt;/code&gt; - disk space information&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>My List of Apps to Install on Ubuntu</title>
+		<link href="https://aykuli.github.io/posts/2022-01-30-ubuntu-install-list/"/>
+		<updated>2022-01-31T00:00:00Z</updated>
+		<id>https://aykuli.github.io/posts/2022-01-30-ubuntu-install-list/</id>
+		<content type="html">&lt;p&gt;List of applications, that I use for the last 6 years:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git&lt;/li&gt;
+&lt;li&gt;nodejs&lt;/li&gt;
+&lt;li&gt;vscode&lt;/li&gt;
+&lt;li&gt;npm&lt;/li&gt;
+&lt;li&gt;yarn&lt;/li&gt;
+&lt;li&gt;docker&lt;/li&gt;
+&lt;li&gt;chrome-browser&lt;/li&gt;
+&lt;li&gt;opera&lt;/li&gt;
+&lt;li&gt;gimp&lt;/li&gt;
+&lt;li&gt;kazam&lt;/li&gt;
+&lt;li&gt;zoom&lt;/li&gt;
+&lt;li&gt;nemo&lt;/li&gt;
+&lt;li&gt;obs&lt;/li&gt;
+&lt;li&gt;deepin-screenshot&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+	</entry>
+</feed>

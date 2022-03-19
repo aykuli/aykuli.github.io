@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagged “11ty”</title>
+    <meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Aynur Shauerman">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Aynur Shauerman">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="/static/js/alpine.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+  <nav class="header" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+    <div class="header__title" x-bind:style="isOpen ? 'border-bottom: 2px solid #fff;' : 'none'">
+      <button class="header__menu-btn" @click="isOpen = !isOpen" type="button">
+        <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40" x-show="!isOpen"/>
+        <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40" x-show="isOpen"/>
+      </button>
+      <h1>
+        <a class="main-link" href=" /">
+          Aynur Shauerman
+        </a>
+      </h1>
+    </div>
+    <ul class="nav" x-show="isOpen" x-transition>
+        <li>
+          <a href="/cv/" title="CV" class="nav-item  ">
+              <span class="cv">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li>
+          <a href="/notes/" title="Notes" class="nav-item  ">
+              <img src="../../img/icons/note.png" width="40" height="40" alt="Notes">
+              <span class="nav-item__key">
+                Notes
+              </span>
+            
+          </a>
+        </li>
+    </ul>
+    <div class="nav nav-resume" x-show="isOpen" x-transition>
+          <a href="/youtube" class="nav-item" target="_parent">
+            <img width="40" height="40" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          <a href="https://www.linkedin.com/in/aynur-shauerman-1830751b4/" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          <a href="https://career.habr.com/aykuli" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+      
+    </div>
+  </nav>
+
+  <nav class="header__big">
+    <ul class="nav__big">
+      <li class="nav__big--item">
+        <h1>
+          <a class="main-link" href=" /">
+            <img src="../../img/icons/home.svg" width="30" height="30" alt="home">
+
+          </a>
+        </h1>
+      </li>
+        <li class="nav__big--item ">
+          <a href="/cv/" title="CV">
+              <span class="cv cv__big">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li class="nav__big--item ">
+          <a href="/notes/" title="Notes">
+              <img src="../../img/icons/note.png" width="30" height="30" alt="Notes">
+            
+          </a>
+        </li>
+    </ul>
+    <ul class="nav__big nav-resume">
+        <li class="nav__big--item ">
+          <a href="/youtube" target="_parent">
+            <img width="30" height="30" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://www.linkedin.com/in/aynur-shauerman-1830751b4/" target="_blank">
+            <img width="30" height="30" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" target="_blank">
+            <img width="30" height="30" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://career.habr.com/aykuli" target="_blank">
+            <img width="30" height="30" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+          </li>
+      
+    </div>
+  </nav>
+</header>
+    <main class="container" >
+  
+
+
+<h2>Tagged “11ty”</h2>
+
+
+<ul reversed class="postlist" style="counter-reset: start-from 2">
+  
+    <li class="postlist__item">
+      <div class='post__main-info'>
+        <a href="/posts/2022-01-30-11ty-install/" class="postlist__link">
+          
+            My blog on 11ty
+          
+        </a>
+        <time class="postlist__date" datetime="2022-02-28">28 Feb 2022</time>
+      </div>
+      <div class='post__tags'>
+        
+          
+          <a href="/tags/11ty/" class="post__tag">11ty</a>
+        
+          
+          <a href="/tags/eleventy/" class="post__tag">eleventy</a>
+        
+      </div>
+    </li>
+  
+</ul>
+
+<p>See <a href="/tags/">all tags</a>.</p>
+
+
+
+
+
+</main>
+    <footer class="footer container">
+  2022
+</footer>
+  </body>
+</html>

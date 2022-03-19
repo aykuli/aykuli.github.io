@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently used Linux Commands</title>
+    <meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/md.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Aynur Shauerman">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Aynur Shauerman">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico"/>
+    <script src="/static/js/alpine.js" defer></script>
+  </head>
+  <body>
+    <header class='header-container'>
+  <nav class="header" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+    <div class="header__bg"  x-show="isOpen"> </div>
+    <div class="header__title" x-bind:style="isOpen ? 'border-bottom: 2px solid #fff;' : 'border-bottom: none'">
+      <button class="header__menu-btn" @click="isOpen = !isOpen" type="button">
+        <img src='../../img/icons/align-justify.svg' title="open menu" width="35" height="35" x-show="!isOpen"/>
+        <img src='../../img/icons/cross.svg' title="close menu" width="35" height="35" x-show="isOpen"/>
+      </button>
+      <h1>
+        <a class="main-link" href=" /" title="home">
+          Aynur Shauerman
+        </a>
+      </h1>
+    </div>
+    <ul class="nav" x-show="isOpen" x-transition>
+        <li>
+          <a href="/cv/" title="CV" class="nav-item  ">
+              <span class="cv">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li>
+          <a href="/notes/" title="Notes" class="nav-item  ">
+              <img src="../../img/icons/note.png" width="40" height="40" alt="Notes">
+              <span class="nav-item__key">
+                Notes
+              </span>
+            
+          </a>
+        </li>
+    </ul>
+    <div class="nav nav-resume" x-show="isOpen" x-transition>
+          <a href="/youtube" class="nav-item" target="_parent">
+            <img width="40" height="40" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          <a href="https://www.linkedin.com/in/ainur-shauerman/" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          <a href="https://career.habr.com/aykuli" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+      
+    </div>
+  </nav>
+  
+
+  <nav class="header__big container">
+    <ul class="nav__big">
+      <li class="nav__big--item ">
+        <h1>
+          <a class="main-link" href=" /" title="Main page">
+            <img src="../../img/icons/home.svg" width="30" height="30" alt="home">
+
+          </a>
+        </h1>
+      </li>
+        <li class="nav__big--item ">
+          <a href="/cv/" title="CV" >
+              <span class="cv cv__big">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li class="nav__big--item ">
+          <a href="/notes/" title="Notes" >
+              <img src="../../img/icons/note.png" width="30" height="30" alt="Notes">
+            
+          </a>
+        </li>
+    </ul>
+    <ul class="nav__big nav-resume">
+        <li class="nav__big--item ">
+          <a href="/youtube" target="_parent"
+          title="youtube">
+            <img width="30" height="30" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://www.linkedin.com/in/ainur-shauerman/" target="_blank"
+          title="Linkedin">
+            <img width="30" height="30" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" target="_blank"
+          title="HH">
+            <img width="30" height="30" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://career.habr.com/aykuli" target="_blank"
+          title="Habr">
+            <img width="30" height="30" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+          </li>
+      
+    </div>
+  </nav>
+</header>
+<div class="header__big--mock"></div>
+    <main class="container" >
+  
+<div class="note__crumbs"> 
+  <a href='/notes'>Notes</a>
+  <p>&nbsp / &nbsp Frequently used Linux Commands</p>
+</div>
+
+<h2 class="note__title">Frequently used Linux Commands</h2>
+
+<time class="note__time" datetime="2022-03-03">03 Mar 2022</time>
+<div class="note__tags"><a href="/tags/ubuntu/" class="post__tag">ubuntu</a><a href="/tags/linux/" class="post__tag">linux</a>
+</div>
+<div class="note-md">
+  <ul>
+<li>
+<p><code>pwd</code> - current directory</p>
+</li>
+<li>
+<p><code>ls -al</code> - list of fileas and directi=ories in folder</p>
+</li>
+<li>
+<p><code>rm file_or_dir_name</code> - remove</p>
+</li>
+<li>
+<p><code>cp file1 file2</code> - copy content of file1 to file2</p>
+</li>
+<li>
+<p><code>tail -N</code> - see last N lines in file</p>
+</li>
+<li>
+<p><code>head -N</code> - see first N lines in file</p>
+</li>
+<li>
+<p><code>less filename</code> - see content of file</p>
+</li>
+<li>
+<p><code>cat package.json | grep &quot;@11ty/&quot;</code> - see lines which contain string <code>@11ty/</code></p>
+</li>
+</ul>
+<p>result:</p>
+<pre><code>    &quot;@11ty/eleventy&quot;: &quot;^1.0.0&quot;,
+    &quot;@11ty/eleventy-navigation&quot;: &quot;^0.3.2&quot;,
+    &quot;@11ty/eleventy-plugin-rss&quot;: &quot;^1.1.2&quot;,
+    &quot;@11ty/eleventy-plugin-syntaxhighlight&quot;: &quot;^3.1.3&quot;,
+</code></pre>
+<ul>
+<li><code>cat package.json | head -3</code> - see first 3 lines in file</li>
+</ul>
+<p>result:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;Aynur Shuaerman's notes&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+</code></pre>
+<ul>
+<li>
+<p><code>find . -name index</code> - find in current folder files containing string <code>index</code></p>
+</li>
+<li>
+<p><code>diff posts/2022-03-13-linux-commands/index.md posts/2022-01-30-ubuntu-install-list.md</code> - difference between this files</p>
+</li>
+<li>
+<p><code>df</code> - disk space information</p>
+</li>
+</ul>
+
+</div>
+
+<div class="note__pagination">
+  <div>
+    <a href="/posts/2022-03-14-docker-commands-conspect/">
+        <span class="note__pagination-arrow--right"><</span>
+        <span style="text-align: left">Dockerfile Commands Resume</span>
+      </a>
+    
+  </div>
+  <div>
+      <a href="/posts/2022-01-30-ubuntu-install-list/">
+        <span style="text-align: right">My List of Apps to Install on Ubuntu</span>
+        <span class="note__pagination-arrow--left">></span>
+      </a>
+    
+  </div>
+</div>
+
+</main>
+    
+  </body>
+</html>

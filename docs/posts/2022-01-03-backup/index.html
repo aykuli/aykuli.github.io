@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backup ubuntu</title>
+    <meta name="description" content="I decided to gather information/tips here, that i wanna keep">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Aynur Shauerman">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Aynur Shauerman">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="/static/js/alpine.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+  <nav class="header" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
+    <div class="header__title" x-bind:style="isOpen ? 'border-bottom: 2px solid #fff;' : 'border-bottom: none'">
+      <button class="header__menu-btn" @click="isOpen = !isOpen" type="button">
+        <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40" x-show="!isOpen"/>
+        <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40" x-show="isOpen"/>
+      </button>
+      <h1>
+        <a class="main-link" href=" /">
+          Aynur Shauerman
+        </a>
+      </h1>
+    </div>
+    <ul class="nav" x-show="isOpen" x-transition>
+        <li>
+          <a href="/cv/" title="CV" class="nav-item  ">
+              <span class="cv">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li>
+          <a href="/notes/" title="Notes" class="nav-item  ">
+              <img src="../../img/icons/note.png" width="40" height="40" alt="Notes">
+              <span class="nav-item__key">
+                Notes
+              </span>
+            
+          </a>
+        </li>
+    </ul>
+    <div class="nav nav-resume" x-show="isOpen" x-transition>
+          <a href="/youtube" class="nav-item" target="_parent">
+            <img width="40" height="40" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          <a href="https://www.linkedin.com/in/aynur-shauerman-1830751b4/" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          <a href="https://career.habr.com/aykuli" class="nav-item" target="_blank">
+            <img width="40" height="40" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+      
+    </div>
+  </nav>
+
+  <nav class="header__big">
+    <ul class="nav__big">
+      <li class="nav__big--item">
+        <h1>
+          <a class="main-link" href=" /">
+            <img src="../../img/icons/home.svg" width="30" height="30" alt="home">
+
+          </a>
+        </h1>
+      </li>
+        <li class="nav__big--item ">
+          <a href="/cv/" title="CV">
+              <span class="cv cv__big">
+                CV
+              </span>
+            
+          </a>
+        </li>
+        <li class="nav__big--item ">
+          <a href="/notes/" title="Notes">
+              <img src="../../img/icons/note.png" width="30" height="30" alt="Notes">
+            
+          </a>
+        </li>
+    </ul>
+    <ul class="nav__big nav-resume">
+        <li class="nav__big--item ">
+          <a href="/youtube" target="_parent">
+            <img width="30" height="30" src="../../img/icons/youtube.svg" alt="youtube"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://www.linkedin.com/in/aynur-shauerman-1830751b4/" target="_blank">
+            <img width="30" height="30" src="../../img/icons/linkedin.svg" alt="Linkedin"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://novosibirsk.hh.ru/applicant/resumes/view?resume=5f4f9b0fff07d6f7440039ed1f7476456e5a50" target="_blank">
+            <img width="30" height="30" src="../../img/icons/hh.svg" alt="HH"/>
+          </a>
+          </li>
+        <li class="nav__big--item ">
+          <a href="https://career.habr.com/aykuli" target="_blank">
+            <img width="30" height="30" src="../../img/icons/habr.png" alt="Habr"/>
+          </a>
+          </li>
+      
+    </div>
+  </nav>
+</header>
+    <main class="container" >
+  
+<div class="note__crumbs"> 
+  <a href='/notes'>Notes</a>
+  <p>&nbsp / &nbsp backup ubuntu</p>
+</div>
+
+<h2 class="note__title">backup ubuntu</h2>
+
+<time class="note__time" datetime="2022-01-03">03 Jan 2022</time>
+<div class="note__tags"><a href="/tags/backup/" class="post__tag">backup</a><a href="/tags/ubuntu/" class="post__tag">ubuntu</a>
+</div>
+<div class="note-md">
+  <p>Привет, смарт!</p>
+<p>Новый год начинается с каникул, поэтому рвемя провести надо с пользой, иначе совсеть жить не даст.</p>
+<p>Итак, я прочитала книгу &quot;Командная строка Linux&quot;.</p>
+<p>Сейчас выделю для себя нужне команды здесь (остальное пока не знаю куда приложить):</p>
+<ol>
+<li></li>
+</ol>
+<p>в файле .bashrc:</p>
+<p>alias backup=&quot;sudo rsync -av --delete /etc /home /usr/local /media/BigDisk/backup'</p>
+<p>rsync - программа, синхронизирующщая локальные и удаленные каталоги.</p>
+<p>параметры -а - обеспечивает рекурсивный обход и сохранение атрибуто файла</p>
+<p>-v - подробный вывод</p>
+<p>--delete - удалить файлы, которые могут присутствовать на устройстве с резервной копией</p>
+<p>/media/BigDisk/backup - каталог в смонтированном диске</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>sudo tail -f /var/log/messages</p>
+<p>Мониторинг сожержимого файла /var/log/messages или /var/log/syslog в режиме реального времени</p>
+
+</div>
+
+<div class="note__pagination">
+  <div>
+    <a href="/posts/2022-01-30-keyboard-shortcuts-changing-ubuntu/">
+        <span class="note__pagination-arrow--right">
+          <
+        </span>
+        Turn off Touchpad on Lenovo Ideapad 5
+      </a>
+    
+  </div>
+  <div>
+      <a href="/posts/fourthpost/">
+        This is my fourth post.
+        <span class="note__pagination-arrow--left">
+          >
+        </span>
+      </a>
+    
+  </div>
+</div>
+
+</main>
+    
+  </body>
+</html>
