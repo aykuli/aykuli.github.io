@@ -357,14 +357,13 @@ a[href].post__tag:focus {
 .note__pagination a {
   display: flex;
   align-items: center;
-  padding: 0.25rem;
+  padding: 0 0.5rem 0 0.25rem;
   text-decoration: none;
 }
 .note__pagination a:hover,
 .note__pagination a:focus {
   background-color: var(--lightmint);
   border-radius: 0.4rem;
-  padding: 0 0.5rem 0 0.25rem;
 }
 .note__pagination-arrow {
   font-size: 1rem;
