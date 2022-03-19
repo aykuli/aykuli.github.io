@@ -1,7 +1,7 @@
 /* Colors */
 :root {
   --lightgray: #f2f2f2;
-  --gray: #c0c0c0;
+  --gray: #939191;
   --darkgray: #333;
   --navy: #17050f;
   --blue: #082840;
@@ -17,11 +17,6 @@
   --middle: "768px";
   --large: "1240px";
 }
-/*
-Breakpoints:
-768
-1240
-*/
 
 /* Global stylesheet */
 * {
@@ -340,6 +335,7 @@ a[href].post__tag:focus {
 .note__time {
   display: block;
   margin-bottom: 0.5rem;
+  color: var(--gray);
 }
 .note__tags {
   margin-bottom: 1.5rem;

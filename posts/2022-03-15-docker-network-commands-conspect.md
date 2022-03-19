@@ -32,13 +32,13 @@ prune
 
 #### Examples
 
-```bash
+```
 docker network ls
 ```
 
-<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #DDD">
+<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea">
 <summary>Result</summary>
-<pre style="background-color: #DDD">
+<pre style="background-color: #daeeea">
 NETWORK ID     NAME          DRIVER    SCOPE
 8177523a8087   ayn-network   bridge    local
 19588a186fed   bridge        bridge    local
@@ -51,9 +51,9 @@ fa699046eb10   none          null      local
 docker network inspect bridge
 ```
 
-<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #DDD">
+<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea">
 <summary>Result</summary>
-<pre style="background-color: #DDD">
+<pre style="background-color: #daeeea">
 [
     {
         "Name": "bridge",
@@ -79,7 +79,7 @@ docker network inspect bridge
             "Network": ""
         },
         "ConfigOnly": false,
-        <div style="background-color: #FCC">
+        <div style="background-color: #FEE">
         "Containers": {
             "480849852ab9df8156166f5e821e6f2a72195abffc9809dd0958167cc71779ff": {
                 "Name": "node1",
@@ -130,9 +130,9 @@ docker create ayn-network
 docker network ls
 ```
 
-<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #DDD">
+<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea">
 <summary>Result</summary>
-<pre style="background-color: #DDD">
+<pre style="background-color: #daeeea">
 NETWORK ID     NAME          DRIVER    SCOPE
 8177523a8087   ayn-network   bridge    local
 19588a186fed   bridge        bridge    local
@@ -147,9 +147,9 @@ docker connect ayn-network node2
 docker network inspect
 ```
 
-<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #DDD">
+<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #daeeea">
 <summary>Result</summary>
-<pre style="background-color: #DDD">
+<pre style="background-color: #daeeea">
 [
     {
         "Name": "ayn-network",
@@ -175,7 +175,7 @@ docker network inspect
             "Network": ""
         },
         "ConfigOnly": false,
-        <div style="background-color: #FCC">
+        <div style="background-color: #FEE">
         "Containers": {
             "480849852ab9df8156166f5e821e6f2a72195abffc9809dd0958167cc71779ff": {
                 "Name": "node1",
@@ -207,9 +207,9 @@ curl localhost:3001
 
 This container exits in `ayn-network` only and doesn't exist in `bridge`. Port 3001 on host shows port 3000 of container with name node3
 
-<details style="padding-bottom:10px;margin-bottom: 40px;border-bottom: 1px solid #DDD">
+<details style="padding-bottom:10px">
 <summary>Result</summary>
-<pre style="background-color: #DDD">
+<pre style="background-color: #daeeea">
 {"eth0":["172.18.0.5"]}
 </pre>
 </details>
