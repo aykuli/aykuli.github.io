@@ -289,6 +289,10 @@
   list-style: none;
 }
 
+.cv-list__wrapper {
+  position: relative;
+}
+
 .cv-list__item {
   display: grid;
   grid-template-columns: 100px 1fr;
@@ -304,9 +308,34 @@
 }
 
 .cv-list__title {
+  position: relative;
   margin: 0.75rem 0;
+}
+.cv-list__title span {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  display: block;
   font-size: 1.2rem;
   font-weight: 600;
+  z-index: 2;
+}
+summary.cv-list__title::marker {
+  display: block;
+  color: var(--mint);
+  font-size: 1.5em;
+  z-index: 2;
+}
+.cv-list__title::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -6px;
+  width: 125px;
+  height: 24px;
+  background-color: var(--lightmint);
+  text-decoration: none;
+  z-index: -1;
 }
 
 p.cv-list__item--date {

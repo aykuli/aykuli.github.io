@@ -34,7 +34,6 @@ body {
   margin: 0;
   font-family: "Kaisei HarunoUmi", -apple-system, system-ui, serif;
   color: var(--darkgray);
-  background-color: var(--white);
 }
 h1 {
   padding: 0;
