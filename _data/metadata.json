@@ -42,6 +42,7 @@
     "youtube": {
       "title": "youtube",
       "url": "/youtube",
+      "pageurl": "/youtube/",
       "img": "youtube.svg",
       "redirect": false
     },

@@ -178,6 +178,7 @@
   color: var(--black);
   font-weight: 500;
   text-decoration: none;
+  z-index: 2;
 }
 .videolist__link:hover,
 .videolist__link:focus {
@@ -188,7 +189,7 @@
   text-decoration: none;
   color: rgba(var(--black), 0.1);
 }
-.videolist__link::after {
+.videolist__item::before {
   content: "";
   position: absolute;
   top: -3px;
