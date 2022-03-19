@@ -26,3 +26,6 @@
 .note-md img {
   max-width: 100%;
 }
+.note-md pre {
+  overflow: scroll;
+}

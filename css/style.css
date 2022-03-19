@@ -40,6 +40,7 @@
   width: 100vw;
   display: block;
   background-color: #3138368c;
+  z-index: 1;
 }
 
 .nav-resume {
