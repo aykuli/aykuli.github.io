@@ -309,7 +309,7 @@
 
 .cv-list__title {
   position: relative;
-  margin: 0.75rem 0;
+  margin: 18px 0;
 }
 .cv-list__title span {
   position: absolute;
@@ -323,8 +323,8 @@
 summary.cv-list__title::marker {
   display: block;
   color: var(--mint);
-  font-size: 1.5em;
-  z-index: 2;
+  font-size: 30px;
+  line-height: 36px;
 }
 .cv-list__title::before {
   content: "";
