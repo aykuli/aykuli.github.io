@@ -1,12 +1,13 @@
-<header class="container">
+<header class='header-container'>
   <nav class="header" x-data="{ isOpen: false }" @keydown.escape="isOpen = false" @click.away="isOpen = false">
-    <div class="header__title" x-bind:style="isOpen ? 'border-bottom: 2px solid #fff;' : 'border-bottom: none'">
+    <div class="header__bg"  x-show="isOpen"> </div>
+    <div class="header__title">
       <button class="header__menu-btn" @click="isOpen = !isOpen" type="button">
         <img src='../../img/icons/align-justify.svg' title="open menu" width="40" height="40" x-show="!isOpen"/>
         <img src='../../img/icons/cross.svg' title="close menu" width="40" height="40" x-show="isOpen"/>
       </button>
       <h1>
-        <a class="main-link" href=" {{ '/' | url }}">
+        <a class="main-link" href=" {{ '/' | url }}" title="home">
           {{ metadata.title }}
         </a>
       </h1>
@@ -39,12 +40,13 @@
       {% endif %}
     </div>
   </nav>
+  
 
-  <nav class="header__big">
+  <nav class="header__big container">
     <ul class="nav__big">
       <li class="nav__big--item">
         <h1>
-          <a class="main-link" href=" {{ '/' | url }}">
+          <a class="main-link" href=" {{ '/' | url }}" title="Main page">
             <img src="../../img/icons/home.svg" width="30" height="30" alt="home">
 
           </a>
@@ -52,7 +54,7 @@
       </li>
       {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav__big--item {% if entry.url == page.url %} nav-item-active {% endif %}">
-          <a href="{{ entry.url | url }}" title="{{ entry.title }}">
+          <a href="{{ entry.url | url }}" title="{{ entry.title }}" >
             {%- if entry.title === 'CV' %}
               <span class="cv cv__big">
                 {{ entry.title }}
@@ -68,7 +70,8 @@
       {%- if metadata.resumeList %}
         {%- for _, data in metadata.resumeList %}
         <li class="nav__big--item {% if entry.url == page.url %} nav-item-active {% endif %}">
-          <a href="{{ data.url }}" target="{% if data.redirect %}_blank{% else %}_parent{% endif %}">
+          <a href="{{ data.url }}" target="{% if data.redirect %}_blank{% else %}_parent{% endif %}"
+          title="{{ data.title }}">
             <img width="30" height="30" src="../../img/icons/{{ data.img }}" alt="{{ data.title }}"/>
           </a>
           </li>
@@ -77,3 +80,4 @@
     </div>
   </nav>
 </header>
+<div class="header__big--mock"></div>

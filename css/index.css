@@ -9,7 +9,7 @@
   /* Mine */
   --lightblue: #5586ab;
   --deepgreen: #2b6777;
-  --lightmint: #91cbbf55;
+  --lightmint: #daeeea;
   --mint: #91cbbf;
   --black: #121312;
 
@@ -155,10 +155,13 @@ code {
   align-items: center;
   margin: 0;
   padding: 0;
+  background-color: var(--lightmint);
   list-style: none;
   border-bottom: 2px solid #fff;
+  z-index: 2;
 }
 .nav:last-child {
+  padding-bottom: 25px;
   border-bottom: none;
 }
 .nav li {

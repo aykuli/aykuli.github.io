@@ -1,16 +1,19 @@
 .container {
   position: relative;
-  max-width: 768px;
+  width: 768px;
   margin: 0 auto;
 }
-
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
 .header {
-  position: fixed;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: var(--mint);
-  box-shadow: 5px 5px 25px rgb(0 0 0 / 20%);
+  box-shadow: 5px 5px 25px rgb(var(--lightmint) / 5%);
   z-index: 2;
 }
 .header__title {
@@ -18,6 +21,8 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 1rem;
+  background-color: var(--lightmint);
+  z-index: 2;
 }
 .header__menu-btn {
   width: 80px;
@@ -25,6 +30,15 @@
   border: none;
   background: transparent;
   cursor: pointer;
+}
+.header__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-color: #3138368c;
 }
 
 .nav-resume {
@@ -37,12 +51,12 @@
   align-items: center;
   width: 56px;
   height: 56px;
-  color: var(--deepgreen);
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 500;
   cursor: pointer;
   border-radius: 50%;
-  border: 2px solid var(--deepgreen);
+  border: 1px solid var(--black);
+  color: var(--black);
 }
 .cv__big {
   width: 30px;
@@ -92,6 +106,12 @@
 .author-info__photo {
   margin-right: 20px;
 }
+@media (max-width: 768px) {
+  .author-info__photo {
+    margin-right: 10px;
+  }
+}
+
 .author-info__prof {
   margin: 0 0 1rem;
   font-size: 1.2rem;
@@ -201,17 +221,33 @@
   margin-right: 0.5rem;
 }
 
+.header-container {
+  width: 100%;
+  background-color: var(--lightmint);
+  box-shadow: 5px 5px 25px rgb(var(--lightmint) / 0.05);
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .header-container {
+    position: fixed;
+  }
+}
+
 .header__big {
   display: flex;
   justify-content: space-between;
-  background-color: var(--mint);
-  box-shadow: 5px 5px 25px rgb(0 0 0 / 20%);
 }
 @media (max-width: 768px) {
   .header__big {
     display: none;
   }
 }
+@media (min-width: 768px) {
+  .header__big--mock {
+    height: 80px;
+  }
+}
+
 .nav__big {
   display: flex;
   height: 70px;

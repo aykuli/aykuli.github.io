@@ -19,7 +19,7 @@ tags:
 
 Command to see what namespace is used by current machine
 
-```sh
+```
 cat /etc/resolve.conf
 ```
 
@@ -49,7 +49,7 @@ cat /etc/resolve.conf
 
 Adding dns of Google for new container
 
-```sh
+```
 docker run --name node8 -d --dns 8.8.8.8 demo-3
 docker exec -it node8 sh
 /opt/app# cat /etc/resolv.conf
