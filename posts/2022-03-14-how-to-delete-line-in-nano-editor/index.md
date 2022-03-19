@@ -15,7 +15,7 @@ Or
 2. Shift the cursor to the end of the block with the arrow keys, and it will outline the text.
 3. Press CTRL + K to cut/delete a block and it will remove a line in nano.
 
-![img](./0.png)
+![img](../../img/posts/2022-03-14-how-to-delete-line-in-nano-editor.png)
 
 ---
 
