@@ -1,0 +1,28 @@
+.note-md {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--mint);
+}
+.note-md hr {
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+  color: var(--lightmint);
+}
+.note-md p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 0;
+}
+.note-md ul {
+  margin: 1rem 0;
+}
+.note-md table {
+  border-collapse: collapse;
+}
+.note-md td {
+  padding: 0.25em 0.5em;
+  vertical-align: top;
+  border: 1px solid var(--mint);
+}
+.note-md img {
+  maw-width: 100%;
+}
