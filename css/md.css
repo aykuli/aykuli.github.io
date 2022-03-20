@@ -29,3 +29,6 @@
 .note-md pre {
   overflow: scroll;
 }
+.note-md summary {
+  font-size: 0.8em;
+}
