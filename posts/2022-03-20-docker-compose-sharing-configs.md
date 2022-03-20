@@ -1,5 +1,5 @@
 ---
-title: Docker Compose merge 2 files
+title: Docker Compose Sharing Configuration
 date: 2022-03-20
 tags:
   - docker
@@ -25,55 +25,64 @@ services:
       - an1
     depends_on:
       - rmq
-  api:
-    build:
-      context: .
-      dockerfile: ./apps/api/Dockerfile
-    restart: always
-    container_name: api
-    volumes: 
-    - ./.env:/opt/app/.env
-    ports: 
-    - 3002:3000
-    networks: 
-    - an1
-    depends_on: - rmq
+  api:<div style="background-color: #FEE">
+    extends:
+      file: docker-compose.api.yml
+      service: api
+      </div>
+    depends_on:
+      - rmq
   app:
     build:
       context: .
       dockerfile: ./apps/app/Dockerfile
     restart: always
     container_name: app
-    ports: 
-    - 3001:80
-    networks: 
-    - an1
+    ports:
+      - 3001:80
+    networks:
+      - an1
   rmq:
     image: rabbitmq:latest
     restart: always
-    networks: 
-    - an1
-    environment: 
-    - RABBITMQ_DEFAULT_USER=admin 
-    - RABBITMQ_DEFAULT_PASS=admin
+    networks:
+      - an1
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+networks:
+  an1:
+    driver: bridge
 </pre>
+
 </details>
 
 <details>
-    <summary>docker-compose.dev.yml</summary>
+    <summary>docker-compose.api.yml</summary>
     <pre style="background-color: #daeeea">
 version: '3'
 services:
-  rmq:
+  api:
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile
+    restart: always
+    container_name: api
+    volumes:
+    - .env:/opt/app/.env
     ports:
-      - 15672:15672
+    - 3002:3000
+    networks:
+    - an1
 </details>
 
-I want to compose two docker-compose files.
+```
+extends:
+  file: docker-compose.api.yml
+  service: api
+```
 
-```
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-```
+I write in main docker-compose file to the service i want to be extended `extends` field and wrote:
 
 Command to see the resulting docker-compose file:
 
@@ -81,7 +90,7 @@ Command to see the resulting docker-compose file:
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml config
 ```
 
-<details style="padding-bottom:10px">
+<details>
     <summary>Result</summary>
     <pre style="background-color: #daeeea">
 networks:
@@ -141,4 +150,5 @@ services:
     restart: always
 version: '3'
     </pre>
+
 </details>
