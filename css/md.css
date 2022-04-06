@@ -2,6 +2,9 @@
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--mint);
 }
+.note-md code {
+  color: #0a66c2;
+}
 .note-md hr {
   margin-top: 1em;
   margin-bottom: 2.5em;
@@ -9,7 +12,7 @@
 }
 .note-md p {
   font-size: 1rem;
-  line-height: 1.2rem;
+  line-height: 2rem;
   margin: 0;
 }
 .note-md ul {
@@ -26,6 +29,8 @@
 .note-md img {
   max-width: 100%;
   width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 .note-md pre {
   overflow: scroll;
