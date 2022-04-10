@@ -38,3 +38,7 @@
 .note-md summary {
   font-size: 0.9em;
 }
+
+.note-md .language-bash {
+  background-color: #300e24;
+}
