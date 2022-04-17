@@ -3,6 +3,11 @@ title: Code editor opening commands
 date: 2022-04-09
 tags:
   - code editor
+  - sublime
+  - vscode
+  - code
+  - rubymain
+  - terminal commands
 layout: layouts/post.njk
 ---
 
@@ -16,4 +21,10 @@ subl {path-to-open}
 
 ```bash
 code {path-to-open}
+```
+
+### RubyMine from JetBrains
+
+```bash
+rubymain {path-to-open}
 ```
