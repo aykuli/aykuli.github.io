@@ -16,21 +16,25 @@ layout: layouts/home.njk
 {% set videosLen = youtube.length %}
 
 {% for info in videoList %}
-  <details open>
-    <summary class="videolist__year">
-    {{info.year}}
-    </summary>
-    <ul class="videolist">
-      {% for video in info.data %}
-      <li class="videolist__item">
-        <a href="{{ video.url }}" class="videolist__link" target="_blank">
-          <span title="{{ video.title }}">{{ video.title}}</span>
-          <img src="../img/icons/youtube.svg" title="watch on youtube" class="videolist__btn--watch" width="20" >
-        </a>
-        <time class="videolist__date" datetime="{{ video.date | htmlDateString }}">{{ video.date  }}</time>
-      </li>
-      {% endfor %}
-    </ul>
-  </details>
+  {% if info.state %}
+    <details open>
+  {%else%}
+    <details>
+  {%endif%}
+      <summary class="videolist__year">
+      {{info.year}}
+      </summary>
+      <ul class="videolist">
+        {% for video in info.data %}
+        <li class="videolist__item">
+          <a href="{{ video.url }}" class="videolist__link" target="_blank">
+            <span title="{{ video.title }}">{{ video.title}}</span>
+            <img src="../img/icons/youtube.svg" title="watch on youtube" class="videolist__btn--watch" width="20" >
+          </a>
+          <time class="videolist__date" datetime="{{ video.date | htmlDateString }}">{{ video.date  }}</time>
+        </li>
+        {% endfor %}
+      </ul>
+     </details>
 {% endfor %}
 
