@@ -1,6 +1,6 @@
 ---
 title: Ruby typing
-date: 2022-0509
+date: 2022-05-09
 tags:
   - ruby
 layout: layouts/post.njk
