@@ -6,7 +6,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-![rbs](https://github.com/ruby/rbs)
+[rbs](https://github.com/ruby/rbs)
 
 ### Readme.md
 
