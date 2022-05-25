@@ -7,9 +7,9 @@ layout: layouts/post.njk
 ---
 
 <details>
-<summary>
-Check version
-</summary>
+  <summary>
+  Check version
+  </summary>
 
 ```bash
 user$ rpm -q centos-release

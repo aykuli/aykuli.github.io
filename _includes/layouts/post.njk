@@ -17,9 +17,6 @@ templateClass: tmpl-post
   <a href="{{ tagUrl | url }}" class="post__tag">{{ tag }}</a>
   {%- endfor %}
 </div>
-<div class="note-md">
-  {{ content | safe }}
-</div>
 
 {%- if collections.posts %}
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
@@ -46,3 +43,8 @@ templateClass: tmpl-post
 </div>
 {%- endif %}
 {%- endif %}
+
+<div class="note-md">
+  {{ content | safe }}
+</div>
+
