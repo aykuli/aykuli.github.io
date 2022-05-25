@@ -1,5 +1,5 @@
 ---
-title: Ubuntu killall process {processname}
+title: Ubuntu killall process { process_name }
 date: 2022-05-15
 tags:
   - ubuntu
