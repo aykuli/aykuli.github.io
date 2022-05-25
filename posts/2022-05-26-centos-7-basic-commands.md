@@ -43,3 +43,27 @@ CentOS Linux release 7.9.2009 (Core)
 ```
 
 </details>
+
+<details>
+<summary>
+My brief list to install Docker on server(root)
+</summary>
+
+```bash
+  yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin epel-release
+
+yum list docker-ce --showduplicates | sort -r
+
+systemctl start docker
+
+docker run hello-world
+
+```
+
+Then install docker-compose https://docs.docker.com/compose/install/
+
+</details>
