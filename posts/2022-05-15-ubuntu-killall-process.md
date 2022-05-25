@@ -1,5 +1,5 @@
 ---
-title: Ruby typing
+title: Ubuntu killall process {processname}
 date: 2022-05-15
 tags:
   - ubuntu
