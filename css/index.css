@@ -349,16 +349,23 @@ a[href].post__tag:focus {
 .note__pagination {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--lightmint);
 }
-.note__pagination a {
+.note__pagination div:first-child {
+  margin-bottom: 1rem;
+}
+.note__pagination--link-txt p {
+  margin: 0;
+}
+.note__pagination--link {
   display: flex;
-  align-items: start;
-  padding: 0 0.5rem 0 0.25rem;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
   text-decoration: none;
 }
-.note__pagination a:hover,
-.note__pagination a:focus {
+.note__pagination--link:hover,
+.note__pagination--link:focus {
   background-color: var(--lightmint);
   border-radius: 0.4rem;
 }
