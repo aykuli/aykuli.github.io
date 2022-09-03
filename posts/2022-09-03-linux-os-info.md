@@ -6,7 +6,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-```shell
+```bash
 cat /etc/os-release
 ```
 

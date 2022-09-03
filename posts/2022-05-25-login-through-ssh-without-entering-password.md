@@ -22,7 +22,7 @@ ssh-keygen
 
 ```
 
-### 2. Copy just created public key to remote servert using `ssh-copy-id`:
+### 2. Copy (variant 1) just created public key to remote server using `ssh-copy-id`:
 
 ```bash
 ssh-copy-id -i ~/.ssh/{filename_you_entered_before}.pub root@XXX.XXX.XXX.XXX
@@ -44,7 +44,14 @@ and check to make sure that only the key(s) you wanted were added.
 
 ```
 
-### 3. Login to your server without entering the password:
+### 3. Copy (variant 2) just created public key to remote server:
+
+```bash
+
+cat ~/.ssh/id_rsa.pub | ssh user@remote-host 'cat >> ~/.ssh/authorized_keys'
+```
+
+### 4. Login to your server without entering the password:
 
 ```bash
 ssh root@XXX.XXX.XXX.XXX
