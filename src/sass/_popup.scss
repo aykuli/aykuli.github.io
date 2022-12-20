@@ -1,0 +1,17 @@
+.popup {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    padding: 10px 20px;
+
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+
+    background-color: rgba($color: $green, $alpha: 0.8);
+    border-radius: 5px;
+}

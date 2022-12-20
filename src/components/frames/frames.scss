@@ -1,0 +1,123 @@
+@import '../../sass/vars.scss';
+
+.frames {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 125px;
+
+    &__list {
+        margin: 0;
+        margin-bottom: 10px;
+        padding: 0;
+        
+        list-style: none;
+    }
+
+    &__btn {
+        &--add {
+            width: 105px;
+            padding-left: 30px;
+
+            text-align: left;
+            font-size: 16px;
+            line-height: 20px;
+            color: $grey;
+
+            background-color: $dark-light;
+            background-image: url(./img/plus.svg);
+            background-repeat: no-repeat;
+            background-position: 0px 8px;
+            border: 3px solid $grey-light;
+            border-radius: 2px;
+            
+            &:hover {
+                border: 3px solid $green;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.frame {
+    position: relative;
+    image-rendering: pixelated;
+    background: url(./img/frame-bg.png) repeat;
+    
+    &__item {
+        position: relative;
+
+        width: 100px;
+        height: 100px;
+        
+        margin-bottom: 10px;
+
+        border: 3px solid $grey;
+        border-radius: 2px;
+
+        &:hover, &:focus  {
+            border-color: $grey-light;
+
+            & .frame__btn--delete,
+            & .frame__btn--copy {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__active {
+        border: 3px solid $green;
+
+        &:hover, &:focus {
+            border: 3px solid $green;
+        }
+    }
+
+    &__below {
+        border: 3px dotted rgb(34, 192, 153);
+    }
+
+    &__number {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 0 5px;
+
+        font-size: 16px;
+        font-weight: bold;
+        color: $dark;
+
+        background-color: $green;
+    }
+
+    &__btn {
+        position: absolute;
+        right: 0;
+
+        width: 25px;
+        height: 25px;
+
+        background-repeat: no-repeat;
+        background-position: 3px 3px;
+        background-color: $green;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+
+        &--delete {            
+            top: 0;
+            background-image: url(./img/trash.svg);
+        }
+
+        &--copy {
+            bottom: 0;
+            background-image: url(./img/copy.svg);
+        }
+        
+        &:focus {
+            outline: none;
+        }
+    } 
+}

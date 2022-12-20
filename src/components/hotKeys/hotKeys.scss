@@ -1,0 +1,115 @@
+@import '../../sass/vars.scss';
+
+.hotKeys {
+    height: calc(100% - 130px);
+    margin: 0;
+    padding: 20px;
+
+    background-color: $dark;
+    list-style: none;
+
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        padding: 10px;
+        min-width: 400px;
+        width: 80vh;
+        height: 80vh;
+
+        transform: translate3d(-50%, -50%, 0);
+        background-color: $green;
+
+        z-index: 100;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 5px;
+        
+        font-size: 30px;
+        line-height: 50px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    &__footer {
+        padding-top: 10px;
+        
+        font-weight: bold;
+        color: $red-cherry;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: 30px;
+
+        font-size: 20px;
+        line-height: 35px;
+
+        cursor: pointer;
+
+        &:hover, &:focus {
+            background-color: $grey;
+        }
+    }
+
+    &__close {
+        margin: 0;
+        padding: 0 5px;
+        
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin: 0 15px;
+        padding: 0;
+    }
+
+    &__ecode {
+        width: 35px;
+        height: 35px;
+        margin: 0;
+        margin-right: 15px;
+        padding: 0;
+
+        text-align: center;
+        color: $green;
+        
+        border: 2px solid $green;
+        border-radius: 5px;
+
+        &--highlight {
+            opacity: 0.5;
+        }
+
+        &--unsetted {
+            color: $red;
+            border-color: $red;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        padding: 5px;
+
+        background-color: $grey-light;
+        background-image: url(./img/keyboard.svg);
+        background-repeat: no-repeat;
+        background-position: 2px 1px;
+        border: none;
+
+        width: 45px;
+        height: 30px;
+
+        &:hover, &:focus {
+            outline: none;
+        }
+    }
+}
